@@ -11,52 +11,47 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
 body{margin:0}
-.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
-.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.stk{filter:drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 18px 22px rgba(0,0,0,.32))}
-.sh{filter:drop-shadow(0 22px 30px rgba(0,0,0,.35))}
-.dot{position:absolute;border-radius:50%;width:9px;height:9px;background:#FFF3DE}
-.tri{position:absolute;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase}
+.pol{position:absolute;background:#FFFDF8;padding:12px 12px 0;box-sizing:border-box;box-shadow:0 18px 30px rgba(10,20,80,.35)}
+.pol img{display:block;width:100%;object-fit:cover}
+.pc{font-family:'Instrument Sans',sans-serif;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#1B1B1B;padding:12px 2px 14px}
+.dot{position:absolute;border-radius:50%;width:8px;height:8px;background:#FFF6E8}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #1F35D1; color: #FFF3DE">
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #3A55E2; color: #FFF6E8">
 
-<div class="tri" style="left: 1040px; top: 150px; width: 520px; height: 460px; background: #FF5A1F; transform: rotate(-9deg)"></div>
-<div class="tri" style="left: 140px; top: 600px; width: 180px; height: 160px; background: #FFC93C; transform: rotate(14deg)"></div>
-<div class="tri" style="left: 1760px; top: 90px; width: 90px; height: 80px; background: #F7A1C4; transform: rotate(-20deg)"></div>
+<div class="m" style="position: absolute; left: 64px; right: 64px; top: 40px; display: flex; justify-content: space-between; font-size: 14px"><span>Amy Hu / Selected work</span><span>Touch · Sight · Taste · Sound · Mind</span></div>
+<div style="position: absolute; left: 64px; right: 64px; top: 80px; height: 1px; background: rgba(255,246,232,.55)"></div>
+<div style="position: absolute; left: 64px; right: 64px; top: 892px; height: 1px; background: rgba(255,246,232,.55)"></div>
+<div class="m" style="position: absolute; left: 64px; right: 64px; top: 910px; display: flex; justify-content: space-between; font-size: 13px"><span>Selected projects &amp; research</span><span>Portfolio / 01</span></div>
 
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px">
-<span>Portfolio · University Application 2026 / 27</span>
-<span>Touch · Sight · Taste · Sound · Mind</span>
-<span>No. 01</span>
-</div>
-
-<div class="d" style="position: absolute; left: 52px; top: 70px; font-size: 470px; line-height: .8">AMY</div>
-<div class="d" style="position: absolute; left: 1290px; top: 70px; font-size: 470px; line-height: .8; color: transparent; -webkit-text-stroke: 3px #FFF3DE">HU</div>
-
+<div class="m" style="position: absolute; left: 64px; top: 128px; font-size: 13px; color: #FFD3BE">A portfolio for the senses</div>
+<div class="s" style="position: absolute; left: 56px; top: 150px; font-size: 290px; line-height: .86; letter-spacing: -.02em">Amy</div>
+<div class="s" style="position: absolute; left: 200px; top: 372px; font-size: 290px; line-height: .86; font-style: italic; letter-spacing: -.02em">Hu.</div>
 <sc-for list="{{dots}}" as="d" hint-placeholder-count="30"><span class="dot" style="left: {{d.x}}px; top: {{d.y}}px; opacity: {{d.op}}"></span></sc-for>
+<div style="position: absolute; left: 64px; top: 650px; width: 470px; height: 1px; background: rgba(255,246,232,.55)"></div>
+<div class="s" style="position: absolute; left: 64px; top: 676px; font-size: 64px; line-height: .98; font-style: italic">Made for<br>the senses.</div>
+<div class="b" style="position: absolute; left: 64px; top: 822px; width: 520px; font-size: 16px; line-height: 1.5; color: #E7EAFF">Making things people can touch, see and taste, and testing ideas in the lab.</div>
 
-<img class="stk" src="/_blob/0929ae07cae2f8f58732114e1720647a" alt="Handmade tactile felt book" style="position: absolute; left: 1170px; top: 92px; height: 210px; transform: rotate(9deg)">
-<img class="stk" src="/_blob/8937adfba54d8a786dea9187f126b440" alt="Miniature house" style="position: absolute; left: 1540px; top: 330px; width: 300px; transform: rotate(-5deg)">
-<img class="stk" src="/_blob/b12473c248592c3c17828aff6fead8a7" alt="Croissant from my baking book" style="position: absolute; left: 1620px; top: 700px; width: 230px; transform: rotate(6deg)">
+<div style="position: absolute; left: 640px; top: 176px; width: 900px; height: 690px; background: #FFD9C6; clip-path: polygon(6% 4%, 92% 0, 100% 62%, 96% 100%, 4% 96%, 0 40%); opacity: .95"></div>
+<div style="position: absolute; left: 950px; top: 172px; width: 600px; height: 600px; border-radius: 50%; background: #1E2E9A"></div>
 
-<img class="sh" src="/_blob/f506104aa72ca7765dc60c6471b5e63a" alt="Amy explaining an experiment" style="position: absolute; left: 600px; top: 118px; height: 842px">
-<img class="stk" src="/_blob/1774dec12d5fc7fbe742339b52d4e6d9" alt="Amy on stage as a finalist" style="position: absolute; left: 1330px; top: 470px; height: 470px">
+<div class="s" style="position: absolute; left: 650px; top: 110px; font-size: 44px; font-style: italic; color: #FFF6E8; transform: rotate(-3deg); white-space: nowrap">touch → see → taste → hear → think</div>
 
-<div style="position: absolute; left: 64px; top: 548px; width: 520px; display: flex; flex-direction: column; gap: 22px">
-<div class="s" style="font-size: 92px; line-height: .9; font-style: italic">Made for<br>the senses.</div>
-<div class="b" style="font-size: 19px; line-height: 1.5; max-width: 440px">Books you read with your fingertips, a house you could hold in two hands, a year of baking explained with physics, and the music and sport in between.</div>
-</div>
+<img src="/_blob/0929ae07cae2f8f58732114e1720647a" alt="Tactile felt book" style="position: absolute; left: 668px; top: 214px; height: 330px; transform: rotate(-7deg); filter: drop-shadow(0 18px 20px rgba(80,30,10,.3))">
+<div class="pc" style="position: absolute; left: 690px; top: 548px; padding: 0">01 / Tactile books</div>
 
-<div class="m" style="position: absolute; left: 64px; bottom: 40px; display: flex; gap: 26px; font-size: 12px; align-items: center">
-<span style="display: flex; gap: 8px; align-items: center"><span style="width: 14px; height: 14px; background: #FF5A1F"></span>01 Touch</span>
-<span style="display: flex; gap: 8px; align-items: center"><span style="width: 14px; height: 14px; background: #FFFFFF"></span>02 Sight</span>
-<span style="display: flex; gap: 8px; align-items: center"><span style="width: 14px; height: 14px; background: #8A4B2A"></span>03 Taste</span>
-<span style="display: flex; gap: 8px; align-items: center"><span style="width: 14px; height: 14px; background: #E1262D"></span>04 Sound &amp; Motion</span>
-<span style="display: flex; gap: 8px; align-items: center"><span style="width: 14px; height: 14px; background: #14A37F"></span>05 Mind</span>
-</div>
+<div class="pol" style="left: 650px; top: 598px; width: 236px; transform: rotate(-4deg)"><img src="/_blob/ddf730251db54e0f352610bbfdd09169" alt="Basque cheesecake" style="height: 170px; object-fit: contain; background: #FFFDF8"><div class="pc">03 / Baking &amp; physics</div></div>
+<div class="pol" style="left: 900px; top: 610px; width: 226px; transform: rotate(3deg)"><img src="/_blob/c06bb932235b2fc8cc0f8d260fe2eaa8" alt="Miniature living room" style="height: 170px"><div class="pc">02 / Miniature house</div></div>
+
+<img src="/_blob/f506104aa72ca7765dc60c6471b5e63a" alt="Amy explaining an experiment" style="position: absolute; left: 960px; top: 132px; height: 760px; filter: drop-shadow(0 20px 30px rgba(10,20,80,.35))">
+<div class="m" style="position: absolute; left: 1300px; top: 808px; background: #FF6B3D; color: #FFF6E8; padding: 14px 20px; font-size: 14px; transform: rotate(-3deg)">Made for the senses.</div>
+
+<div class="pol" style="left: 1590px; top: 112px; width: 266px; transform: rotate(3deg)"><img src="/_blob/b84552c91892d782c6d0f8d003051a4f" alt="Amy on stage as a finalist" style="height: 300px; object-position: center 20%"><div class="pc">04 / On stage</div></div>
+<div class="pol" style="left: 1600px; top: 488px; width: 262px; transform: rotate(-2deg)"><img src="/_blob/5da080c1d4d469cb6387c682ecb2c064" alt="Amy in the lab wearing laser goggles" style="height: 280px; object-position: center 30%"><div class="pc">05 / In the lab</div></div>
+<div class="pol" style="left: 1536px; top: 716px; width: 190px; padding: 8px 8px 0; transform: rotate(-6deg)"><img src="/_blob/6c5b7508c3827167ed71b6df53fc033e" alt="Laser and high-speed camera set-up" style="height: 112px"><div class="pc" style="font-size: 11px; padding: 8px 2px 10px">Laser + high-speed camera</div></div>
 
 </div>
 </x-dc>
@@ -66,12 +61,12 @@ renderVals() {
 const BR = {a:[1],b:[1,2],c:[1,4],d:[1,4,5],e:[1,5],f:[1,2,4],g:[1,2,4,5],h:[1,2,5],i:[2,4],j:[2,4,5],k:[1,3],l:[1,2,3],m:[1,3,4],n:[1,3,4,5],o:[1,3,5],p:[1,2,3,4],q:[1,2,3,4,5],r:[1,2,3,5],s:[2,3,4],t:[2,3,4,5],u:[1,3,6],v:[1,2,3,6],w:[2,4,5,6],x:[1,3,4,6],y:[1,3,4,5,6],z:[1,3,5,6]};
 const dots = [];
 let cx = 0;
-const u = 15, ox = 70, oy = 470;
+const u = 13, ox = 66, oy = 612;
 for (const ch of 'amy hu') {
-if (ch === ' ') { cx += u * 2.4; continue; }
+if (ch === ' ') { cx += u * 2.2; continue; }
 const on = BR[ch] || [];
 for (let n = 1; n <= 6; n++) {
-dots.push({ x: ox + cx + (n > 3 ? u : 0), y: oy + ((n - 1) % 3) * u, op: on.includes(n) ? 1 : 0.18 });
+dots.push({ x: ox + cx + (n > 3 ? u : 0), y: oy + ((n - 1) % 3) * u, op: on.includes(n) ? 1 : 0.2 });
 }
 cx += u * 2.6;
 }

@@ -1,119 +1,146 @@
 {
   "v": 3,
-  "createdOnFiles": {
-    "v": 1,
-    "at": "2026-10-02T09:00:00Z"
+  "attachments": {},
+  "boards": {
+    "Contents.dc.html": {
+      "h": 960,
+      "title": "02 Contents",
+      "w": 1920,
+      "x": 2000,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 960,
+      "title": "01 Cover",
+      "w": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "Mind-Opener.dc.html": {
+      "h": 960,
+      "title": "14 Mind · Research (next)",
+      "w": 1920,
+      "x": 0,
+      "y": 6800
+    },
+    "Sight-Details.dc.html": {
+      "h": 960,
+      "title": "10 Sight · How it was made",
+      "w": 1920,
+      "x": 2000,
+      "y": 2720
+    },
+    "Sight-House.dc.html": {
+      "h": 960,
+      "title": "09 Sight · The house",
+      "w": 1920,
+      "x": 0,
+      "y": 2720
+    },
+    "Sound-Motion.dc.html": {
+      "h": 960,
+      "title": "13 Sound & Motion",
+      "w": 1920,
+      "x": 0,
+      "y": 5440
+    },
+    "Taste-Book.dc.html": {
+      "h": 960,
+      "title": "11 Taste · The book",
+      "w": 1920,
+      "x": 0,
+      "y": 4080
+    },
+    "Taste-Twelve.dc.html": {
+      "h": 960,
+      "title": "12 Taste · Twelve bakes",
+      "w": 1920,
+      "x": 2000,
+      "y": 4080
+    },
+    "Touch-Exhibition.dc.html": {
+      "h": 960,
+      "title": "08 Touch · Exhibition",
+      "w": 1920,
+      "x": 10000,
+      "y": 1360
+    },
+    "Touch-Making.dc.html": {
+      "h": 960,
+      "title": "05 Touch · Making",
+      "w": 1920,
+      "x": 4000,
+      "y": 1360
+    },
+    "Touch-Opener.dc.html": {
+      "h": 960,
+      "title": "03 Touch · Even Without Sight",
+      "w": 1920,
+      "x": 0,
+      "y": 1360
+    },
+    "Touch-Pages.dc.html": {
+      "h": 960,
+      "title": "06 Touch · The books",
+      "w": 1920,
+      "x": 6000,
+      "y": 1360
+    },
+    "Touch-Sketches.dc.html": {
+      "h": 960,
+      "title": "04 Touch · Design sketches",
+      "w": 1920,
+      "x": 2000,
+      "y": 1360
+    },
+    "Touch-Visit.dc.html": {
+      "h": 960,
+      "title": "07 Touch · The visit",
+      "w": 1920,
+      "x": 8000,
+      "y": 1360
+    }
   },
-  "title": "Amy Portfolio",
+  "createdOnFiles": {
+    "at": "2026-10-02T09:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
   "launch": {
     "view": "canvas"
   },
-  "pages": [],
-  "boards": {
-    "Main.dc.html": {
+  "notes": {
+    "rowOpen": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "Opening",
+      "w": 240,
       "x": 0,
-      "y": 0,
-      "w": 1920,
-      "h": 960,
-      "title": "01 Cover"
+      "y": -260
     },
-    "Contents.dc.html": {
-      "x": 2000,
-      "y": 0,
-      "w": 1920,
-      "h": 960,
-      "title": "02 Contents"
-    },
-    "Touch-Opener.dc.html": {
+    "rowSight": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "02 Sight · Craft on pure white",
+      "w": 240,
       "x": 0,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "03 Touch · Even Without Sight"
+      "y": 2460
     },
-    "Touch-Sketches.dc.html": {
-      "x": 2000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "04 Touch · Design sketches"
-    },
-    "Touch-Making.dc.html": {
-      "x": 4000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "05 Touch · Making"
-    },
-    "Touch-Pages.dc.html": {
-      "x": 6000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "06 Touch · The pages"
-    },
-    "Touch-Bench.dc.html": {
-      "x": 8000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "07 Touch · Workbench"
-    },
-    "Touch-Visit.dc.html": {
-      "x": 10000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "08 Touch · The visit"
-    },
-    "Touch-Exhibition.dc.html": {
-      "x": 12000,
-      "y": 1360,
-      "w": 1920,
-      "h": 960,
-      "title": "09 Touch · Exhibition"
-    },
-    "Sight-House.dc.html": {
+    "rowTaste": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "03 Taste · The Physics of Baking",
+      "w": 240,
       "x": 0,
-      "y": 2720,
-      "w": 1920,
-      "h": 960,
-      "title": "10 Sight · The house"
+      "y": 3820
     },
-    "Sight-Details.dc.html": {
-      "x": 2000,
-      "y": 2720,
-      "w": 1920,
-      "h": 960,
-      "title": "11 Sight · Details"
-    },
-    "Taste-Book.dc.html": {
+    "rowTouch": {
+      "kind": "title1",
+      "maxW": 11920,
+      "text": "01 Touch · Tactile books for blind children (爱心伴读)",
+      "w": 240,
       "x": 0,
-      "y": 4080,
-      "w": 1920,
-      "h": 960,
-      "title": "12 Taste · The book"
-    },
-    "Taste-Twelve.dc.html": {
-      "x": 2000,
-      "y": 4080,
-      "w": 1920,
-      "h": 960,
-      "title": "13 Taste · Twelve bakes"
-    },
-    "Sound-Motion.dc.html": {
-      "x": 0,
-      "y": 5440,
-      "w": 1920,
-      "h": 960,
-      "title": "14 Sound & Motion"
-    },
-    "Mind-Opener.dc.html": {
-      "x": 0,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "15 Mind · Research (next)"
+      "y": 1100
     }
   },
   "order": [
@@ -123,7 +150,6 @@
     "Touch-Sketches.dc.html",
     "Touch-Making.dc.html",
     "Touch-Pages.dc.html",
-    "Touch-Bench.dc.html",
     "Touch-Visit.dc.html",
     "Touch-Exhibition.dc.html",
     "Sight-House.dc.html",
@@ -133,36 +159,6 @@
     "Sound-Motion.dc.html",
     "Mind-Opener.dc.html"
   ],
-  "notes": {
-    "rowOpen": {
-      "x": 0,
-      "y": -260,
-      "text": "Opening",
-      "kind": "title1",
-      "maxW": 3920
-    },
-    "rowTouch": {
-      "x": 0,
-      "y": 1100,
-      "text": "01 Touch · Tactile books for blind children (爱心伴读)",
-      "kind": "title1",
-      "maxW": 13920
-    },
-    "rowSight": {
-      "x": 0,
-      "y": 2460,
-      "text": "02 Sight · Craft on pure white",
-      "kind": "title1",
-      "maxW": 3920
-    },
-    "rowTaste": {
-      "x": 0,
-      "y": 3820,
-      "text": "03 Taste · The Physics of Baking",
-      "kind": "title1",
-      "maxW": 3920
-    }
-  },
-  "designSystems": [],
-  "attachments": {}
+  "pages": [],
+  "title": "Amy Portfolio"
 }

@@ -15,12 +15,18 @@ body{margin:0}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.board{background-color:#FFFBF2;background-image:linear-gradient(rgba(31,53,209,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(31,53,209,.08) 1px,transparent 1px);background-size:24px 24px}
-.ann{font-family:'Caveat','Bradley Hand',cursive;font-size:21px;fill:#22222E}
-.ttl{font-family:'Caveat','Bradley Hand',cursive;font-size:28px;font-weight:700;fill:#22222E}
+.board{background-color:#FFFBF2;background-image:linear-gradient(rgba(31,53,209,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,53,209,.07) 1px,transparent 1px);background-size:24px 24px}
 .rule{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.4}
 .rn{font-size:26px;line-height:1;color:#FFF3DE}
-.stk{filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 14px 16px rgba(0,0,0,.25))}
+.cell{position:relative;min-width:0}
+.ttl{position:absolute;left:4px;top:0;font-family:'Caveat',cursive;font-size:29px;font-weight:700;color:#22222E}
+.sk{position:absolute;left:0;top:44px;width:330px;height:310px;object-fit:cover;background:#FFFFFF;padding:8px;box-sizing:border-box;box-shadow:0 10px 18px rgba(0,0,0,.14)}
+.tape{position:absolute;width:90px;height:24px;background:rgba(255,201,60,.7)}
+.ann{position:absolute;left:350px;top:52px;width:240px;display:flex;flex-direction:column;gap:12px;font-family:'Caveat',cursive;font-size:22px;line-height:1.05;color:#22222E}
+.ann span::before{content:'→ ';color:#FF5A1F}
+.fin{position:absolute;left:356px;top:232px;width:226px;display:flex;flex-direction:column;gap:4px}
+.fin img{width:100%;height:104px;object-fit:cover;display:block;border:3px solid #FFFFFF;box-shadow:0 8px 14px rgba(0,0,0,.18)}
+.fin span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#5A5A66}
 </style>
 </helmet>
 <div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #22B5A6; color: #0E2A33">
@@ -30,7 +36,7 @@ body{margin:0}
 <div style="position: absolute; left: 64px; top: 96px; width: 470px; display: flex; flex-direction: column; gap: 20px">
 <div class="d" style="font-size: 86px; line-height: .86; color: #FFF3DE">MADE FOR<br>FINGERTIPS</div>
 <div class="s" style="font-size: 30px; line-height: 1.12; font-style: italic">The Kingdom of Shapes</div>
-<div class="b" style="font-size: 16.5px; line-height: 1.55">Our books follow Jianjian, a triangle who lives in Triangle Town. An invitation to the New Year concert sends her across the Kingdom of Shapes, and every scene on the way hides a triangle to find by touch: an obtuse-angled street, a cone-shaped gown, a traffic jam in a right angle, a Christmas tree, an equilateral conductor.</div>
+<div class="b" style="font-size: 16.5px; line-height: 1.55">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square changes into other four-sided shapes. I drew every page before a single piece of felt was cut.</div>
 <div class="m" style="font-size: 12px; padding-top: 6px">Rules I designed by</div>
 <div class="b rule"><span class="d rn">1</span><span>Every shape is raised: felt strips, metal or stitched edges.</span></div>
 <div class="b rule"><span class="d rn">2</span><span>Every scene faces a braille card with a raised-line icon of its shape.</span></div>
@@ -38,94 +44,38 @@ body{margin:0}
 <div class="b rule"><span class="d rn">4</span><span>Nothing loose: thread ends are covered and small parts are sewn or sealed.</span></div>
 </div>
 
-<div class="board" style="position: absolute; left: 580px; top: 92px; width: 1276px; height: 828px; box-shadow: 0 26px 50px rgba(0,0,0,.22); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 26px; box-sizing: border-box">
+<div class="board" style="position: absolute; left: 580px; top: 92px; width: 1276px; height: 828px; box-shadow: 0 26px 50px rgba(0,0,0,.22); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 24px 30px; padding: 26px 30px; box-sizing: border-box">
 
-<svg viewBox="0 0 600 380" width="100%" height="100%" aria-label="Sketch of the Triangle Town page">
-<text class="ttl" x="10" y="28">Sketch 01 · Triangle Town</text>
-<rect x="16" y="56" width="200" height="200" rx="8" fill="#22307A"/>
-<rect x="10" y="50" width="200" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<g stroke-linecap="round" fill="none">
-<path d="M38 228 L110 78 L182 228 Z" stroke="#22222E" stroke-width="15" stroke-linejoin="round"/>
-<path d="M38 228 L110 78" stroke="#FF4F8B" stroke-width="9"/>
-<path d="M110 78 L182 228" stroke="#3DDC97" stroke-width="9"/>
-<path d="M182 228 L38 228" stroke="#FFD23F" stroke-width="9"/>
-<path d="M110 130 L140 190 L80 190 Z" stroke="#22222E" stroke-width="13" stroke-linejoin="round"/>
-<path d="M110 130 L140 190 L80 190 Z" stroke="#FF7A1A" stroke-width="7" stroke-linejoin="round"/>
-</g>
-<circle cx="186" cy="74" r="15" fill="#FF6B3D" stroke="#22222E" stroke-width="2.5"/>
-<path d="M186 59 L186 50" stroke="#22222E" stroke-width="3" stroke-linecap="round"/>
-<rect x="226" y="56" width="180" height="200" rx="8" fill="#5FD3C6"/>
-<rect x="220" y="50" width="180" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<rect x="236" y="70" width="150" height="160" rx="8" fill="#FFFFFF" stroke="#22222E" stroke-width="2"/>
-<g fill="#9AA0AE"><circle cx="250" cy="88" r="2.4"/><circle cx="256" cy="88" r="2.4"/><circle cx="250" cy="94" r="2.4"/><circle cx="268" cy="88" r="2.4"/><circle cx="268" cy="94" r="2.4"/><circle cx="274" cy="100" r="2.4"/><circle cx="286" cy="88" r="2.4"/><circle cx="292" cy="94" r="2.4"/><circle cx="304" cy="88" r="2.4"/><circle cx="310" cy="88" r="2.4"/><circle cx="310" cy="94" r="2.4"/><circle cx="322" cy="100" r="2.4"/><circle cx="340" cy="88" r="2.4"/><circle cx="346" cy="94" r="2.4"/></g>
-<g fill="#C9CDD6"><rect x="250" y="118" width="90" height="6" rx="3"/><rect x="250" y="134" width="120" height="6" rx="3"/><rect x="250" y="150" width="110" height="6" rx="3"/><rect x="250" y="166" width="70" height="6" rx="3"/></g>
-<path d="M352 216 L364 182 L376 216 Z" fill="none" stroke="#22222E" stroke-width="2.5" stroke-linejoin="round"/>
-<g stroke="#FF5A1F" stroke-width="1.6" fill="none"><path d="M118 82 Q300 20 418 64"/><path d="M200 70 Q330 110 418 136"/><path d="M370 200 L418 222"/></g>
-<text class="ann" x="424" y="70"><tspan>felt strips: trace</tspan><tspan x="424" dy="22">all three sides</tspan></text>
-<text class="ann" x="424" y="142"><tspan>spinning top locks</tspan><tspan x="424" dy="22">into a triangle loop,</tspan><tspan x="424" dy="22">sealed with silicone</tspan></text>
-<text class="ann" x="424" y="228"><tspan>braille story +</tspan><tspan x="424" dy="22">raised-line triangle</tspan></text>
-<text class="ann" x="16" y="290" style="font-size: 19px">"My name is Jianjian. I live in Triangle Town,</text>
-<text class="ann" x="16" y="312" style="font-size: 19px">in the Kingdom of Shapes."</text>
-</svg>
+<div class="cell">
+<div class="ttl">Sketch 01 · Triangle Town</div>
+<img class="sk" src="/_blob/0830fbd75e9619c8a8c746732efae928" alt="Sketch of the Triangle Town page" style="transform: rotate(-1.5deg)">
+<div class="tape" style="left: 120px; top: 34px; transform: rotate(-4deg)"></div>
+<div class="ann"><span>felt strips: trace all three sides</span><span>spinning top locks into a triangle loop</span><span>title strip in braille</span></div>
+<div class="fin"><img src="/_blob/50718ba5b8c0e084222e68ad35e54cfa" alt="Finished Triangle Town spread"><span>Finished spread</span></div>
+</div>
 
-<svg viewBox="0 0 600 380" width="100%" height="100%" aria-label="Sketch of the Christmas tree page">
-<text class="ttl" x="10" y="28">Sketch 02 · The Christmas Tree</text>
-<rect x="16" y="56" width="200" height="200" rx="8" fill="#E5322F"/>
-<rect x="10" y="50" width="200" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<g stroke="#22222E" stroke-width="2.5" stroke-linejoin="round">
-<path d="M104 168 L178 236 L30 236 Z" fill="#1FA85B"/>
-<path d="M104 118 L166 182 L42 182 Z" fill="#26BD68"/>
-<path d="M104 70 L150 128 L58 128 Z" fill="#1FA85B"/>
-<path d="M104 52 L109 64 L122 64 L112 72 L116 85 L104 77 L92 85 L96 72 L86 64 L99 64 Z" fill="#FFD23F"/>
-</g>
-<g stroke="#22222E" stroke-width="2"><circle cx="80" cy="150" r="7" fill="#F7A1C4"/><circle cx="130" cy="160" r="7" fill="#FFD23F"/><circle cx="70" cy="210" r="7" fill="#F7A1C4"/><circle cx="120" cy="104" r="6" fill="#FFF3DE"/></g>
-<g fill="#FFE27A" stroke="#22222E" stroke-width="1.2"><circle cx="60" cy="178" r="3.5"/><circle cx="84" cy="176" r="3.5"/><circle cx="108" cy="174" r="3.5"/><circle cx="132" cy="176" r="3.5"/><circle cx="156" cy="178" r="3.5"/></g>
-<path d="M164 196 L164 226 Q164 238 176 238 L196 238 L196 226 L178 226 L178 196 Z" fill="#FFFFFF" stroke="#22222E" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M164 206 L178 206 M164 216 L178 216" stroke="#E5322F" stroke-width="4"/>
-<g stroke="#FFF3DE" stroke-width="2.5" stroke-linecap="round"><path d="M36 70 L36 92 M25 81 L47 81 M28 73 L44 89 M44 73 L28 89"/></g>
-<rect x="226" y="56" width="180" height="200" rx="8" fill="#9B5DE5"/>
-<rect x="220" y="50" width="180" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<rect x="236" y="70" width="150" height="160" rx="8" fill="#FFFFFF" stroke="#22222E" stroke-width="2"/>
-<g fill="#C9CDD6"><rect x="250" y="96" width="120" height="6" rx="3"/><rect x="250" y="112" width="90" height="6" rx="3"/></g>
-<g fill="none" stroke="#22222E" stroke-width="2.2" stroke-linejoin="round"><path d="M362 172 L372 188 L352 188 Z"/><path d="M362 184 L376 204 L348 204 Z"/><path d="M362 200 L370 216 L354 216 Z"/></g>
-<g stroke="#FF5A1F" stroke-width="1.6" fill="none"><path d="M150 150 Q330 70 418 62"/><path d="M146 178 Q320 150 418 136"/><path d="M172 214 Q320 230 418 222"/></g>
-<text class="ann" x="424" y="58"><tspan>layer 2 lifts on</tspan><tspan x="424" dy="22">velcro</tspan></text>
-<text class="ann" x="424" y="132"><tspan>LED string hidden</tspan><tspan x="424" dy="22">under layer 2, switch</tspan><tspan x="424" dy="22">under the gift box</tspan></text>
-<text class="ann" x="424" y="236"><tspan>red strips cover</tspan><tspan x="424" dy="22">the wiring</tspan></text>
-<text class="ann" x="16" y="290" style="font-size: 19px">"A big Christmas tree glows at the door</text>
-<text class="ann" x="16" y="312" style="font-size: 19px">of the concert hall."</text>
-</svg>
+<div class="cell">
+<div class="ttl">Sketch 02 · The Christmas Tree</div>
+<img class="sk" src="/_blob/96a23b2a58703ae6cfc0f0c4c259729b" alt="Sketch of the Christmas tree page" style="transform: rotate(1.5deg)">
+<div class="tape" style="left: 130px; top: 36px; transform: rotate(3deg)"></div>
+<div class="ann"><span>layer 2 lifts on velcro</span><span>LED string hidden under layer 2, switch under the gift</span><span>stocking: soft and hard textures</span></div>
+<div class="fin"><img src="/_blob/341c963622a13464d7dbe1d608d5ae7f" alt="Finished Christmas tree spread"><span>Finished spread</span></div>
+</div>
 
-<svg viewBox="0 0 600 380" width="100%" height="100%" aria-label="Sketch of the triangle conductor page">
-<text class="ttl" x="10" y="28">Sketch 03 · The Triangle Conductor</text>
-<rect x="16" y="56" width="200" height="200" rx="8" fill="#8E3FBF"/>
-<rect x="10" y="50" width="200" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<path d="M62 222 L108 80 L162 222 L80 222" fill="none" stroke="#22222E" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M62 222 L108 80 L162 222 L80 222" fill="none" stroke="#C9CFD8" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="96" y="62" width="24" height="14" rx="3" fill="#FFF3DE" stroke="#22222E" stroke-width="2"/>
-<path d="M168 92 L182 226" stroke="#22222E" stroke-width="7" stroke-linecap="round"/>
-<path d="M168 92 L182 226" stroke="#FFD23F" stroke-width="3.5" stroke-linecap="round"/>
-<circle cx="167" cy="86" r="10" fill="#FF6B3D" stroke="#22222E" stroke-width="2.5"/>
-<rect x="164" y="140" width="30" height="16" rx="2" fill="#FF8A3D" stroke="#22222E" stroke-width="2"/>
-<rect x="166" y="176" width="30" height="16" rx="2" fill="#FF8A3D" stroke="#22222E" stroke-width="2"/>
-<rect x="226" y="56" width="180" height="200" rx="8" fill="#1F7BE0"/>
-<rect x="220" y="50" width="180" height="200" rx="8" fill="none" stroke="#22222E" stroke-width="2.5"/>
-<rect x="236" y="70" width="150" height="160" rx="8" fill="#FFFFFF" stroke="#22222E" stroke-width="2"/>
-<g fill="#C9CDD6"><rect x="250" y="100" width="70" height="6" rx="3"/><rect x="250" y="116" width="120" height="6" rx="3"/><rect x="250" y="132" width="110" height="6" rx="3"/><rect x="250" y="148" width="124" height="6" rx="3"/></g>
-<path d="M350 180 L378 180 L364 200 Z M364 200 L364 218" fill="none" stroke="#22222E" stroke-width="2.2" stroke-linejoin="round"/>
-<g stroke="#FF5A1F" stroke-width="1.6" fill="none"><path d="M140 150 Q300 60 418 62"/><path d="M196 150 Q320 140 418 140"/><path d="M372 196 L418 220"/></g>
-<text class="ann" x="424" y="58"><tspan>a real metal</tspan><tspan x="424" dy="22">triangle: it rings</tspan></text>
-<text class="ann" x="424" y="136"><tspan>beater held by two</tspan><tspan x="424" dy="22">felt tabs</tspan></text>
-<text class="ann" x="424" y="226"><tspan>glass icon for the</tspan><tspan x="424" dy="22">next line of the story</tspan></text>
-<text class="ann" x="16" y="290" style="font-size: 19px">"On stage, an equilateral-triangle conductor</text>
-<text class="ann" x="16" y="312" style="font-size: 19px">keeps every beat equal."</text>
-</svg>
+<div class="cell">
+<div class="ttl">Sketch 03 · The Triangle Conductor</div>
+<img class="sk" src="/_blob/2a2f4fffdea7c99ea3d77ae8738189f5" alt="Sketch of the triangle instrument page" style="transform: rotate(1deg)">
+<div class="tape" style="left: 110px; top: 34px; transform: rotate(-2deg)"></div>
+<div class="ann"><span>a real metal triangle: it rings</span><span>beater held by two felt tabs</span><span>equal sides, equal beats</span></div>
+<div class="fin"><img src="/_blob/4db6d2baca8137407fadc030c2216315" alt="Finished triangle spread"><span>Finished spread</span></div>
+</div>
 
-<div style="position: relative">
-<div style="position: absolute; left: 8px; top: 2px; font-family: 'Caveat', cursive; font-size: 28px; font-weight: 700; color: #22222E">… and how they came out</div>
-<img class="stk" src="/_blob/50718ba5b8c0e084222e68ad35e54cfa" alt="Finished Triangle Town page" style="position: absolute; left: 10px; top: 54px; width: 300px; transform: rotate(-4deg)">
-<img class="stk" src="/_blob/341c963622a13464d7dbe1d608d5ae7f" alt="Finished Christmas tree page" style="position: absolute; left: 270px; top: 104px; width: 300px; transform: rotate(3deg)">
-<img class="stk" src="/_blob/4db6d2baca8137407fadc030c2216315" alt="Finished triangle conductor page" style="position: absolute; left: 110px; top: 196px; width: 300px; transform: rotate(-1deg)">
+<div class="cell">
+<div class="ttl">Sketch 04 · Book 2, Fangfang</div>
+<img class="sk" src="/_blob/66e4b64e5791a77cdcc2d80e0eb897a6" alt="Sketch of the square book cover" style="transform: rotate(-1deg)">
+<div class="tape" style="left: 125px; top: 35px; transform: rotate(5deg)"></div>
+<div class="ann"><span>four-sided family: square, rectangle, rhombus, trapezoid</span><span>stitched edges you can trace</span></div>
+<div class="fin"><img src="/_blob/b6195e76ec6f3d897f7096f9de78442e" alt="A child reading the rhombus page"><span>In use: the rhombus card</span></div>
 </div>
 
 </div>
