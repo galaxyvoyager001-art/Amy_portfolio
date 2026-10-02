@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A House in Miniature</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.pin{position:absolute;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#141414;white-space:nowrap}
+.pd{width:12px;height:12px;border-radius:50%;background:#7A1F2B;box-shadow:0 0 0 4px rgba(255,255,255,.9)}
+.pl{width:44px;height:1px;background:#141414}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #141414">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>02 — Sight</span><span>Amy Hu · 10</span></div>
+
+<div class="d" style="position: absolute; left: 40px; top: 560px; font-size: 420px; line-height: .8; color: #FFFFFF; -webkit-text-stroke: 1.5px #E4D7D9">02</div>
+
+<div style="position: absolute; left: 64px; top: 100px; width: 560px; display: flex; flex-direction: column; gap: 22px">
+<div class="m" style="font-size: 13px; color: #7A1F2B">Craft · photographed on white</div>
+<div class="d" style="font-size: 104px; line-height: .84">A HOUSE IN<br>MINIATURE</div>
+<div class="s" style="font-size: 34px; line-height: 1.1; font-style: italic">A whole home, small enough to sit on a desk.</div>
+<div class="b" style="font-size: 17px; line-height: 1.6; max-width: 460px">A bookcase full of tiny books, a living room behind a round moon window, a loft bed, a kitchen and a dining table already set for dinner. Every room is furnished and finished by hand.</div>
+</div>
+
+<div style="position: absolute; left: 640px; top: 92px; width: 1200px; height: 830px">
+<img src="ASSET/cut_house_pano.webp" alt="The miniature house, full view" style="position: absolute; left: 0; top: 0; width: 1058px; filter: drop-shadow(0 30px 30px rgba(0,0,0,.14))">
+<div class="pin" style="left: 120px; top: 150px"><span class="pd"></span><span class="pl"></span><span>Bookcase</span></div>
+<div class="pin" style="left: 420px; top: 330px"><span class="pd"></span><span class="pl"></span><span>Moon window</span></div>
+<div class="pin" style="left: 650px; top: 120px"><span class="pd"></span><span class="pl"></span><span>Loft bed</span></div>
+<div class="pin" style="left: 800px; top: 450px"><span class="pd"></span><span class="pl"></span><span>Dining table</span></div>
+<div class="pin" style="left: 470px; top: 640px"><span class="pd"></span><span class="pl"></span><span>Sofa</span></div>
+<div class="m" style="position: absolute; right: 0; bottom: 0; font-size: 12px; color: #6A6A6A">Fig. 01 — Full view</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

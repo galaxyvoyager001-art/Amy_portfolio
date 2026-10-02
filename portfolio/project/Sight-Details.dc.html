@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>House details</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.col{display:flex;flex-direction:column;gap:22px}
+.fig{display:flex;flex-direction:column;gap:8px}
+.fig img{width:100%;display:block;box-shadow:0 14px 24px rgba(0,0,0,.10)}
+.cap{display:flex;gap:12px;align-items:baseline;border-top:1px solid #141414;padding-top:7px;font-size:15px}
+.fn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#7A1F2B;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #141414">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>02 — Sight · Details</span><span>Amy Hu · 11</span></div>
+
+<div style="position: absolute; left: 64px; top: 96px; right: 64px; display: grid; grid-template-columns: 400px 460px 360px 380px; gap: 64px; align-items: start">
+
+<div class="col">
+<div class="d" style="font-size: 92px; line-height: .84">ROOM BY<br><span style="color: #7A1F2B">ROOM</span></div>
+<div class="b" style="font-size: 16px; line-height: 1.55">Up close, each room holds its own small world. These are the details I am proudest of.</div>
+<div class="fig"><img src="ASSET/house_d3.webp" alt="Living room behind the moon window" style="width: auto; max-width: 100%; max-height: 480px"><div class="b cap"><span class="fn">Fig. 02</span><span>Moon window and living room</span></div></div>
+</div>
+
+<div class="col">
+<div class="fig"><img src="ASSET/house_d2.webp" alt="Study with bookcase and desk"><div class="b cap"><span class="fn">Fig. 03</span><span>The study: bookcase, desk and chair</span></div></div>
+<div class="fig"><img src="ASSET/house_d1.webp" alt="Dressing room"><div class="b cap"><span class="fn">Fig. 04</span><span>Dressing room</span></div></div>
+</div>
+
+<div class="col">
+<div class="fig"><img src="ASSET/house_d4.webp" alt="Kitchen"><div class="b cap"><span class="fn">Fig. 05</span><span>Kitchen, with every pot hung up</span></div></div>
+<div class="fig"><img src="ASSET/house_d5.webp" alt="Dining table from above"><div class="b cap"><span class="fn">Fig. 06</span><span>Dinner is served, seen from above</span></div></div>
+</div>
+
+<div class="col">
+<div class="fig"><img src="ASSET/house_d8.webp" alt="Tea table part on a book page"><div class="b cap"><span class="fn">Fig. 07</span><span>A single part: the tea table, on a book page for scale</span></div></div>
+<div class="fig"><img src="ASSET/house_d7.webp" alt="Front view of the house"><div class="b cap"><span class="fn">Fig. 08</span><span>Front view</span></div></div>
+</div>
+
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The visit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.fig{display:flex;flex-direction:column;gap:8px}
+.fig img{width:100%;object-fit:cover;display:block}
+.fc{font-size:14px;line-height:1.35}
+.stk{filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 16px 18px rgba(0,0,0,.25))}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #F7A1C4; color: #14205C">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>01 — Touch · Activities</span><span>Amy Hu · 08</span></div>
+
+<div style="position: absolute; left: 64px; top: 90px; width: 540px; display: flex; flex-direction: column; gap: 20px">
+<div class="d" style="font-size: 150px; line-height: .8">THE<br>VISIT</div>
+<div class="b" style="font-size: 17px; line-height: 1.55">When the books were finished, we took them to the children at their NGO. We started with ice-breaker games, then ran a workshop called <i>My Little Planet</i>, where the children painted with materials they could feel. We played more games, interviewed the NGO teachers, and filmed the whole day as a short documentary.</div>
+</div>
+<div class="fig" style="position: absolute; left: 64px; top: 600px; width: 540px">
+<img src="ASSET/club.webp" alt="Club members sewing pages at school" style="height: 270px">
+<span class="b fc">Before the visit: our club workshop, sewing the pages together.</span>
+</div>
+
+<div class="fig" style="position: absolute; left: 648px; top: 90px; width: 620px">
+<img src="ASSET/visit_group.webp" alt="Volunteers together on the visit" style="height: 440px; object-position: center 30%">
+<span class="b fc">The volunteer team on the day of the visit.</span>
+</div>
+<div style="position: absolute; left: 648px; top: 600px; width: 620px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<img src="ASSET/kids1.webp" alt="A child exploring a felt page" style="width: 100%; height: 135px; object-fit: cover; display: block">
+<img src="ASSET/kids2.webp" alt="Children reading the books by touch" style="width: 100%; height: 135px; object-fit: cover; display: block">
+<img src="ASSET/kids3.webp" alt="Hands on the triangle page" style="width: 100%; height: 135px; object-fit: cover; display: block">
+<img src="ASSET/kids4.webp" alt="Turning the felt pages" style="width: 100%; height: 135px; object-fit: cover; display: block">
+</div>
+<span class="b fc" style="position: absolute; left: 648px; top: 890px; width: 620px; font-size: 14px">The children read the books with their fingertips.</span>
+
+<div class="fig" style="position: absolute; left: 1312px; top: 90px; width: 544px">
+<img src="ASSET/planet.webp" alt="Tactile paintings from the My Little Planet workshop" style="height: 400px">
+<span class="b fc"><i>My Little Planet</i>: paintings made with textures instead of colours alone.</span>
+</div>
+
+<img class="stk" src="ASSET/cut_doll.webp" alt="Thank-you doll from the NGO teachers" style="position: absolute; left: 1300px; top: 560px; width: 330px; transform: rotate(-6deg)">
+<div style="position: absolute; left: 1560px; top: 600px; width: 300px; background: #FFFFFF; padding: 18px 20px; box-sizing: border-box; transform: rotate(3deg); box-shadow: 0 16px 24px rgba(20,32,92,.25); display: flex; flex-direction: column; gap: 8px">
+<span class="m" style="font-size: 11px">Tag, translated</span>
+<span style="font-family: 'Caveat', cursive; font-size: 25px; line-height: 1.1">"Thank you, Hu, and the volunteer team of No. 101 Middle School. May this 'Fuba' doll of love and good fortune bring you all joy!"</span>
+<span class="b" style="font-size: 13px">A gift from the NGO teachers.</span>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Twelve bakes</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.it{position:absolute;width:210px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}
+.it img{max-width:170px;max-height:112px;display:block;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 12px 12px rgba(58,30,18,.35))}
+.mo{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A4B2A;padding-top:6px}
+.bn{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:20px;line-height:1}
+.ph{font-family:'Instrument Sans',sans-serif;font-size:12.5px;line-height:1.25;max-width:190px}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #F4C152; color: #3A1E12">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>03 — Taste · Twelve bakes</span><span>Amy Hu · 13</span></div>
+
+<div style="position: absolute; left: 64px; top: 96px; width: 540px; display: flex; flex-direction: column; gap: 22px">
+<div class="d" style="font-size: 92px; line-height: .84">ONE YEAR,<br>TWELVE<br>EXPERIMENTS</div>
+<div class="b" style="font-size: 17px; line-height: 1.6">Every bake in the book is also a small experiment. Around the wheel, each month's bake sits beside the idea its physics page explains: foams, emulsions, heat transfer, starch and fat.</div>
+<div class="s" style="font-size: 28px; line-height: 1.15; font-style: italic">All photographs are from my own kitchen.</div>
+</div>
+
+<svg viewBox="0 0 1920 960" width="1920" height="960" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<circle cx="1220" cy="500" r="330" fill="none" stroke="#3A1E12" stroke-width="2" stroke-dasharray="4 10"/>
+<circle cx="1220" cy="500" r="150" fill="#3A1E12"/>
+</svg>
+<div style="position: absolute; left: 1070px; top: 404px; width: 300px; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #F4C152">
+<span class="d" style="font-size: 110px; line-height: .8">12</span>
+<span class="m" style="font-size: 12px; color: #FFF1DC">recipes · physics</span>
+</div>
+
+<sc-for list="{{items}}" as="it" hint-placeholder-count="12">
+<div class="it" style="left: {{it.x}}px; top: {{it.y}}px">
+<img src="{{it.src}}" alt="{{it.name}}">
+<span class="mo">{{it.month}}</span>
+<span class="bn">{{it.name}}</span>
+<span class="ph">{{it.phys}}</span>
+</div>
+</sc-for>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+const bakes = [
+['Jan', 'Coconut balls', 'Egg-white proteins set the structure', 'ASSET/cut_bake_08.webp'],
+['Feb', 'Croissants', 'Lamination creates the layers', 'ASSET/cut_bake_10.webp'],
+['Mar', 'Bread', 'Yeast fermentation makes the gas', 'ASSET/cut_bake_12.webp'],
+['Apr', 'Lemon cheesecake', 'An emulsion keeps it smooth', 'ASSET/cut_bake_14.webp'],
+['May', 'Macarons', 'A meringue foam builds the shell', 'ASSET/cut_bake_16.webp'],
+['Jun', 'Chiffon cake', 'Whipped egg whites trap air', 'ASSET/cut_bake_18.webp'],
+['Jul', 'Matcha scones', 'Cold butter gives a flaky crumb', 'ASSET/cut_bake_20.webp'],
+['Aug', 'Egg tarts', 'Heat bakes from the outside in', 'ASSET/cut_bake_22.webp'],
+['Sep', 'Osmanthus mung bean cake', 'Starch gelatinises and sets', 'ASSET/cut_bake_24.webp'],
+['Oct', 'Donuts', 'Frying drives fast heat transfer', 'ASSET/cut_bake_26.webp'],
+['Nov', 'Basque cheesecake', 'A steep temperature gradient', 'ASSET/cut_bake_28.webp'],
+['Dec', 'Butter cookies', 'Butter viscosity controls the spread', 'ASSET/cut_bake_30.webp']
+];
+const cx = 1220, cy = 500, R = 330;
+const items = bakes.map((b, i) => {
+const a = -Math.PI / 2 + i * Math.PI / 6;
+return { month: b[0], name: b[1], phys: b[2], src: b[3], x: Math.round(cx + R * Math.cos(a) - 105), y: Math.round(cy + R * Math.sin(a) - 92) };
+});
+return { items };
+}
+}
+</script>
+</body>
+</html>

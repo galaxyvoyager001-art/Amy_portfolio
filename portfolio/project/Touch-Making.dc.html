@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Making a page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.stk{filter:drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 18px 20px rgba(60,20,0,.35))}
+.n{position:absolute;font-size:96px;line-height:.8;color:transparent;-webkit-text-stroke:2.5px #14205C}
+.cap{position:absolute;display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.4;color:#14205C}
+.ct{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:24px;line-height:1}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FF5A1F; color: #14205C">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>01 — Touch · Making</span><span>Amy Hu · 05</span></div>
+
+<svg viewBox="0 0 1920 960" width="1920" height="960" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<path d="M420 470 C 560 300, 640 220, 800 250 S 1060 180, 1190 220 S 1500 260, 1620 300 C 1760 360, 1700 470, 1500 500 S 1100 470, 960 560 S 900 760, 1240 770 S 1560 700, 1680 640" fill="none" stroke="#14205C" stroke-width="3" stroke-dasharray="16 12" stroke-linecap="round"/>
+</svg>
+
+<div class="d" style="position: absolute; left: 64px; top: 92px; font-size: 112px; line-height: .84">HOW A PAGE<br>IS MADE</div>
+
+<img class="stk" src="ASSET/cut_materials.webp" alt="The material kit for one page" style="position: absolute; left: 70px; top: 330px; width: 500px; transform: rotate(-3deg)">
+<div class="cap b" style="left: 70px; top: 680px; width: 420px"><span class="ct">00 · The kit</span><span>Everything for one page: felt sheets, coloured felt strips, a braille story card and thread. We packed a kit like this for every club member.</span></div>
+
+<img class="stk" src="ASSET/cut_step_measure.webp" alt="Measuring felt strips" style="position: absolute; left: 650px; top: 150px; width: 320px; transform: rotate(2deg)">
+<div class="d n" style="left: 610px; top: 116px">01</div>
+<div class="cap b" style="left: 660px; top: 356px; width: 300px"><span class="ct">Measure &amp; mark</span><span>Strips are measured against the page before cutting.</span></div>
+
+<img class="stk" src="ASSET/cut_step_cut.webp" alt="Cutting the felt" style="position: absolute; left: 1050px; top: 104px; width: 300px; transform: rotate(-3deg)">
+<div class="d n" style="left: 1010px; top: 80px">02</div>
+<div class="cap b" style="left: 1060px; top: 320px; width: 290px"><span class="ct">Cut the felt</span><span>Each scene piece is cut by hand.</span></div>
+
+<img class="stk" src="ASSET/cut_step_draw.webp" alt="Tracing a shape onto felt" style="position: absolute; left: 1440px; top: 150px; width: 360px; transform: rotate(3deg)">
+<div class="d n" style="left: 1410px; top: 112px">03</div>
+<div class="cap b" style="left: 1450px; top: 340px; width: 320px"><span class="ct">Trace the shapes</span><span>Outlines go onto the felt with a ruler first.</span></div>
+
+<img class="stk" src="ASSET/cut_step_layout.webp" alt="Laying out a scene" style="position: absolute; left: 700px; top: 470px; width: 250px; transform: rotate(-4deg)">
+<div class="d n" style="left: 650px; top: 450px">04</div>
+<div class="cap b" style="left: 700px; top: 770px; width: 260px"><span class="ct">Lay out the scene</span><span>Pieces are placed and checked before sewing.</span></div>
+
+<img class="stk" src="ASSET/cut_step_glue.webp" alt="Fixing the braille card" style="position: absolute; left: 1040px; top: 540px; width: 330px; transform: rotate(2deg)">
+<div class="d n" style="left: 1000px; top: 520px">05</div>
+<div class="cap b" style="left: 1050px; top: 745px; width: 300px"><span class="ct">Fix the braille card</span><span>The story card is fixed opposite the scene.</span></div>
+
+<div style="position: absolute; left: 1440px; top: 470px; width: 400px; background: #FFF3DE; padding: 12px 12px 14px; box-sizing: border-box; transform: rotate(3deg); box-shadow: 0 22px 34px rgba(60,20,0,.35); display: flex; flex-direction: column; gap: 10px">
+<img src="ASSET/amy_working.webp" alt="Amy working at her desk" style="width: 100%; height: 270px; object-fit: cover; display: block">
+<span style="font-family: 'Caveat', cursive; font-size: 26px; line-height: 1">06 · piecing a page together at my desk</span>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
