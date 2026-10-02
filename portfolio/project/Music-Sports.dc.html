@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Music and sports</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Caveat:wght@500;700&amp;family=Noto+Serif+SC:wght@600;900&amp;display=swap">
+<style>
+body{margin:0}
+.ph{box-sizing:border-box;position:relative;overflow:hidden;background:#E6E4DE repeating-linear-gradient(135deg,rgba(0,0,0,.04) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:12px;font:500 10px/1.45 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:#55524B;letter-spacing:.02em}
+.it{display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;padding:8px 0;font-size:14px;line-height:1.35}
+.yr{font-family:'IBM Plex Mono',monospace;font-size:11px}
+</style>
+</helmet>
+<div style="width: 1123px; height: 794px; position: relative; overflow: hidden; background: #F5F5F2; color: #1A1A18; font-family: 'Newsreader', Georgia, serif; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
+
+<div style="position: relative; background: #2747C9; color: #FFFFFF; padding: 44px 40px 40px 56px; display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase">04 Other · 音乐</div>
+<div style="font-family: 'Gloock', 'Times New Roman', serif; font-size: 96px; line-height: .85">Music</div>
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; height: 300px">
+<div class="ph" style="background-color: #C9D2F3">演奏 / 舞台照</div>
+<div class="ph" style="background-color: #C9D2F3">乐器或乐谱特写</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div class="it" style="border-top: 1px solid rgba(255,255,255,.5)"><span class="yr">[YEAR]</span><span>[Instrument] · [grade / level, e.g. ABRSM Grade 8]</span></div>
+<div class="it" style="border-top: 1px solid rgba(255,255,255,.5)"><span class="yr">[YEAR]</span><span>[Performance / competition / ensemble]</span></div>
+<div class="it" style="border-top: 1px solid rgba(255,255,255,.5); border-bottom: 1px solid rgba(255,255,255,.5)"><span class="yr">[YEAR]</span><span>[Performance / competition / ensemble]</span></div>
+</div>
+</div>
+
+<div style="position: relative; padding: 44px 56px 40px 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #2747C9">04 Other · 运动</div>
+<div style="font-family: 'Gloock', 'Times New Roman', serif; font-size: 96px; line-height: .85; color: #2747C9">Sports</div>
+<div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 12px; height: 300px">
+<div class="ph">训练 / 器材</div>
+<div class="ph">比赛动作抓拍（越有动感越好）</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div class="it" style="border-top: 1px solid #1A1A18"><span class="yr">[YEAR]</span><span>[Sport] · [team / position / years played]</span></div>
+<div class="it" style="border-top: 1px solid #1A1A18"><span class="yr">[YEAR]</span><span>[Match / medal / result]</span></div>
+<div class="it" style="border-top: 1px solid #1A1A18; border-bottom: 1px solid #1A1A18"><span class="yr">[YEAR]</span><span>[Match / medal / result]</span></div>
+</div>
+<div style="position: absolute; right: 56px; bottom: 30px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #55524B">12</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1123,"height":794}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Baking notebook</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Caveat:wght@500;700&amp;family=Noto+Serif+SC:wght@600;900&amp;display=swap">
+<style>
+body{margin:0}
+.grid{background-color:#FBFAF4;background-image:linear-gradient(rgba(70,110,170,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(70,110,170,.16) 1px,transparent 1px);background-size:20px 20px}
+.ph{box-sizing:border-box;position:relative;overflow:hidden;background:#E6E1D4 repeating-linear-gradient(135deg,rgba(0,0,0,.04) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:10px;font:500 10px/1.4 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:#55524B}
+.hand{font-family:'Caveat','Bradley Hand',cursive}
+.tape{position:absolute;width:76px;height:22px;background:rgba(242,196,84,.55);border:1px solid rgba(0,0,0,.05)}
+.pr{display:grid;grid-template-columns:minmax(0,1.25fr) 74px minmax(0,1.1fr);gap:10px;padding:7px 0;border-top:1px solid #4A2A1A;font-size:12.5px;line-height:1.3;align-items:baseline}
+.ing{display:flex;justify-content:space-between;border-bottom:1px dotted #8C7A6B;padding:3px 0}
+</style>
+</helmet>
+<div class="grid" style="width: 1123px; height: 794px; position: relative; overflow: hidden; color: #2B1A10; font-family: 'Newsreader', Georgia, serif">
+
+<div style="position: absolute; left: 56px; top: 40px; display: flex; align-items: baseline; gap: 18px">
+<span style="font-family: 'Gloock', serif; font-size: 64px; line-height: 1; color: #C98E1E">03</span>
+<span class="hand" style="font-size: 54px; font-weight: 700; line-height: 1">Baking notebook</span>
+<span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 18px; letter-spacing: .3em">烘焙手账</span>
+</div>
+<div class="hand" style="position: absolute; right: 56px; top: 52px; font-size: 24px; color: #4A2A1A">Entry #[N] · [date]</div>
+
+<div style="position: absolute; left: 60px; top: 150px; width: 270px; background: #FFFFFF; padding: 10px 10px 8px; box-shadow: 0 8px 18px rgba(60,40,20,.15); transform: rotate(-3deg)">
+<div class="ph" style="height: 230px">成品照片（手账风）</div>
+<div class="hand" style="font-size: 22px; padding-top: 6px">[name of the bake]</div>
+<div class="tape" style="top: -10px; left: 96px; transform: rotate(4deg)"></div>
+</div>
+<div style="position: absolute; left: 110px; top: 470px; width: 220px; background: #FFFFFF; padding: 10px 10px 8px; box-shadow: 0 8px 18px rgba(60,40,20,.15); transform: rotate(3deg)">
+<div class="ph" style="height: 160px">切面 / 组织特写</div>
+<div class="hand" style="font-size: 20px; padding-top: 6px">crumb: [open / tight]</div>
+<div class="tape" style="top: -10px; left: 70px; transform: rotate(-5deg)"></div>
+</div>
+
+<div style="position: absolute; left: 380px; top: 150px; width: 300px; box-sizing: border-box; background: #FFFDF6; border: 1px solid #D9CBB5; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; transform: rotate(-.6deg)">
+<div class="hand" style="font-size: 30px; font-weight: 700; line-height: 1">Recipe · [name]</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #6B5444">Baker's % · flour = 100</div>
+<div style="display: flex; flex-direction: column; font-size: 14px">
+<div class="ing"><span>Flour</span><span>[g] · 100%</span></div>
+<div class="ing"><span>Water</span><span>[g] · [%]</span></div>
+<div class="ing"><span>Butter</span><span>[g] · [%]</span></div>
+<div class="ing"><span>Sugar</span><span>[g] · [%]</span></div>
+<div class="ing"><span>Egg</span><span>[g] · [%]</span></div>
+<div class="ing"><span>Yeast / baking powder</span><span>[g] · [%]</span></div>
+</div>
+<div class="hand" style="font-size: 21px; line-height: 1.15; color: #4A2A1A">Method: [3–4 short steps in your own handwriting style]</div>
+</div>
+
+<div class="hand" style="position: absolute; left: 400px; top: 560px; width: 270px; font-size: 23px; line-height: 1.15; color: #8A3B12; transform: rotate(-2deg)">steam + CO₂ expand in the first minutes → oven spring ↗<br>crust browns above ~140 °C (Maillard)</div>
+
+<div style="position: absolute; left: 720px; top: 150px; width: 347px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'Gloock', serif; font-size: 26px; line-height: 1.05">Physical properties</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #6B5444">What I measured · 物理性质记录</div>
+<div style="display: flex; flex-direction: column; padding-top: 4px">
+<div class="pr" style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B5444"><span>Property</span><span>Value</span><span>Why it matters</span></div>
+<div class="pr"><span>Dough temperature</span><span>[ ] °C</span><span>Sets yeast activity</span></div>
+<div class="pr"><span>Oven temperature</span><span>[ ] °C</span><span>Heat transfer rate</span></div>
+<div class="pr"><span>Mass before → after</span><span>[ ] → [ ] g</span><span>Water lost as steam</span></div>
+<div class="pr"><span>Water loss</span><span>[ ] %</span><span>Moisture of crumb</span></div>
+<div class="pr"><span>Height rise</span><span>[ ] mm</span><span>Gas expansion</span></div>
+<div class="pr"><span>Density</span><span>[ ] g/cm³</span><span>Light vs dense crumb</span></div>
+<div class="pr" style="border-bottom: 1px solid #4A2A1A"><span>Core temp at done</span><span>[ ] °C</span><span>Starch gelatinised</span></div>
+</div>
+<div class="hand" style="font-size: 21px; line-height: 1.15; color: #4A2A1A; padding-top: 6px">conclusion: [one line on what you changed next time and why]</div>
+</div>
+
+<div style="position: absolute; right: 56px; bottom: 30px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B5444">10</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1123,"height":794}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

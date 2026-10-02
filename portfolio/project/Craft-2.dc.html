@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Craft plates</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Caveat:wght@500;700&amp;family=Noto+Serif+SC:wght@600;900&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+.ph{box-sizing:border-box;position:relative;overflow:hidden;background:#F4F4F4;border:1px dashed #C9C9C9;display:flex;align-items:flex-end;padding:12px;font:500 10px/1.45 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:#6A6A6A;letter-spacing:.02em}
+.plate{display:flex;flex-direction:column;gap:8px}
+.cap{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-top:1px solid #111111;padding-top:7px}
+.pn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#6A6A6A}
+.pt{font-family:'Gloock',serif;font-size:17px}
+.pm{font-size:12.5px;color:#4A4A4A}
+</style>
+</helmet>
+<div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 48px 56px 40px; position: relative; overflow: hidden; background: #FFFFFF; color: #111111; font-family: 'Newsreader', Georgia, serif; display: flex; flex-direction: column; gap: 26px">
+
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<div style="display: flex; gap: 18px; align-items: baseline"><span style="font-family: 'Gloock', serif; font-size: 40px; line-height: 1">Plates 02 – 07</span><span style="font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 15px; letter-spacing: .3em">手工作品</span></div>
+<span class="pn">All objects shot on white</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 30px; flex-grow: 1">
+<div class="plate"><div class="ph" style="height: 232px">PLATE 02 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">02</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+<div class="plate"><div class="ph" style="height: 232px">PLATE 03 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">03</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+<div class="plate"><div class="ph" style="height: 232px">PLATE 04 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">04</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+<div class="plate"><div class="ph" style="height: 232px">PLATE 05 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">05</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+<div class="plate"><div class="ph" style="height: 232px">PLATE 06 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">06</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+<div class="plate"><div class="ph" style="height: 232px">PLATE 07 · 白底</div><div class="cap"><span class="pt">[Title]</span><span class="pn">07</span></div><div class="pm">[Material] · [W×H cm] · [Year]</div></div>
+</div>
+
+<div style="position: absolute; right: 56px; bottom: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6A6A6A">09</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1123,"height":794}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

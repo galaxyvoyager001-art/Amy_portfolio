@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reading sessions</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Caveat:wght@500;700&amp;family=Noto+Serif+SC:wght@600;900&amp;display=swap">
+<style>
+body{margin:0}
+.ph{box-sizing:border-box;position:relative;overflow:hidden;background:#E6E4DE repeating-linear-gradient(135deg,rgba(0,0,0,.04) 0 8px,transparent 8px 16px);display:flex;align-items:flex-end;padding:12px;font:500 11px/1.45 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:#55524B;letter-spacing:.02em}
+.lr{display:grid;grid-template-columns:70px minmax(0,1fr) 34px;gap:10px;padding:8px 0;border-top:1px solid #CFCBC2;font-size:13px}
+</style>
+</helmet>
+<div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; position: relative; overflow: hidden; background: #F5F5F2; color: #1A1A18; font-family: 'Newsreader', Georgia, serif; display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 34px">
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: 420px minmax(0, 1fr); gap: 14px">
+<div class="ph" style="grid-column: span 2">活动主图 · 读书现场全景（孩子围坐、你在讲故事）</div>
+<div class="ph" style="background-color: #EFD3C8">孩子拿着书的特写</div>
+<div class="ph">互动 / 做游戏</div>
+<div class="ph">孩子的画或留言卡</div>
+<div class="ph">合影</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #C8442A">01 Reading Companion · 活动</div>
+<div style="font-family: 'Gloock', 'Times New Roman', serif; font-size: 48px; line-height: 1">Reading sessions</div>
+<div style="font-size: 15px; line-height: 1.5; color: #3B3934">[Where the sessions happen, how often, and what one session looks like from start to finish.]</div>
+<div style="position: relative; padding: 18px 0 0 0">
+<div style="position: absolute; left: -6px; top: -22px; font-family: 'Gloock', serif; font-size: 90px; line-height: 1; color: #C8442A">“</div>
+<div style="font-family: 'Caveat', 'Bradley Hand', cursive; font-size: 27px; line-height: 1.15; padding-left: 34px">[Something one of the children said to you — keep it in their words.]</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 8px 0 0 34px; color: #55524B">— [Name / age]</div>
+</div>
+<div style="margin-top: auto; display: flex; flex-direction: column">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; padding-bottom: 6px">Session log</div>
+<div class="lr" style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #55524B"><span>Date</span><span>Place · book read</span><span>Kids</span></div>
+<div class="lr"><span>[MM/YY]</span><span>[Place] · [Book]</span><span>[N]</span></div>
+<div class="lr"><span>[MM/YY]</span><span>[Place] · [Book]</span><span>[N]</span></div>
+<div class="lr" style="border-bottom: 1px solid #CFCBC2"><span>[MM/YY]</span><span>[Place] · [Book]</span><span>[N]</span></div>
+</div>
+<div style="text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #55524B">06</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1123,"height":794}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
