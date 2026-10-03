@@ -8,59 +8,32 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,600;1,8..60,700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
 body{margin:0}
-.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
-.s{font-family:'Instrument Serif',Georgia,serif}
-.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
-.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.fig{position:absolute;display:flex;flex-direction:column;gap:6px}
-.fig img{display:block;width:100%;object-fit:cover;border-radius:4px}
-.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8C96AE}
-.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #FF8A3D;padding-top:10px}
-.on{font-size:46px;line-height:.9;color:#FFFFFF}
-.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
-.kv{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;font-size:14px;line-height:1.4;padding:7px 0;border-top:1px solid rgba(238,241,248,.15)}
-.kv span:first-child{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#FF8A3D;padding-top:2px}
+*{box-sizing:border-box}
+.sr{font-family:'Source Serif 4','Times New Roman',serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}
+.band{position:absolute;left:0;top:0;width:1920px;height:118px;background:#0051AF;color:#FFFFFF;display:grid;grid-template-columns:300px minmax(0,1fr) 300px;align-items:center;font-family:'Source Serif 4',serif}
+.sec{position:absolute;background:#E9F5FD;padding:46px 16px 12px}
+.tab{position:absolute;left:0;top:0;background:#0B57B0;color:#FFFFFF;font-family:'Source Serif 4',serif;font-weight:700;font-size:21px;line-height:1;padding:9px 16px 8px}
+.sub{display:inline-block;background:#3D7FD0;color:#FFFFFF;font-family:'Source Serif 4',serif;font-weight:700;font-style:italic;font-size:14px;padding:4px 12px;clip-path:polygon(0 0,100% 0,94% 100%,0 100%);margin:2px 0 6px}
+.ul{margin:0;padding:0 0 0 18px;font-family:'Source Serif 4',serif;font-weight:600;font-size:13.5px;line-height:1.38;color:#111}
+.ul li{margin:0 0 6px}
+.ul b{color:#0B57B0}
+.cap{font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11.5px;line-height:1.3;text-align:center;color:#222;padding-top:4px}
+.pill{font-family:'Source Serif 4',serif;font-weight:700;font-size:12.5px;line-height:1.2;text-align:center;padding:7px 6px;display:flex;align-items:center;justify-content:center}
+.eq{font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:16px;text-align:center;color:#111;padding:6px 0;white-space:nowrap}
+.kw{display:flex;flex-direction:column;gap:2px;border-top:3px solid #0B57B0;padding-top:6px}
+.kw b{font-family:'Source Serif 4',serif;font-weight:800;font-size:32px;line-height:1;color:#0B3F86}
+.kw span{font-family:'Source Serif 4',serif;font-weight:600;font-size:12.5px;line-height:1.25;color:#1D2B40}
+.fig{background:#FFFFFF;border:1px solid #BFD9EE;display:flex;align-items:center;justify-content:center;padding:6px}
+.fig img{max-width:100%;max-height:100%;display:block}
+.arrow{font-size:22px;color:#3D7FD0;text-align:center;line-height:1}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #120E0C; color: #F2EEEA">
-
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #B8ADA4"><span>05 — Mind · Nº 04 / 06 · Strength</span><span>Research · Chinese Academy of Sciences, Institute of Mechanics</span><span>Amy Hu · 18</span></div>
-
-<div style="position: absolute; left: 64px; top: 88px; width: 600px; display: flex; flex-direction: column; gap: 14px">
-<div class="m" style="font-size: 12px; color: #FF8A3D">Spacecraft solid mechanics research intern</div>
-<div class="d" style="font-size: 88px; line-height: .84">FLOWED<br><span style="color: #FF8A3D">METAL</span></div>
-<div class="s" style="font-size: 26px; line-height: 1.15; font-style: italic">Micro-particle impacts on metallic glass at high temperature.</div>
-<div class="b" style="font-size: 15px; line-height: 1.58; color: #DED7D0">Spacecraft shields are hit by tiny particles at enormous speed, often while hot. Crystalline metals can get <i>stronger</i> under fast impact as temperature rises; ordinary glasses get softer. Metallic glass is both a metal and a glass, so which way does it go?</div>
-<div style="display: flex; flex-direction: column">
-<div class="kv"><span>Sample</span><span>Pd₄₃Ni₁₀Cu₂₇P₂₀ bulk metallic glass, confirmed amorphous by XRD and DSC</span></div>
-<div class="kv"><span>Impact</span><span>Laser-induced particle impact: 30 µm silica spheres at 70–700 m/s, filmed by a high-speed camera</span></div>
-<div class="kv"><span>Heat</span><span>25, 100 and 200 °C, held by a PID controller</span></div>
-<div class="kv" style="border-bottom: 1px solid rgba(238,241,248,.15)"><span>Model</span><span>Finite-element simulation with a shear-transformation constitutive model</span></div>
-</div>
-</div>
-
-<div class="fig" style="left: 700px; top: 92px; width: 520px"><img src="/_blob/6c5b7508c3827167ed71b6df53fc033e" alt="Laser and high-speed camera impact rig" style="height: 390px"><span class="fc">Fig. 1 · The impact rig: 532 nm laser, high-speed camera, heated stage</span></div>
-<div class="fig" style="left: 1250px; top: 92px; width: 606px"><img src="/_blob/1a3e3f795e41906ed4bf6bbfb51a52e9" alt="High-speed frames of a particle impact" style="height: 160px; object-fit: contain; background: #FFFFFF"><span class="fc">Fig. 2 · A particle arrives at 383 m/s and rebounds</span></div>
-<div class="fig" style="left: 1250px; top: 300px; width: 296px"><img src="/_blob/c3401b0e4a6dd320fe1d1d0d582fde62" alt="SEM image of crater at 25 °C" style="height: 182px"><span class="fc">Fig. 3a · 25 °C: solid-like crater</span></div>
-<div class="fig" style="left: 1560px; top: 300px; width: 296px"><img src="/_blob/d5cdc3ff88631e74d766faf945a07264" alt="SEM image of crater at 200 °C" style="height: 182px"><span class="fc">Fig. 3b · 200 °C: fluid-like pile-up</span></div>
-<div class="fig" style="left: 700px; top: 530px; width: 300px"><img src="/_blob/0f1e5bcc281d446411ef773b7ef5aef2" alt="Coefficient of restitution against impact velocity" style="height: 200px; object-fit: contain; background: #FFFFFF"><span class="fc">Fig. 4 · Less rebound when hot</span></div>
-<div class="fig" style="left: 1030px; top: 530px; width: 390px"><img src="/_blob/6946ad7dd41f787cef71f148dd36d902" alt="Finite-element simulation of impact at two temperatures" style="height: 200px; object-fit: contain; background: #FFFFFF"><span class="fc">Fig. 5 · Simulation reproduces the experiment</span></div>
-<div style="position: absolute; left: 1450px; top: 530px; width: 406px; display: flex; flex-direction: column; gap: 10px">
-<div style="border-left: 3px solid #FF8A3D; padding-left: 16px"><span class="s" style="font-size: 21px; line-height: 1.25; font-style: italic">At 200 °C the glass flows: craters turn fluid-like and dynamic yield strength drops about 10.4%, from 2089 to 1825 MPa.</span></div>
-<div class="m" style="font-size: 11px; color: #FF8A3D; padding-top: 6px">Why it matters</div>
-<div class="b" style="font-size: 15px; line-height: 1.55; color: #DED7D0">Temperature decides whether this material resists or flows. Choosing a shield material by its room-temperature strength alone could be a mistake in space.</div>
-</div>
-
-<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 26px">
-<div class="out"><span class="d on">100+</span><span class="b ol">metallic-glass impact tests</span></div>
-<div class="out"><span class="d on">−10.4%</span><span class="b ol">dynamic yield strength at 200 °C</span></div>
-<div class="out"><span class="d on">3</span><span class="b ol">temperatures, 25 to 200 °C</span></div>
-<div class="out"><span class="d on">1st</span><span class="b ol">author, 28-page research paper + poster</span></div>
-<div class="out"><span class="d on">ISEF</span><span class="b ol">Beijing qualifier</span></div>
-</div>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #ACE0FF">
+<img src="/_blob/da9a1a53fa481f4de7c0a33e7f257341" alt="My research poster: Flowed Metal, micro-particle impacts on metallic glasses under high temperature" style="position: absolute; left: 0; top: 0; width: 1920px; height: 734px; display: block"><div class="m" style="position: absolute; left: 20px; top: 790px; right: 20px; display: flex; justify-content: space-between; font-size: 11px; color: #0B3F86"><span>05 — Mind · Research Nº 04 · Chinese Academy of Sciences, Institute of Mechanics · spacecraft solid mechanics research intern</span><span>My research poster · Amy Hu · 18</span></div><div style="position: absolute; left: 20px; top: 840px; width: 1880px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px"><div class="kw"><b>100+</b><span>metallic-glass impact tests</span></div><div class="kw"><b>−10.39%</b><span>dynamic yield strength, 25 → 200 °C</span></div><div class="kw"><b>3</b><span>temperatures: 25, 100 and 200 °C</span></div><div class="kw"><b>1st</b><span>author, 28-page research paper + poster</span></div><div class="kw"><b>ISEF</b><span>Beijing qualifier</span></div></div>
 
 </div>
 </x-dc>
