@@ -15,13 +15,15 @@ body{margin:0;background:#FFFFFF}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.card{position:absolute;width:496px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:16px;align-items:start}
-.card img{width:210px;height:160px;object-fit:cover;display:block;border-radius:2px;outline:1px solid #7A1F2B;outline-offset:5px;box-shadow:0 10px 18px rgba(0,0,0,.12)}
-.ct{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.card{position:absolute;width:540px;display:grid;grid-template-columns:330px minmax(0,1fr);gap:16px;align-items:center}
+.card .ph{width:330px;height:240px;display:flex;align-items:center;justify-content:center}
+.card .ph img.rect{width:330px;height:236px;object-fit:cover;display:block;border-radius:2px;outline:1px solid #7A1F2B;outline-offset:5px;box-shadow:0 10px 18px rgba(0,0,0,.12)}
+.card .ph img.cut{max-width:330px;max-height:240px;display:block;filter:drop-shadow(0 14px 14px rgba(0,0,0,.18))}
+.ct{display:flex;flex-direction:column;gap:6px}
 .ctt{font-size:24px;line-height:1;color:#7A1F2B}
-.cc{font-size:19px;line-height:1.15;font-style:italic}
-.cd{font-size:13.5px;line-height:1.45;color:#4A4A4A}
-.ring{position:absolute;width:68px;height:68px;border-radius:50%;border:2.5px solid #7A1F2B;box-sizing:border-box;background:rgba(122,31,43,.06)}
+.cc{font-size:18px;line-height:1.15;font-style:italic}
+.cd{font-size:13px;line-height:1.42;color:#4A4A4A}
+.ring{position:absolute;width:40px;height:40px;border-radius:50%;border:2.5px solid #7A1F2B;box-sizing:border-box;background:rgba(122,31,43,.06)}
 .ln{position:absolute;height:0;border-top:1.5px solid #7A1F2B;transform-origin:0 0}
 .dotend{position:absolute;width:10px;height:10px;border-radius:50%;background:#7A1F2B}
 </style>
@@ -35,33 +37,33 @@ body{margin:0;background:#FFFFFF}
 <div class="s" style="font-size: 24px; font-style: italic">Every circle opens a room. Each one is a small world of its own.</div>
 </div>
 
-<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 660px; top: 250px; width: 600px; filter: drop-shadow(0 24px 24px rgba(0,0,0,.12))">
-<div class="card" style="left: 64px; top: 120px"><img src="/_blob/ef01523c3cfe79659d0b88ea4de3be21" alt="The study"><div class="ct"><div class="d ctt">The study</div><div class="s cc">A desk and a full bookcase give the house someone's habits.</div><div class="b cd">Tiny printed books, a desk lamp, brushes and a chair pulled up to work.</div></div></div>
-<div class="ring" style="left: 734px; top: 310px"></div>
-<div class="ln" style="left: 740px; top: 324px; width: 213px; transform: rotate(-144.2deg)"></div>
-<div class="dotend" style="left: 563px; top: 195px"></div>
-<div class="card" style="left: 64px; top: 405px"><img src="/_blob/d90bc1b8a3b5049315ae0f625b760387" alt="Dressing room"><div class="ct"><div class="d ctt">Dressing room</div><div class="s cc">The small things of a morning routine.</div><div class="b cd">A yellow towel on the rail, a basin, a red chair and slippers by the step.</div></div></div>
-<div class="ring" style="left: 698px; top: 452px"></div>
-<div class="ln" style="left: 698px; top: 485px; width: 130px; transform: rotate(-179.8deg)"></div>
-<div class="dotend" style="left: 563px; top: 480px"></div>
-<div class="card" style="left: 64px; top: 690px"><img src="/_blob/c06bb932235b2fc8cc0f8d260fe2eaa8" alt="Moon window"><div class="ct"><div class="d ctt">Moon window</div><div class="s cc">A round window frames the living room like a Chinese garden view.</div><div class="b cd">Painted branches on the walls and a screen glowing with a mountain sunset.</div></div></div>
-<div class="ring" style="left: 854px; top: 395px"></div>
-<div class="ln" style="left: 865px; top: 454px; width: 434px; transform: rotate(133.2deg)"></div>
-<div class="dotend" style="left: 563px; top: 765px"></div>
-<div class="card" style="left: 1360px; top: 120px"><img src="/_blob/f83b583b288aafd266585ca0e6c8e04c" alt="Kitchen"><div class="ct"><div class="d ctt">Kitchen</div><div class="s cc">Tucked under the loft bed, with every pot in its place.</div><div class="b cd">Hanging utensils, a range hood and a row of drawers below.</div></div></div>
-<div class="ring" style="left: 986px; top: 414px"></div>
-<div class="ln" style="left: 1047px; top: 427px; width: 380px; transform: rotate(-36.7deg)"></div>
-<div class="dotend" style="left: 1347px; top: 195px"></div>
-<div class="card" style="left: 1360px; top: 405px"><img src="/_blob/8963dd851db13fa0aba2d8f1d190d37a" alt="Dining table"><div class="ct"><div class="d ctt">Dining table</div><div class="s cc">Dinner is already served for the family.</div><div class="b cd">Plates of food, glasses and chopsticks on a patterned runner.</div></div></div>
-<div class="ring" style="left: 1046px; top: 499px"></div>
-<div class="ln" style="left: 1113px; top: 527px; width: 242px; transform: rotate(-9.9deg)"></div>
-<div class="dotend" style="left: 1347px; top: 480px"></div>
-<div class="card" style="left: 1360px; top: 690px"><img src="/_blob/7de7140b375287d8f49ebbbd00daaaf9" alt="Tea table"><div class="ct"><div class="d ctt">Tea table</div><div class="s cc">The smallest set in the house sits in front of the sofa.</div><div class="b cd">A teapot and cups smaller than a fingernail, shown on a book page for scale.</div></div></div>
-<div class="ring" style="left: 866px; top: 536px"></div>
-<div class="ln" style="left: 931px; top: 584px; width: 460px; transform: rotate(23.8deg)"></div>
-<div class="dotend" style="left: 1347px; top: 765px"></div>
+<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 770px; top: 330px; width: 380px; filter: drop-shadow(0 18px 18px rgba(0,0,0,.12))">
+<div class="card" style="left: 40px; top: 96px"><div class="ph"><img class="cut" src="/_blob/f00502050f787d76ea6a7dcfa8a17d8d" alt="The study"></div><div class="ct"><div class="d ctt">The study</div><div class="s cc">A desk and a full bookcase give the house someone's habits.</div><div class="b cd">Tiny printed books, a desk lamp, brushes and a chair pulled up to work.</div></div></div>
+<div class="ring" style="left: 818px; top: 370px"></div>
+<div class="ln" style="left: 586px; top: 216px; width: 290px; transform: rotate(36.8deg)"></div>
+<div class="dotend" style="left: 581px; top: 211px"></div>
+<div class="card" style="left: 40px; top: 370px"><div class="ph"><img class="rect" src="/_blob/d90bc1b8a3b5049315ae0f625b760387" alt="Dressing room"></div><div class="ct"><div class="d ctt">Dressing room</div><div class="s cc">The small things of a morning routine.</div><div class="b cd">A yellow towel on the rail, a basin, a red chair and slippers by the step.</div></div></div>
+<div class="ring" style="left: 796px; top: 459px"></div>
+<div class="ln" style="left: 586px; top: 490px; width: 210px; transform: rotate(-3.0deg)"></div>
+<div class="dotend" style="left: 581px; top: 485px"></div>
+<div class="card" style="left: 40px; top: 644px"><div class="ph"><img class="cut" src="/_blob/419d94386c54dc42195ec76ceb08b2c9" alt="Moon window"></div><div class="ct"><div class="d ctt">Moon window</div><div class="s cc">A round window frames the living room like a Chinese garden view.</div><div class="b cd">Painted branches on the walls and a screen glowing with a mountain sunset.</div></div></div>
+<div class="ring" style="left: 894px; top: 423px"></div>
+<div class="ln" style="left: 586px; top: 764px; width: 445px; transform: rotate(-46.1deg)"></div>
+<div class="dotend" style="left: 581px; top: 759px"></div>
+<div class="card" style="left: 1340px; top: 96px"><div class="ph"><img class="rect" src="/_blob/f83b583b288aafd266585ca0e6c8e04c" alt="Kitchen"></div><div class="ct"><div class="d ctt">Kitchen</div><div class="s cc">Tucked under the loft bed, with every pot in its place.</div><div class="b cd">Hanging utensils, a range hood and a row of drawers below.</div></div></div>
+<div class="ring" style="left: 978px; top: 435px"></div>
+<div class="ln" style="left: 1334px; top: 216px; width: 396px; transform: rotate(142.9deg)"></div>
+<div class="dotend" style="left: 1329px; top: 211px"></div>
+<div class="card" style="left: 1340px; top: 370px"><div class="ph"><img class="cut" src="/_blob/6920bde1f7be04ac995d990a9257776a" alt="Dining table"></div><div class="ct"><div class="d ctt">Dining table</div><div class="s cc">Dinner is already served for the family.</div><div class="b cd">Plates of food, glasses and chopsticks on a patterned runner.</div></div></div>
+<div class="ring" style="left: 1016px; top: 489px"></div>
+<div class="ln" style="left: 1334px; top: 490px; width: 279px; transform: rotate(176.1deg)"></div>
+<div class="dotend" style="left: 1329px; top: 485px"></div>
+<div class="card" style="left: 1340px; top: 644px"><div class="ph"><img class="cut" src="/_blob/9e30caed9d5cd1ae7d21d74ff2a6eca7" alt="Tea table"></div><div class="ct"><div class="d ctt">Tea table</div><div class="s cc">The smallest set in the house sits in front of the sofa.</div><div class="b cd">A teapot and cups smaller than a fingernail, shown on a book page for scale.</div></div></div>
+<div class="ring" style="left: 902px; top: 513px"></div>
+<div class="ln" style="left: 1334px; top: 764px; width: 455px; transform: rotate(-149.5deg)"></div>
+<div class="dotend" style="left: 1329px; top: 759px"></div>
 
-<div class="b" style="position: absolute; left: 640px; top: 761px; width: 640px; font-size: 15px; line-height: 1.55; text-align: center; color: #3A3A3A">Making it small is not the hard part. The hard part is making every room believable: the scale has to agree, the surfaces have to look used, and the light has to land the way it would in a real home.</div>
+<div class="b" style="position: absolute; left: 650px; top: 800px; width: 620px; font-size: 15px; line-height: 1.55; text-align: center; color: #3A3A3A">Making it small is not the hard part. The hard part is making every room believable: the scale has to agree, the surfaces have to look used, and the light has to land the way it would in a real home.</div>
 
 </div>
 </x-dc>

@@ -19,7 +19,7 @@ body{margin:0}
 .it img{max-width:150px;max-height:84px;display:block;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 10px 10px rgba(58,30,18,.35))}
 .bn{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:18px;line-height:1;padding-top:4px}
 .ph{font-family:'Instrument Sans',sans-serif;font-size:12.5px;line-height:1.25;max-width:190px}
-.th{position:absolute;width:150px;height:109px;object-fit:cover;display:block;border:3px solid #FFF8EA;box-shadow:0 10px 16px rgba(58,30,18,.35)}
+.th{position:absolute;width:206px;height:149px;object-fit:cover;display:block;border:3px solid #FFF8EA;box-shadow:0 10px 16px rgba(58,30,18,.35)}
 </style>
 </helmet>
 <div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #F4C152; color: #3A1E12">
@@ -38,7 +38,7 @@ body{margin:0}
 </div>
 
 <svg viewBox="0 0 1920 960" width="1920" height="960" style="position: absolute; left: 0; top: 0" aria-hidden="true">
-<ellipse cx="1240" cy="490" rx="570" ry="372" fill="none" stroke="#3A1E12" stroke-width="1.5" stroke-dasharray="3 9"/>
+<ellipse cx="1240" cy="490" rx="540" ry="362" fill="none" stroke="#3A1E12" stroke-width="1.5" stroke-dasharray="3 9"/>
 <ellipse cx="1240" cy="490" rx="330" ry="226" fill="none" stroke="#3A1E12" stroke-width="2" stroke-dasharray="4 10"/>
 <circle cx="1240" cy="490" r="104" fill="#3A1E12"/>
 </svg>
@@ -48,8 +48,11 @@ body{margin:0}
 <span class="m" style="font-size: 11px; color: #FFF1DC">months · bakes · ideas</span>
 </div>
 
+<sc-for list="{{phys}}" as="q" hint-placeholder-count="12">
+<img class="th" src="{{q.src}}" alt="{{q.alt}}" style="left: {{q.x}}px; top: {{q.y}}px; transform: rotate({{q.r}}deg)">
+</sc-for>
 <sc-for list="{{pages}}" as="p" hint-placeholder-count="12">
-<img class="th" src="{{p.src}}" alt="{{p.alt}}" style="left: {{p.x}}px; top: {{p.y}}px">
+<img class="th" src="{{p.src}}" alt="{{p.alt}}" style="left: {{p.x}}px; top: {{p.y}}px; transform: rotate({{p.r}}deg)">
 </sc-for>
 
 <sc-for list="{{items}}" as="it" hint-placeholder-count="12">
@@ -80,17 +83,20 @@ const bakes = [
 ['December', 'Butter cookies', 'Butter viscosity controls the spread', '/_blob/2f09950c3a7aacc05150349fdebddd8c', '/_blob/5549c68afc35831fd56c07cb4a20ecd2']
 ];
 const cx = 1240, cy = 490;
-const items = [], pages = [], links = [];
+const PH = ["/_blob/3f9411c8d2afa320a2ce8d28bd89dc77", "/_blob/e43990f06355c4220ea67d0b44aea216", "/_blob/906826f0e1fdf1e1a8f4a186bf5f346d", "/_blob/f483a95ae2c8dad9802cbf8bcc0321fb", "/_blob/d2a9e82a9613ef0fd998aad3d248b37b", "/_blob/aedb692383ea7aa4c52da2c447e907ed", "/_blob/f732d99424ed4ef483c6ad81e141bc22", "/_blob/269873e43a38ea62133f67f3ba8306fc", "/_blob/a0015a9ac654ccb7dda8d2038498597d", "/_blob/f5e9c2075de6aec07cbe0455e0303e99", "/_blob/f7150d3e09ac04f49e76e2b8ef77d8ab", "/_blob/d975a22a463e37057be9fa09a5eefa1c"];
+const items = [], pages = [], links = [], phys = [];
 bakes.forEach((b, i) => {
 const a = -Math.PI / 2 + i * Math.PI / 6;
 const ix = cx + 330 * Math.cos(a), iy = cy + 226 * Math.sin(a);
-const px = cx + 570 * Math.cos(a), py = cy + 372 * Math.sin(a);
+const px = cx + 540 * Math.cos(a), py = cy + 362 * Math.sin(a);
 items.push({ name: b[1], phys: b[2], src: b[3], x: Math.round(ix - 100), y: Math.round(iy - 72) });
-pages.push({ src: b[4], alt: b[0] + ' opening page', x: Math.round(px - 75), y: Math.round(py - 55) });
+const rot = (i % 2 ? 1 : -1) * 3;
+phys.push({ src: PH[i], alt: b[0] + ' physics page', x: Math.round(px - 103 + 20), y: Math.round(py - 75 - 20), r: -rot });
+pages.push({ src: b[4], alt: b[0] + ' opening page', x: Math.round(px - 103), y: Math.round(py - 75), r: rot });
 const sx = ix + (px - ix) * 0.28, sy = iy + (py - iy) * 0.28, ex = ix + (px - ix) * 0.78, ey = iy + (py - iy) * 0.78;
 links.push({ x: Math.round(sx), y: Math.round(sy), len: Math.round(Math.hypot(ex - sx, ey - sy)), deg: (Math.atan2(ey - sy, ex - sx) * 180 / Math.PI).toFixed(1) });
 });
-return { items, pages, links };
+return { items, pages, links, phys };
 }
 }
 </script>

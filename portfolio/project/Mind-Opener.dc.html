@@ -11,46 +11,79 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
 body{margin:0}
-.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.row{display:grid;grid-template-columns:64px 130px minmax(0,1fr) 70px;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(238,241,248,.18)}
-.rn{font-size:40px;line-height:.85}
-.rs{font-size:12px}
-.rt{font-size:28px;line-height:1}
-.rd{font-size:14px;line-height:1.4;color:#AEB6C8;padding-top:5px}
-.rp{font-size:12px;text-align:right;color:#AEB6C8}
-.st{display:flex;flex-direction:column;gap:4px;border-left:2px solid #14A37F;padding-left:14px}
-.sn{font-size:40px;line-height:.9;color:#FFFFFF}
-.sl{font-size:13px;line-height:1.3;color:#AEB6C8}
+.h{font-family:'Caveat',cursive}
+.paper{background-color:#F3EEE3;background-image:linear-gradient(rgba(47,107,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(47,107,255,.09) 1px,transparent 1px);background-size:32px 32px}
+.riso{position:relative;display:inline-block;white-space:nowrap}
+.riso .r1{color:#FF4F8B;mix-blend-mode:multiply}
+.riso .r2{position:absolute;left:5px;top:4px;color:#2F6BFF;mix-blend-mode:multiply;opacity:.9}
+.tape{position:absolute;width:110px;height:30px;background:rgba(255,228,92,.72);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.card{position:absolute;background:#FFFDF8;box-shadow:0 14px 26px rgba(31,42,107,.16),0 2px 4px rgba(31,42,107,.08);padding:14px 14px 16px;box-sizing:border-box}
+.stamp{display:flex;flex-direction:column;gap:2px;border:2px solid #FF4F8B;padding:8px 12px 10px;color:#FF4F8B;background:rgba(255,79,139,.04)}
+.stamp b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:40px;line-height:.95;color:#1F2A6B}
+.stamp span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1.35}
+.hl{background:linear-gradient(transparent 55%,rgba(255,228,92,.85) 55%)}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0D1220; color: #EEF1F8">
-
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #AEB6C8"><span>05 — Mind</span><span>Research &amp; leadership</span><span>Amy Hu · 14</span></div>
-
-<div class="d" style="position: absolute; left: 50px; top: 86px; font-size: 330px; line-height: .8; color: #14A37F">MIND</div>
-<div class="s" style="position: absolute; left: 64px; top: 380px; width: 720px; font-size: 52px; line-height: 1; font-style: italic">The science behind the senses.</div>
-<div class="b" style="position: absolute; left: 64px; top: 500px; width: 680px; font-size: 17px; line-height: 1.6; color: #D5DAE6">My research asks the same question as the rest of this portfolio: how do people sense the world, and what can engineering do when a sense fails or a body is fragile? It runs from tournament physics to an AI hearing aid, from metallic glass under impact to a mattress that moves like the sea.</div>
-
-<div style="position: absolute; left: 64px; bottom: 56px; width: 700px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 26px">
-<div class="st"><span class="d sn">1</span><span class="b sl">patent, AI hearing aid</span></div>
-<div class="st"><span class="d sn">2</span><span class="b sl">first-author research papers</span></div>
-<div class="st"><span class="d sn">$100k+</span><span class="b sl">raised for an assistive-tech startup</span></div>
-<div class="st"><span class="d sn">ISEF</span><span class="b sl">Beijing qualifier, metallic glass</span></div>
-<div class="st"><span class="d sn">IYPT</span><span class="b sl">Macao team captain</span></div>
-<div class="st"><span class="d sn">5</span><span class="b sl">mathematical modelling papers</span></div>
+<div class="paper" style="width: 1920px; height: 960px; position: relative; overflow: hidden; color: #1F2A6B">
+<div class="m" style="position: absolute; left: 64px; top: 36px; right: 64px; display: flex; justify-content: space-between; font-size: 12px; color: #1F2A6B"><span>05 — Mind · research &amp; leadership</span><span>Amy Hu · 14</span></div>
+<div class="s" style="position: absolute; left: 50px; top: 40px; font-size: 330px; line-height: 1; font-style: italic"><span class="riso"><span class="r1">Mind</span><span class="r2">Mind</span></span></div>
+<div class="h" style="position: absolute; left: 80px; top: 372px; font-size: 44px; line-height: 1; color: #1F2A6B; transform: rotate(-2deg)">the science behind the senses</div>
+<svg style="position: absolute; left: 520px; top: 360px" width="200" height="90" viewBox="0 0 200 90" aria-hidden="true"><path d="M6 60 C 60 80, 120 70, 182 22" fill="none" stroke="#FF4F8B" stroke-width="3" stroke-linecap="round"/><path d="M168 20 L184 20 L180 36" fill="none" stroke="#FF4F8B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="b" style="position: absolute; left: 64px; top: 450px; width: 400px; font-size: 16px; line-height: 1.6; color: #2A3366">My research asks the same question as the rest of this portfolio: <span class="hl">how do people sense the world, and what can engineering do when a sense fails or a body is fragile?</span> It runs from tournament physics to an AI hearing aid, from metallic glass under impact to a mattress that moves like the sea.</div>
+<img src="/_blob/1774dec12d5fc7fbe742339b52d4e6d9" alt="Amy presenting on stage" style="position: absolute; left: 480px; top: 300px; height: 520px; filter: drop-shadow(0 18px 20px rgba(31,42,107,.22))">
+<div class="h" style="position: absolute; left: 650px; top: 600px; font-size: 26px; line-height: 1; color: #1F2A6B; transform: rotate(-3deg)">← presenting as<br>a Conrad finalist</div>
+<div class="card" style="left: 820px; top: 96px; width: 320px; transform: rotate(-2.2deg)">
+<div class="tape" style="left: 30px; top: -14px; transform: rotate(4.4deg)"></div>
+<img src="/_blob/f208c647069e9343412650e08270708f" alt="IYPT captain &amp; the magnetic cradle" style="width: 100%; height: 150px; object-fit: cover; display: block; filter: saturate(.9)">
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">01</span><span class="s" style="font-size: 23px; line-height: 1.05">IYPT captain &amp; the magnetic cradle</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Leading the IYPT Macao team; my own research on coupled magnetic pendulums and three CYPT problems.</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 15</span>
 </div>
-
-<div style="position: absolute; left: 860px; top: 96px; width: 996px; display: flex; flex-direction: column">
-<div class="m" style="font-size: 12px; color: #14A37F; padding-bottom: 10px">In the order of my activity list</div>
-<div class="row"><span class="d rn" style="color: #4D7CFF">01</span><span class="m rs" style="color: #4D7CFF">Motion</span><div><div class="d rt">IYPT captain &amp; the magnetic cradle</div><div class="b rd">Leadership of the IYPT Macao team and my own research on energy moving through coupled magnetic pendulums, plus three CYPT problems.</div></div><span class="m rp">p. 15</span></div>
-<div class="row"><span class="d rn" style="color: #FF6B5B">02</span><span class="m rs" style="color: #FF6B5B">Hearing</span><div><div class="d rt">SmartHearing, an AI hearing aid</div><div class="b rd">Peking University, Institute for Artificial Intelligence. Patent and paper.</div></div><span class="m rp">p. 16</span></div>
-<div class="row"><span class="d rn" style="color: #2EC4B6">03</span><span class="m rs" style="color: #2EC4B6">Touch</span><div><div class="d rt">A startup and a mattress like the sea</div><div class="b rd">Beijing Lingtong Future Technology and the Curawave wave mattress (Conrad Challenge).</div></div><span class="m rp">p. 17</span></div>
-<div class="row"><span class="d rn" style="color: #FF8A3D">04</span><span class="m rs" style="color: #FF8A3D">Strength</span><div><div class="d rt">Flowed metal: glass under impact</div><div class="b rd">Chinese Academy of Sciences, Institute of Mechanics. First-author paper, ISEF Beijing qualifier.</div></div><span class="m rp">p. 18</span></div>
-<div class="row"><span class="d rn" style="color: #7CE0A0">05</span><span class="m rs" style="color: #7CE0A0">Light</span><div><div class="d rt">Nonlinear optics</div><div class="b rd">Peking University, Institute of Physics. Raman and laser systems, 20+ polarisation states.</div></div><span class="m rp">p. 19</span></div>
-<div class="row" style="border-bottom: 1px solid rgba(238,241,248,.18)"><span class="d rn" style="color: #F4C152">06</span><span class="m rs" style="color: #F4C152">Thinking</span><div><div class="d rt">An editor and a modeller</div><div class="b rd">Founding editor of our engineering &amp; maths journal, and five modelling papers: one HiMCM and two IMMC Finalist awards.</div></div><span class="m rp">p. 20</span></div>
+<div class="card" style="left: 1170px; top: 96px; width: 320px; transform: rotate(1.6deg)">
+<div class="tape" style="left: 47px; top: -14px; transform: rotate(-3.2deg)"></div>
+<img src="/_blob/a4a5ad7be8959db013341505f730570e" alt="SmartHearing, an AI hearing aid" style="width: 100%; height: 150px; object-fit: cover; display: block; filter: saturate(.9)">
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">02</span><span class="s" style="font-size: 23px; line-height: 1.05">SmartHearing, an AI hearing aid</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Peking University, Institute for Artificial Intelligence. Patent and paper.</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 16</span>
+</div>
+<div class="card" style="left: 1520px; top: 96px; width: 320px; transform: rotate(-1deg)">
+<div class="tape" style="left: 64px; top: -14px; transform: rotate(2.0deg)"></div>
+<img src="/_blob/9d8e6e3557fbd85611fe80cffbd26e34" alt="A startup and a mattress like the sea" style="width: 100%; height: 150px; object-fit: cover; display: block; filter: saturate(.9)">
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">03</span><span class="s" style="font-size: 23px; line-height: 1.05">A startup and a mattress like the sea</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Beijing Lingtong Future Technology and the Curawave wave mattress (Conrad Challenge).</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 17</span>
+</div>
+<div class="card" style="left: 820px; top: 448px; width: 320px; transform: rotate(1.8deg)">
+<div class="tape" style="left: 81px; top: -14px; transform: rotate(-3.6deg)"></div>
+<img src="/_blob/6c5b7508c3827167ed71b6df53fc033e" alt="Flowed metal: glass under impact" style="width: 100%; height: 150px; object-fit: cover; display: block; filter: saturate(.9)">
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">04</span><span class="s" style="font-size: 23px; line-height: 1.05">Flowed metal: glass under impact</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Chinese Academy of Sciences, Institute of Mechanics. First-author paper, ISEF Beijing qualifier.</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 18</span>
+</div>
+<div class="card" style="left: 1170px; top: 448px; width: 320px; transform: rotate(-1.6deg)">
+<div class="tape" style="left: 98px; top: -14px; transform: rotate(3.2deg)"></div>
+<div style="height: 150px; background: #2F6BFF; display: flex; align-items: center; justify-content: center; gap: 14px"><svg width="56" height="56" viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="24" ry="4" transform="rotate(0 28 28)" fill="none" stroke="#FFFDF8" stroke-width="3"/></svg><svg width="56" height="56" viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="24" ry="12" transform="rotate(35 28 28)" fill="none" stroke="#FFFDF8" stroke-width="3"/></svg><svg width="56" height="56" viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="24" ry="20" transform="rotate(70 28 28)" fill="none" stroke="#FFFDF8" stroke-width="3"/></svg><svg width="56" height="56" viewBox="0 0 56 56"><ellipse cx="28" cy="28" rx="24" ry="24" transform="rotate(0 28 28)" fill="none" stroke="#FFFDF8" stroke-width="3"/></svg></div>
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">05</span><span class="s" style="font-size: 23px; line-height: 1.05">Nonlinear optics</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Peking University, Institute of Physics. Raman and laser systems, 20+ polarisation states.</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 19</span>
+</div>
+<div class="card" style="left: 1520px; top: 448px; width: 320px; transform: rotate(1.2deg)">
+<div class="tape" style="left: 115px; top: -14px; transform: rotate(-2.4deg)"></div>
+<div style="height: 150px; background: #FF4F8B; display: flex; align-items: center; justify-content: center"><span class="s" style="font-size: 92px; font-style: italic; color: #FFFDF8; line-height: 1">f(x) = ?</span></div>
+<div style="display: flex; align-items: baseline; gap: 10px; padding-top: 10px"><span class="s" style="font-size: 40px; line-height: .9; color: #FF4F8B; font-style: italic">06</span><span class="s" style="font-size: 23px; line-height: 1.05">An editor and a modeller</span></div>
+<div class="b" style="font-size: 13px; line-height: 1.4; color: #3B4470; padding-top: 6px">Founding editor of our engineering &amp; maths journal; five modelling papers, three Finalist awards.</div>
+<span class="h" style="position: absolute; right: 12px; bottom: -6px; font-size: 26px; color: #FF4F8B; transform: rotate(-4deg)">p. 20</span>
+</div>
+<div style="position: absolute; left: 64px; right: 64px; bottom: 40px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px">
+<div class="stamp" style="transform: rotate(-1.5deg)"><b>1</b><span>patent, AI hearing aid</span></div>
+<div class="stamp" style="transform: rotate(1deg)"><b>2</b><span>first-author research papers</span></div>
+<div class="stamp" style="transform: rotate(-0.5deg)"><b>$100k+</b><span>raised for an assistive-tech startup</span></div>
+<div class="stamp" style="transform: rotate(1.5deg)"><b>ISEF</b><span>Beijing qualifier, metallic glass</span></div>
+<div class="stamp" style="transform: rotate(-1deg)"><b>IYPT</b><span>Macao team captain</span></div>
+<div class="stamp" style="transform: rotate(0.8deg)"><b>5</b><span>modelling papers · 3 Finalist awards</span></div>
 </div>
 
 </div>

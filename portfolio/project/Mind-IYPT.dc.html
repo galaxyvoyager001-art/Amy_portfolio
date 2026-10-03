@@ -11,92 +11,73 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
 body{margin:0}
-.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.fig{position:absolute;display:flex;flex-direction:column;gap:6px}
-.fig img{display:block;width:100%;object-fit:cover;background:#FFFFFF;border-radius:4px}
-.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8C96AE}
-.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #4D7CFF;padding-top:10px}
-.on{font-size:46px;line-height:.9;color:#FFFFFF}
-.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
-.pb{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:center;padding:10px 0;border-top:1px solid rgba(238,241,248,.15)}
-.pb img{width:150px;height:84px;object-fit:cover;display:block;border-radius:3px}
-.pt{font-size:19px;line-height:1.05}
-.pd{font-size:12.5px;line-height:1.35;color:#AEB6C8;padding-top:3px}
-.cy{position:absolute;width:352px;display:flex;flex-direction:column;gap:8px}
-.cyt{font-size:21px;line-height:1;border-top:2px solid #4D7CFF;padding-top:8px}
-.cyt b{color:#4D7CFF;font-weight:800}
-.sch{height:186px;background:#FFFFFF;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box}
-.sch img{max-width:100%;max-height:100%;display:block}
-.lab{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#4D7CFF;padding-top:4px}
-.eq{background:#141B30;border:1px solid rgba(77,124,255,.55);border-radius:4px;height:78px;box-sizing:border-box;padding:6px 10px;display:flex;flex-direction:column;justify-content:center;gap:4px;text-align:center;font-family:'Instrument Serif',Georgia,serif;font-style:italic;color:#FFFFFF;white-space:nowrap}
-.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:.8em;line-height:1.05}
-.fr span:first-child{border-bottom:1.5px solid #FFFFFF;padding:0 3px}
-.fd{display:grid;grid-template-columns:16px minmax(0,1fr);gap:6px;font-size:13px;line-height:1.38;color:#D5DAE6;padding:5px 0;border-top:1px solid rgba(238,241,248,.13)}
-.fd i{font-style:normal;color:#4D7CFF;font-family:'Bricolage Grotesque',sans-serif;font-weight:800}
-.fd b{color:#FFFFFF;font-weight:600}
+.h{font-family:'Caveat',cursive}
+.paper{background-color:#F3EEE3;background-image:linear-gradient(rgba(47,107,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(47,107,255,.09) 1px,transparent 1px);background-size:32px 32px}
+.riso{position:relative;display:inline-block;white-space:nowrap}
+.riso .r1{color:#FF4F8B;mix-blend-mode:multiply}
+.riso .r2{position:absolute;left:5px;top:4px;color:#2F6BFF;mix-blend-mode:multiply;opacity:.9}
+.tape{position:absolute;width:110px;height:30px;background:rgba(255,228,92,.72);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.card{position:absolute;background:#FFFDF8;box-shadow:0 14px 26px rgba(31,42,107,.16),0 2px 4px rgba(31,42,107,.08);padding:14px 14px 16px;box-sizing:border-box}
+.stamp{display:flex;flex-direction:column;gap:2px;border:2px solid #FF4F8B;padding:8px 12px 10px;color:#FF4F8B;background:rgba(255,79,139,.04)}
+.stamp b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:40px;line-height:.95;color:#1F2A6B}
+.stamp span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;line-height:1.35}
+.hl{background:linear-gradient(transparent 55%,rgba(255,228,92,.85) 55%)}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0D1220; color: #EEF1F8">
-
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #AEB6C8"><span>05 — Mind · Nº 01 / 06 · Motion</span><span>Leadership + Research · IYPT</span><span>Amy Hu · 15</span></div>
-
-<div style="position: absolute; left: 64px; top: 88px; width: 640px; display: flex; flex-direction: column; gap: 16px">
-<div class="m" style="font-size: 12px; color: #4D7CFF">IYPT Macao team captain · school physics captain · independent researcher</div>
-<div class="d" style="font-size: 86px; line-height: .86">A CRADLE THAT<br><span style="color: #4D7CFF">NEVER TOUCHES</span></div>
-<div class="s" style="font-size: 26px; line-height: 1.15; font-style: italic">How energy travels along a chain of magnetic pendulums.</div>
-<div class="b" style="font-size: 15.5px; line-height: 1.6; color: #D5DAE6">In a Newton's cradle, energy passes by collision. Replace the balls with repelling magnets and it passes without contact, the way atoms in a crystal trade energy through forces. I asked how magnet strength, spacing and release angle shift the chain's normal-mode frequencies, and how that decides whether energy travels or stays trapped. I designed and 3D-printed the rig, tracked every trial on video, extracted eigenfrequencies by FFT and compared them with a Lagrangian model.</div>
-<div style="border-left: 3px solid #4D7CFF; padding-left: 16px"><span class="s" style="font-size: 22px; line-height: 1.25; font-style: italic">"A tournament question became my Extended Essay: a desktop analogue of energy transfer in a lattice."</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px; padding-top: 4px">
-<div class="m" style="font-size: 12px; color: #4D7CFF">As captain</div>
-<div class="b" style="font-size: 15px; line-height: 1.55; color: #D5DAE6">I captained the IYPT Macao team and, at school, founded our physics lab and community, Wavefront (CYPT / MYPT varsity). I run forums and inter-school exchanges and tutor younger students for tournaments.</div>
+<div class="paper" style="width: 1920px; height: 960px; position: relative; overflow: hidden; color: #1F2A6B">
+<div class="m" style="position: absolute; left: 64px; top: 36px; right: 64px; display: flex; justify-content: space-between; font-size: 12px; color: #1F2A6B"><span>05 — Mind · 01 / 06 · motion</span><span>Leadership + research · IYPT &amp; CYPT · Amy Hu · 15</span></div>
+<div style="position: absolute; left: 64px; top: 84px; width: 640px; display: flex; flex-direction: column; gap: 14px">
+<div class="h" style="font-size: 30px; color: #FF4F8B; transform: rotate(-1.5deg); transform-origin: left">IYPT Macao team captain · school physics captain</div>
+<div class="s" style="font-size: 90px; line-height: .9">A cradle that<br><span class="riso" style="font-style: italic"><span class="r1">never touches.</span><span class="r2">never touches.</span></span></div>
+<div class="b" style="font-size: 15px; line-height: 1.6; color: #2A3366">In a Newton's cradle, energy passes by collision. Replace the balls with repelling magnets and it passes without contact, the way atoms in a crystal trade energy through forces. I asked how magnet strength, spacing and release angle shift the chain's normal-mode frequencies, and how that decides whether energy travels or stays trapped. I designed and 3D-printed the rig, tracked every trial on video, extracted eigenfrequencies by FFT and compared them with a Lagrangian model.</div>
 </div>
+<div class="card" style="left: 70px; top: 560px; width: 300px; transform: rotate(-3deg); padding-bottom: 10px">
+<div class="tape" style="left: 90px; top: -14px; transform: rotate(4deg)"></div>
+<img src="/_blob/f208c647069e9343412650e08270708f" alt="My 3D-printed magnetic cradle rig" style="width: 100%; height: 150px; object-fit: cover; display: block">
+<div class="h" style="font-size: 22px; padding-top: 6px">my 3D-printed rig, 100+ trials</div>
 </div>
-
-<div class="m" style="position: absolute; left: 760px; top: 92px; width: 1096px; font-size: 12px; color: #4D7CFF">CYPT 2026 · the three problems I reported · picture → equation → result</div>
-
-<div class="cy" style="left: 760px; top: 124px">
-<div class="d cyt"><b>#15</b> Magnetic Newton's Cradle</div>
-<div class="sch"><img src="/_blob/65f30f882333e620f82d5f8abdffdf71" alt="My schematic: n magnetic pendulums of length l, spacing s, release angle theta"></div>
-<div class="lab">Key equation</div>
-<div class="eq"><div style="font-size: 16px">L = ½ I<sub>eq</sub>Σθ̇<sub>i</sub>² − Σ Mg(l+R)(1−cos θ<sub>i</sub>) − Σ V<sub>mag,ij</sub></div><div style="font-size: 19px">I<sub>eq</sub> θ̈<sub>n</sub> + <span class="fr"><span>∂V</span><span>∂θ<sub>n</sub></span></span> + γ θ̇<sub>n</sub> = 0</div></div>
-<div class="lab">What I found</div>
-<div class="b fd"><i>1</i><span>The motion mixes <b>normal modes</b>: the first frequency is set by gravity, the second by the magnets.</span></div>
-<div class="b fd"><i>2</i><span>Release angle sets the dominant frequency; spacing and magnet strength tune the second.</span></div>
-<div class="b fd"><i>3</i><span>Model and experiment agree within <b>~3%</b>; the chain is non- or weakly chaotic.</span></div>
+<div style="position: absolute; left: 400px; top: 560px; width: 300px; background: #FFE45C; padding: 18px 20px 20px; box-sizing: border-box; transform: rotate(1.8deg); box-shadow: 0 12px 20px rgba(31,42,107,.16)">
+<div class="h" style="font-size: 32px; line-height: 1; color: #1F2A6B">As captain</div>
+<div class="b" style="font-size: 14px; line-height: 1.5; color: #1F2A6B; padding-top: 8px">I captained the IYPT Macao team and, at school, founded our physics lab and community, Wavefront (CYPT / MYPT varsity). I run forums and inter-school exchanges and tutor younger students for tournaments.</div>
 </div>
-
-<div class="cy" style="left: 1132px; top: 124px">
-<div class="d cyt"><b>#2</b> Electrical Damping</div>
-<div class="sch"><img src="/_blob/e1b34ceaf89766c5c19457871a5126d9" alt="My schematic: bar magnet on a spring inside a solenoid coil, wired to a resistor and galvanometer"></div>
-<div class="lab">Key equation</div>
-<div class="eq"><div style="font-size: 21px">F<sub>em</sub> = − <span class="fr"><span>G(x, N, B)²</span><span>R</span></span> · ẋ &nbsp;⇒&nbsp; γ<sub>em</sub> = <span class="fr"><span>G²</span><span>R</span></span></div></div>
-<div class="lab">What I found</div>
-<div class="b fd"><i>1</i><span>Damping rises with coil turns, <b>peaks near 2,700 turns</b>, then falls as the coil's own inductance takes over.</span></div>
-<div class="b fd"><i>2</i><span>The damping coefficient falls as <b>1/R</b>.</span></div>
-<div class="b fd"><i>3</i><span>For weak magnets it grows with the <b>square</b> of the magnetic moment, then levels off.</span></div>
+<div class="h" style="position: absolute; left: 770px; top: 84px; font-size: 34px; color: #1F2A6B; transform: rotate(-1deg)">Three problems I reported at CYPT 2026 — <span style="color: #FF4F8B">picture → equation → result</span></div>
+<div class="card" style="left: 760px; top: 150px; width: 348px; transform: rotate(-1.4deg)">
+<div class="tape" style="left: 120px; top: -14px; transform: rotate(2.8deg)"></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><span class="s" style="font-size: 38px; line-height: .9; color: #FF4F8B; font-style: italic">#15</span><span class="s" style="font-size: 25px; line-height: 1">Magnetic Newton's Cradle</span></div>
+<div style="height: 170px; display: flex; align-items: center; justify-content: center; padding: 8px 0"><img src="/_blob/65f30f882333e620f82d5f8abdffdf71" alt="My schematic: n magnetic pendulums, spacing s, release angle θ" style="max-width: 100%; max-height: 100%; display: block"></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF">↓ the picture becomes an equation</div>
+<div class="s" style="font-style: italic; text-align: center; padding: 8px 6px; background: rgba(255,228,92,.55); white-space: nowrap; display: flex; flex-direction: column; gap: 2px"><div style="font-size: 17px">L = ½ I<sub>eq</sub>Σθ̇<sub>i</sub>² − Σ Mg(l+R)(1−cos θ<sub>i</sub>) − Σ V<sub>mag</sub></div><div style="font-size: 20px">I<sub>eq</sub> θ̈<sub>n</sub> + ∂V/∂θ<sub>n</sub> + γ θ̇<sub>n</sub> = 0</div></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF; padding-top: 6px">↓ what I found</div>
+<div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">1</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">The motion mixes normal modes: gravity sets the first frequency, the magnets set the second.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">2</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">Release angle sets the dominant frequency; spacing and magnet strength tune the second.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">3</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">Model and experiment agree within ~3%; the chain is non- or weakly chaotic.</span></div>
 </div>
-
-<div class="cy" style="left: 1504px; top: 124px">
-<div class="d cyt"><b>#9</b> Levitation Control</div>
-<div class="sch"><img src="/_blob/e43dfcf34f8f8f1951b5144f1b591241" alt="My schematic: graphite sheet over a checkerboard magnet array, and the light-induced force on the sheet"></div>
-<div class="lab">Key equation</div>
-<div class="eq"><div style="font-size: 21px">F<sub>r</sub> = <span class="fr"><span>h</span><span>2μ<sub>0</sub></span></span> <span class="fr"><span>dχ<sub>∥</sub></span><span>dT</span></span> <span class="fr"><span>dT</span><span>dr</span></span> ∬ B<sub>xy</sub>² dA<sub>0</sub></div></div>
-<div class="lab">What I found</div>
-<div class="b fd"><i>1</i><span>The graphite floats where <b>diamagnetic lift</b> balances its weight.</span></div>
-<div class="b fd"><i>2</i><span>Light heats one corner; susceptibility drops with temperature, so the sheet is <b>pushed away from the light</b>.</span></div>
-<div class="b fd"><i>3</i><span>Simulation: a <b>1.36 K</b> difference across the sheet, constant under steady light.</span></div>
+<div class="card" style="left: 1132px; top: 150px; width: 348px; transform: rotate(1.2deg)">
+<div class="tape" style="left: 120px; top: -14px; transform: rotate(-2.4deg)"></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><span class="s" style="font-size: 38px; line-height: .9; color: #FF4F8B; font-style: italic">#2</span><span class="s" style="font-size: 25px; line-height: 1">Electrical Damping</span></div>
+<div style="height: 170px; display: flex; align-items: center; justify-content: center; padding: 8px 0"><img src="/_blob/e1b34ceaf89766c5c19457871a5126d9" alt="My schematic: a magnet on a spring inside a coil, wired to a resistor" style="max-width: 100%; max-height: 100%; display: block"></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF">↓ the picture becomes an equation</div>
+<div class="s" style="font-style: italic; text-align: center; padding: 8px 6px; background: rgba(255,228,92,.55); white-space: nowrap; display: flex; flex-direction: column; gap: 2px"><div style="font-size: 22px">F<sub>em</sub> = − G(x, N, B)² ẋ / R</div><div style="font-size: 20px">γ<sub>em</sub> = G² / R</div></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF; padding-top: 6px">↓ what I found</div>
+<div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">1</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">Damping rises with coil turns, peaks near 2,700 turns, then falls as the coil's inductance takes over.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">2</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">The damping coefficient falls as 1/R.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">3</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">For weak magnets it grows with the square of the magnetic moment, then levels off.</span></div>
 </div>
-
-<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px">
-<div class="out"><span class="d on">100+</span><span class="b ol">trials on my own 3D-printed rig</span></div>
-<div class="out"><span class="d on">2k+</span><span class="b ol">audience for my research talk</span></div>
-<div class="out"><span class="d on">30+</span><span class="b ol">forums and inter-school exchanges led</span></div>
-<div class="out"><span class="d on">10+</span><span class="b ol">workshops run</span></div>
-<div class="out"><span class="d on">200+</span><span class="b ol">hours coaching</span></div>
-<div class="out"><span class="d on">20+</span><span class="b ol">students coached</span></div>
+<div class="card" style="left: 1504px; top: 150px; width: 348px; transform: rotate(-0.8deg)">
+<div class="tape" style="left: 120px; top: -14px; transform: rotate(1.6deg)"></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><span class="s" style="font-size: 38px; line-height: .9; color: #FF4F8B; font-style: italic">#9</span><span class="s" style="font-size: 25px; line-height: 1">Levitation Control</span></div>
+<div style="height: 170px; display: flex; align-items: center; justify-content: center; padding: 8px 0"><img src="/_blob/e43dfcf34f8f8f1951b5144f1b591241" alt="My schematic: graphite over a magnet array, pushed by light" style="max-width: 100%; max-height: 100%; display: block"></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF">↓ the picture becomes an equation</div>
+<div class="s" style="font-style: italic; text-align: center; padding: 8px 6px; background: rgba(255,228,92,.55); white-space: nowrap; display: flex; flex-direction: column; gap: 2px"><div style="font-size: 16.5px">F<sub>r</sub> = (h / 2μ<sub>0</sub>) · (dχ<sub>∥</sub>/dT) · (dT/dr) · ∬ B<sub>xy</sub>² dA</div></div>
+<div class="h" style="font-size: 22px; color: #2F6BFF; padding-top: 6px">↓ what I found</div>
+<div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">1</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">The graphite floats where diamagnetic lift balances its weight.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">2</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">Light heats one corner; susceptibility drops with temperature, so the sheet is pushed away from the light.</span></div><div style="display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 6px; padding: 5px 0; border-top: 1px dashed rgba(31,42,107,.25)"><span class="h" style="font-size: 24px; line-height: .9; color: #FF4F8B">3</span><span class="b" style="font-size: 13px; line-height: 1.4; color: #2A3366">Simulation: a 1.36 K difference across the sheet, constant under steady light.</span></div>
+</div>
+<div style="position: absolute; left: 64px; right: 64px; bottom: 40px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px">
+<div class="stamp" style="transform: rotate(-1.5deg)"><b>100+</b><span>trials on my own 3D-printed rig</span></div>
+<div class="stamp" style="transform: rotate(1deg)"><b>2k+</b><span>audience for my research talk</span></div>
+<div class="stamp" style="transform: rotate(-0.5deg)"><b>30+</b><span>forums and inter-school exchanges led</span></div>
+<div class="stamp" style="transform: rotate(1.5deg)"><b>10+</b><span>workshops run</span></div>
+<div class="stamp" style="transform: rotate(-1deg)"><b>200+</b><span>hours coaching</span></div>
+<div class="stamp" style="transform: rotate(0.8deg)"><b>20+</b><span>students coached</span></div>
 </div>
 
 </div>
