@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Look closer</title>
+<title>How the house was made</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -10,76 +10,58 @@
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
-body{margin:0}
+body{margin:0;background:#FFFFFF}
 .d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.hd{position:absolute;left:64px;top:40px;right:64px;display:flex;justify-content:space-between;font-size:13px;color:#8E8A84}
-.kick{font-size:12px;color:var(--ac)}
-.H{text-transform:uppercase;color:var(--ac);line-height:.82}
-.H2{text-transform:uppercase;line-height:.9}
-.Q{font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:700;letter-spacing:-.01em}
-.obox{background:var(--ac);color:#111;padding:18px 20px;box-sizing:border-box;font-family:'Instrument Sans',sans-serif;font-size:15px;line-height:1.5;font-weight:500}
-.cols{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-family:'Instrument Sans',sans-serif;font-size:13.5px;line-height:1.55;color:var(--tx2);column-gap:30px;column-rule:1px solid var(--rule)}
-.cols h4{margin:0 0 4px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);break-after:avoid}
-.cols p{margin:0 0 12px}
-.cols b{color:var(--tx);font-weight:600}
-.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid var(--ac);padding-top:10px}
-.on{font-size:44px;line-height:.9;color:var(--tx)}
-.ol{font-size:13px;line-height:1.35;color:var(--tx2)}
-.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8E8A84}
-.shd{filter:drop-shadow(0 30px 40px rgba(0,0,0,.65))}
-.stk{filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 24px 30px rgba(0,0,0,.6))}
-.hd{color:#8A8A8A}
-.card{position:absolute;width:380px;display:flex;flex-direction:column;gap:8px}
-.ph{position:relative;width:380px;height:172px;outline:1px solid #111;outline-offset:5px}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.no{position:absolute;left:-6px;top:-6px;background:var(--ac);color:#FFF;font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:22px;line-height:1;padding:6px 9px 5px}
-.ctt{font-size:22px;line-height:1;color:#111;text-transform:uppercase;padding-top:6px}
-.cd{font-family:'Instrument Sans',sans-serif;font-size:13.5px;line-height:1.42;color:#3E3E3E}
-.ring{position:absolute;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);box-sizing:border-box;background:rgba(225,38,45,.08)}
-.rn{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;display:flex;align-items:center;justify-content:center}
-
+.card{position:absolute;width:496px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:16px;align-items:start}
+.card img{width:210px;height:160px;object-fit:cover;display:block;border-radius:50% 50% 6px 6px / 40% 40% 6px 6px;box-shadow:0 10px 18px rgba(0,0,0,.12)}
+.ct{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+.ctt{font-size:24px;line-height:1;color:#7A1F2B}
+.cc{font-size:19px;line-height:1.15;font-style:italic}
+.cd{font-size:13.5px;line-height:1.45;color:#4A4A4A}
+.ring{position:absolute;width:68px;height:68px;border-radius:50%;border:2.5px solid #7A1F2B;box-sizing:border-box;background:rgba(122,31,43,.06)}
+.ln{position:absolute;height:0;border-top:1.5px solid #7A1F2B;transform-origin:0 0}
+.dotend{position:absolute;width:10px;height:10px;border-radius:50%;background:#7A1F2B}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #111111; --ac:#E1262D;--tx:#111111;--tx2:#3E3E3E;--rule:rgba(0,0,0,.14)">
-<div class="m hd"><span>02 — Sight · Nº 02 / 02</span><span>Look closer · six rooms</span><span>Amy Hu · 10</span></div>
-<div style="position: absolute; left: 560px; top: 92px; width: 800px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
-<div class="m kick">Six close-ups</div>
-<div class="d H" style="font-size: 96px">LOOK <span style="color: #111">CLOSER</span></div>
-<div class="Q" style="font-size: 21px; line-height: 1.2; color: #111; width: 640px">Each ring on the house opens one room. Each room is a small world of its own.</div>
-</div>
-<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 730px; top: 300px; width: 460px; filter: drop-shadow(0 20px 20px rgba(0,0,0,.12))">
-<div style="position: absolute; left: 452px; top: 186px; width: 386px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(28.9deg)"></div>
-<div style="position: absolute; left: 448px; top: 182px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 790px; top: 349px"></div><span class="rn" style="left: 825px; top: 342px">01</span>
-<div style="position: absolute; left: 452px; top: 462px; width: 311px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(3.4deg)"></div>
-<div style="position: absolute; left: 448px; top: 458px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 762px; top: 457px"></div><span class="rn" style="left: 797px; top: 450px">02</span>
-<div style="position: absolute; left: 452px; top: 738px; width: 479px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(-23.7deg)"></div>
-<div style="position: absolute; left: 448px; top: 734px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 891px; top: 522px"></div><span class="rn" style="left: 926px; top: 515px">03</span>
-<div style="position: absolute; left: 1468px; top: 186px; width: 596px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(155.1deg)"></div>
-<div style="position: absolute; left: 1464px; top: 182px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 882px; top: 414px"></div><span class="rn" style="left: 917px; top: 407px">04</span>
-<div style="position: absolute; left: 1468px; top: 462px; width: 439px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(-178.6deg)"></div>
-<div style="position: absolute; left: 1464px; top: 458px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 983px; top: 429px"></div><span class="rn" style="left: 1018px; top: 422px">05</span>
-<div style="position: absolute; left: 1468px; top: 738px; width: 451px; height: 0; border-top: 1.5px solid #E1262D; transform-origin: 0 0; transform: rotate(-150.6deg)"></div>
-<div style="position: absolute; left: 1464px; top: 734px; width: 8px; height: 8px; border-radius: 50%; background: #E1262D"></div>
-<div class="ring" style="left: 1029px; top: 493px"></div><span class="rn" style="left: 1064px; top: 486px">06</span>
-<div class="card" style="left: 64px; top: 100px"><div class="ph"><img src="/_blob/ef01523c3cfe79659d0b88ea4de3be21" alt="The study"><span class="no">01</span></div><div class="d ctt">The study</div><div class="cd">Tiny printed books, a desk lamp, brushes and a chair pulled up to work.</div></div>
-<div class="card" style="left: 64px; top: 376px"><div class="ph"><img src="/_blob/d90bc1b8a3b5049315ae0f625b760387" alt="Dressing room"><span class="no">02</span></div><div class="d ctt">Dressing room</div><div class="cd">A yellow towel on the rail, a basin, a red chair and slippers by the step.</div></div>
-<div class="card" style="left: 64px; top: 652px"><div class="ph"><img src="/_blob/7de7140b375287d8f49ebbbd00daaaf9" alt="Tea table"><span class="no">03</span></div><div class="d ctt">Tea table</div><div class="cd">A teapot and cups smaller than a fingernail, on a book page for scale.</div></div>
-<div class="card" style="left: 1476px; top: 100px"><div class="ph"><img src="/_blob/c06bb932235b2fc8cc0f8d260fe2eaa8" alt="Moon window"><span class="no">04</span></div><div class="d ctt">Moon window</div><div class="cd">A round window frames the living room like a Chinese garden view.</div></div>
-<div class="card" style="left: 1476px; top: 376px"><div class="ph"><img src="/_blob/f83b583b288aafd266585ca0e6c8e04c" alt="Kitchen"><span class="no">05</span></div><div class="d ctt">Kitchen</div><div class="cd">Under the loft bed: hanging utensils, a range hood, a row of drawers.</div></div>
-<div class="card" style="left: 1476px; top: 652px"><div class="ph"><img src="/_blob/8963dd851db13fa0aba2d8f1d190d37a" alt="Dining table"><span class="no">06</span></div><div class="d ctt">Dining table</div><div class="cd">Plates of food, glasses and chopsticks on a patterned runner.</div></div>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #141414">
 
-<div style="position: absolute; left: 600px; top: 712px; width: 720px; display: flex; flex-direction: column; gap: 8px; text-align: center; align-items: center">
-<div style="width: 60px; height: 3px; background: #E1262D"></div>
-<div class="b" style="font-size: 16px; line-height: 1.55; color: #3E3E3E">Making it small is not the hard part. The hard part is making every room believable: the scale has to agree, the surfaces have to look used, and the light has to land the way it would in a real home.</div>
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>02 — Sight · Look closer</span><span>Amy Hu · 10</span></div>
+
+<div style="position: absolute; left: 600px; top: 84px; width: 720px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
+<div class="d" style="font-size: 84px; line-height: .86">LOOK <span style="color: #7A1F2B">CLOSER</span></div>
+<div class="s" style="font-size: 24px; font-style: italic">Every circle opens a room. Each one is a small world of its own.</div>
 </div>
+
+<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 660px; top: 250px; width: 600px; filter: drop-shadow(0 24px 24px rgba(0,0,0,.12))">
+<div class="card" style="left: 64px; top: 120px"><img src="/_blob/ef01523c3cfe79659d0b88ea4de3be21" alt="The study"><div class="ct"><div class="d ctt">The study</div><div class="s cc">A desk and a full bookcase give the house someone's habits.</div><div class="b cd">Tiny printed books, a desk lamp, brushes and a chair pulled up to work.</div></div></div>
+<div class="ring" style="left: 734px; top: 310px"></div>
+<div class="ln" style="left: 740px; top: 324px; width: 213px; transform: rotate(-144.2deg)"></div>
+<div class="dotend" style="left: 563px; top: 195px"></div>
+<div class="card" style="left: 64px; top: 405px"><img src="/_blob/d90bc1b8a3b5049315ae0f625b760387" alt="Dressing room"><div class="ct"><div class="d ctt">Dressing room</div><div class="s cc">The small things of a morning routine.</div><div class="b cd">A yellow towel on the rail, a basin, a red chair and slippers by the step.</div></div></div>
+<div class="ring" style="left: 698px; top: 452px"></div>
+<div class="ln" style="left: 698px; top: 485px; width: 130px; transform: rotate(-179.8deg)"></div>
+<div class="dotend" style="left: 563px; top: 480px"></div>
+<div class="card" style="left: 64px; top: 690px"><img src="/_blob/c06bb932235b2fc8cc0f8d260fe2eaa8" alt="Moon window"><div class="ct"><div class="d ctt">Moon window</div><div class="s cc">A round window frames the living room like a Chinese garden view.</div><div class="b cd">Painted branches on the walls and a screen glowing with a mountain sunset.</div></div></div>
+<div class="ring" style="left: 854px; top: 395px"></div>
+<div class="ln" style="left: 865px; top: 454px; width: 434px; transform: rotate(133.2deg)"></div>
+<div class="dotend" style="left: 563px; top: 765px"></div>
+<div class="card" style="left: 1360px; top: 120px"><img src="/_blob/f83b583b288aafd266585ca0e6c8e04c" alt="Kitchen"><div class="ct"><div class="d ctt">Kitchen</div><div class="s cc">Tucked under the loft bed, with every pot in its place.</div><div class="b cd">Hanging utensils, a range hood and a row of drawers below.</div></div></div>
+<div class="ring" style="left: 986px; top: 414px"></div>
+<div class="ln" style="left: 1047px; top: 427px; width: 380px; transform: rotate(-36.7deg)"></div>
+<div class="dotend" style="left: 1347px; top: 195px"></div>
+<div class="card" style="left: 1360px; top: 405px"><img src="/_blob/8963dd851db13fa0aba2d8f1d190d37a" alt="Dining table"><div class="ct"><div class="d ctt">Dining table</div><div class="s cc">Dinner is already served for the family.</div><div class="b cd">Plates of food, glasses and chopsticks on a patterned runner.</div></div></div>
+<div class="ring" style="left: 1046px; top: 499px"></div>
+<div class="ln" style="left: 1113px; top: 527px; width: 242px; transform: rotate(-9.9deg)"></div>
+<div class="dotend" style="left: 1347px; top: 480px"></div>
+<div class="card" style="left: 1360px; top: 690px"><img src="/_blob/7de7140b375287d8f49ebbbd00daaaf9" alt="Tea table"><div class="ct"><div class="d ctt">Tea table</div><div class="s cc">The smallest set in the house sits in front of the sofa.</div><div class="b cd">A teapot and cups smaller than a fingernail, shown on a book page for scale.</div></div></div>
+<div class="ring" style="left: 866px; top: 536px"></div>
+<div class="ln" style="left: 931px; top: 584px; width: 460px; transform: rotate(23.8deg)"></div>
+<div class="dotend" style="left: 1347px; top: 765px"></div>
+
+<div class="b" style="position: absolute; left: 640px; top: 761px; width: 640px; font-size: 15px; line-height: 1.55; text-align: center; color: #3A3A3A">Making it small is not the hard part. The hard part is making every room believable: the scale has to agree, the surfaces have to look used, and the light has to land the way it would in a real home.</div>
 
 </div>
 </x-dc>

@@ -15,54 +15,35 @@ body{margin:0}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.hd{position:absolute;left:64px;top:40px;right:64px;display:flex;justify-content:space-between;font-size:13px;color:#8E8A84}
-.kick{font-size:12px;color:var(--ac)}
-.H{text-transform:uppercase;color:var(--ac);line-height:.82}
-.H2{text-transform:uppercase;line-height:.9}
-.Q{font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:700;letter-spacing:-.01em}
-.obox{background:var(--ac);color:#111;padding:18px 20px;box-sizing:border-box;font-family:'Instrument Sans',sans-serif;font-size:15px;line-height:1.5;font-weight:500}
-.cols{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-family:'Instrument Sans',sans-serif;font-size:13.5px;line-height:1.55;color:var(--tx2);column-gap:30px;column-rule:1px solid var(--rule)}
-.cols h4{margin:0 0 4px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);break-after:avoid}
-.cols p{margin:0 0 12px}
-.cols b{color:var(--tx);font-weight:600}
-.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid var(--ac);padding-top:10px}
-.on{font-size:44px;line-height:.9;color:var(--tx)}
-.ol{font-size:13px;line-height:1.35;color:var(--tx2)}
-.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8E8A84}
-.shd{filter:drop-shadow(0 30px 40px rgba(0,0,0,.65))}
-.stk{filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 24px 30px rgba(0,0,0,.6))}
-.rule{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;font-family:'Instrument Sans',sans-serif;font-size:14px;line-height:1.45;color:var(--tx2);border-top:1px solid var(--rule);padding-top:10px}
-.rn{font-size:40px;line-height:.85;color:var(--ac)}
-.sh{position:absolute;width:540px;height:405px;background:#FFFBF2;box-shadow:0 24px 40px rgba(0,0,0,.55)}
-.sh img{width:100%;height:100%;object-fit:contain;display:block}
-.tg{position:absolute;left:0;top:0;background:var(--ac);color:#111;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px}
-
+.board{background-color:#FFFBF2;background-image:linear-gradient(rgba(31,53,209,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,53,209,.07) 1px,transparent 1px);background-size:24px 24px}
+.rule{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.4}
+.rn{font-size:26px;line-height:1;color:#FFF3DE}
+.sh{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0}
+.sh img{max-width:100%;max-height:100%;display:block;box-shadow:0 18px 30px rgba(0,0,0,.25)}
+.tape{position:absolute;width:96px;height:26px;background:rgba(255,201,60,.75)}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0B0B0B; color: #F4F1EC; --ac:#FF5A1F;--tx:#FFFFFF;--tx2:#C9C4BC;--rule:rgba(255,255,255,.13)">
-<div style="position: absolute; inset: 0; background: radial-gradient(900px 720px at 1300px 480px, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.042) 40%, rgba(255,255,255,0) 72%)"></div>
-<div class="m hd"><span>01 — Touch · Nº 02 / 06</span><span>Design drawings</span><span>Amy Hu · 04</span></div>
-<div style="position: absolute; left: 64px; top: 84px; width: 640px; display: flex; flex-direction: column; gap: 16px">
-<div class="m kick">Design · the Kingdom of Shapes</div>
-<div class="d H" style="font-size: 104px">MADE FOR<br><span style="color: #FFFFFF">FINGERTIPS</span></div>
-<div class="Q" style="font-size: 25px; line-height: 1.18">What does a page need before a blind child can read it?</div>
-<div class="obox">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square turns into a whole family of shapes. I drew every page as a plan, a section and an assembly before any felt was cut.</div>
-<div class="m" style="font-size: 12px; color: var(--ac); padding-top: 6px">Four rules I designed by</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px">
-<div class="rule"><span class="d rn">1</span><span>Every shape is <b style="color:#fff">raised</b>: felt strips, metal or stitched edges.</span></div>
-<div class="rule"><span class="d rn">2</span><span>Every scene faces a <b style="color:#fff">braille card</b> with a raised-line icon of its shape.</span></div>
-<div class="rule"><span class="d rn">3</span><span>Something on each page <b style="color:#fff">spins, rings or lights up</b>.</span></div>
-<div class="rule"><span class="d rn">4</span><span><b style="color:#fff">Nothing loose</b>: thread ends covered, small parts sewn or sealed.</span></div>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #22B5A6; color: #0E2A33">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>01 — Touch · Design</span><span>Amy Hu · 04</span></div>
+
+<div style="position: absolute; left: 64px; top: 96px; width: 470px; display: flex; flex-direction: column; gap: 20px">
+<div class="d" style="font-size: 86px; line-height: .86; color: #FFF3DE">MADE FOR<br>FINGERTIPS</div>
+<div class="s" style="font-size: 30px; line-height: 1.12; font-style: italic">The Kingdom of Shapes</div>
+<div class="b" style="font-size: 16.5px; line-height: 1.55">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square grows into a whole family of shapes, from parallelograms to hexagons. I drew every page as a plan, a section and an assembly before a single piece of felt was cut.</div>
+<div class="m" style="font-size: 12px; padding-top: 6px">Rules I designed by</div>
+<div class="b rule"><span class="d rn">1</span><span>Every shape is raised: felt strips, metal or stitched edges.</span></div>
+<div class="b rule"><span class="d rn">2</span><span>Every scene faces a braille card with a raised-line icon of its shape.</span></div>
+<div class="b rule"><span class="d rn">3</span><span>Something on each page spins, rings or lights up.</span></div>
+<div class="b rule"><span class="d rn">4</span><span>Nothing loose: thread ends are covered and small parts are sewn or sealed.</span></div>
 </div>
+
+<div style="position: absolute; left: 640px; top: 96px; width: 1216px; height: 824px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 20px 24px">
+<div class="sh"><img src="/_blob/d5d52a24311797bad59dd72449b62318" alt="Plan drawing of spread 01, Triangle Town" style="transform: rotate(-1deg)"><div class="tape" style="left: 40%; top: -10px; transform: rotate(-4deg)"></div></div>
+<div class="sh"><img src="/_blob/2426d4b1a2daef7252961bbe2a84530a" alt="Exploded axonometric of one page" style="transform: rotate(1deg)"><div class="tape" style="left: 44%; top: -10px; transform: rotate(3deg)"></div></div>
+<div class="sh"><img src="/_blob/dbc701229db819be438089a410c6fd7e" alt="Elevation and section of the Christmas tree page" style="transform: rotate(.8deg)"><div class="tape" style="left: 38%; top: -10px; transform: rotate(-2deg)"></div></div>
+<div class="sh"><img src="/_blob/4cebe66a2362519797e8e193aed39a05" alt="Shape sequence for Book 2, Fangfang" style="transform: rotate(-.8deg)"><div class="tape" style="left: 46%; top: -10px; transform: rotate(5deg)"></div></div>
 </div>
-<div style="position: absolute; left: 64px; top: 704px; width: 640px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px"><img src="/_blob/50718ba5b8c0e084222e68ad35e54cfa" alt="Finished spread 01, Triangle Town" style="width: 100%; height: 170px; object-fit: cover; display: block"><span class="fc">A-01 → the finished Triangle Town spread</span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><img src="/_blob/161f25c1df18f301e5cfddddbc6d8ad3" alt="Finished Book 2 spread, the dart" style="width: 100%; height: 170px; object-fit: cover; display: block"><span class="fc">A-04 → Fangfang becomes a dart</span></div>
-</div>
-<div class="sh" style="left: 756px; top: 92px"><img src="/_blob/d5d52a24311797bad59dd72449b62318" alt="Plan · spread 01, Triangle Town"><span class="tg">01 · Plan · spread 01, Triangle Town</span></div>
-<div class="sh" style="left: 1316px; top: 92px"><img src="/_blob/2426d4b1a2daef7252961bbe2a84530a" alt="Exploded view · one page"><span class="tg">02 · Exploded view · one page</span></div>
-<div class="sh" style="left: 756px; top: 517px"><img src="/_blob/dbc701229db819be438089a410c6fd7e" alt="Elevation + section · the tree"><span class="tg">03 · Elevation + section · the tree</span></div>
-<div class="sh" style="left: 1316px; top: 517px"><img src="/_blob/4cebe66a2362519797e8e193aed39a05" alt="Sequence · Book 2, Fangfang"><span class="tg">04 · Sequence · Book 2, Fangfang</span></div>
 
 </div>
 </x-dc>
