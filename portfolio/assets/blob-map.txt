@@ -132,3 +132,4 @@ mattress_v2 b351ba8769af1177063819278e3be9b5
 cypt_cradle 65f30f882333e620f82d5f8abdffdf71
 cypt_damping e1b34ceaf89766c5c19457871a5126d9
 cypt_levitation e43dfcf34f8f8f1951b5144f1b591241
+stage_center 2e1b9f50d4145ca72acfc87fa3a100bd
