@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IYPT and the magnetic cradle</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.fig{position:absolute;display:flex;flex-direction:column;gap:6px}
+.fig img{display:block;width:100%;object-fit:cover;background:#FFFFFF;border-radius:4px}
+.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8C96AE}
+.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #4D7CFF;padding-top:10px}
+.on{font-size:46px;line-height:.9;color:#FFFFFF}
+.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
+.pb{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:center;padding:10px 0;border-top:1px solid rgba(238,241,248,.15)}
+.pb img{width:150px;height:84px;object-fit:cover;display:block;border-radius:3px}
+.pt{font-size:19px;line-height:1.05}
+.pd{font-size:12.5px;line-height:1.35;color:#AEB6C8;padding-top:3px}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0D1220; color: #EEF1F8">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #AEB6C8"><span>05 — Mind · Nº 01 / 06 · Motion</span><span>Leadership + Research · IYPT</span><span>Amy Hu · 15</span></div>
+
+<div style="position: absolute; left: 64px; top: 88px; width: 640px; display: flex; flex-direction: column; gap: 16px">
+<div class="m" style="font-size: 12px; color: #4D7CFF">IYPT Macao team captain · school physics captain · independent researcher</div>
+<div class="d" style="font-size: 86px; line-height: .86">A CRADLE THAT<br><span style="color: #4D7CFF">NEVER TOUCHES</span></div>
+<div class="s" style="font-size: 26px; line-height: 1.15; font-style: italic">How energy travels along a chain of magnetic pendulums.</div>
+<div class="b" style="font-size: 15.5px; line-height: 1.6; color: #D5DAE6">In a Newton's cradle, energy passes by collision. Replace the balls with repelling magnets and it passes without contact, the way atoms in a crystal trade energy through forces. I asked how magnet strength, spacing and release angle shift the chain's normal-mode frequencies, and how that decides whether energy travels or stays trapped. I designed and 3D-printed the rig, tracked every trial on video, extracted eigenfrequencies by FFT and compared them with a Lagrangian model.</div>
+<div style="border-left: 3px solid #4D7CFF; padding-left: 16px"><span class="s" style="font-size: 22px; line-height: 1.25; font-style: italic">"A tournament question became my Extended Essay: a desktop analogue of energy transfer in a lattice."</span></div>
+</div>
+
+<div class="fig" style="left: 760px; top: 96px; width: 560px"><img src="/_blob/f208c647069e9343412650e08270708f" alt="The magnetic cradle rig" style="height: 340px"><span class="fc">Fig. 1 · My 3D-printed rig with five magnetic pendulums</span></div>
+<div class="fig" style="left: 760px; top: 480px; width: 270px"><img src="/_blob/2e810404204587b4707687ff34cea418" alt="Model of coupled magnetic pendulums" style="height: 170px; object-fit: contain; background: #0D1220"><span class="fc">Fig. 2 · Model: repelling dipoles</span></div>
+<div class="fig" style="left: 1050px; top: 480px; width: 270px"><img src="/_blob/8b70f980030d85526ecb2ed3a60561a3" alt="Time-frequency spectrograms of three pendulums" style="height: 170px"><span class="fc">Fig. 3 · Energy moving pendulum to pendulum</span></div>
+
+<div style="position: absolute; left: 1370px; top: 96px; width: 486px; display: flex; flex-direction: column">
+<div class="m" style="font-size: 12px; color: #4D7CFF; padding-bottom: 8px">CYPT 2026 · problems I reported</div>
+<div class="pb"><img src="/_blob/6b8c53ff3a14dfb07f667f6d98b30dcc" alt="Slide: Magnetic Newton's Cradle"><div><div class="d pt">#15 Magnetic Newton's Cradle</div><div class="b pd">Non-touching magnets as a new kind of cradle.</div></div></div>
+<div class="pb"><img src="/_blob/557168a18b23a43c01f6296e087f006a" alt="Slide: Electrical Damping"><div><div class="d pt">#2 Electrical Damping</div><div class="b pd">A magnet on a spring, slowed by a coil and resistor.</div></div></div>
+<div class="pb" style="border-bottom: 1px solid rgba(238,241,248,.15)"><img src="/_blob/dea34c31024bca90c5d9399574b17546" alt="Slide: Levitation Control"><div><div class="d pt">#9 Levitation Control</div><div class="b pd">Steering levitating graphite with light.</div></div></div>
+<div class="m" style="font-size: 12px; color: #4D7CFF; padding: 22px 0 8px">As captain</div>
+<div class="b" style="font-size: 15px; line-height: 1.6; color: #D5DAE6">I captained the IYPT Macao team and, at school, founded our physics lab and community, Wavefront (CYPT / MYPT varsity). I run forums and inter-school exchanges and tutor younger students for tournaments.</div>
+</div>
+
+<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px">
+<div class="out"><span class="d on">100+</span><span class="b ol">trials on my own 3D-printed rig</span></div>
+<div class="out"><span class="d on">2k+</span><span class="b ol">audience for my research talk</span></div>
+<div class="out"><span class="d on">30+</span><span class="b ol">forums and inter-school exchanges led</span></div>
+<div class="out"><span class="d on">10+</span><span class="b ol">workshops run</span></div>
+<div class="out"><span class="d on">200+</span><span class="b ol">hours coaching</span></div>
+<div class="out"><span class="d on">20+</span><span class="b ol">students coached</span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

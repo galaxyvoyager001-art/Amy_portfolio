@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Curawave</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.fig{position:absolute;display:flex;flex-direction:column;gap:6px}
+.fig img{display:block;width:100%;object-fit:cover;border-radius:4px}
+.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8C96AE}
+.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #2EC4B6;padding-top:10px}
+.on{font-size:44px;line-height:.9;color:#FFFFFF}
+.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
+.lab{position:absolute;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#0D1220;background:#FFFFFF;padding:5px 9px;border-radius:3px;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.lab i{width:9px;height:9px;border-radius:50%;background:#2EC4B6;display:block}
+.stp{display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;font-size:13.5px;line-height:1.4;color:#D5DAE6;padding:7px 0;border-top:1px solid rgba(238,241,248,.15)}
+.stp b{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;color:#2EC4B6;font-size:18px}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0B1A2A; color: #EEF1F8">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #AEB6C8"><span>05 — Mind · Nº 03 / 06 · Touch</span><span>Startup · Beijing Lingtong Future Technology · Conrad Challenge</span><span>Amy Hu · 17</span></div>
+
+<div style="position: absolute; left: 64px; top: 88px; width: 560px; display: flex; flex-direction: column; gap: 14px">
+<div class="m" style="font-size: 12px; color: #2EC4B6">Founder &amp; R&amp;D lead · Curawave co-founder &amp; CTO</div>
+<div class="d" style="font-size: 76px; line-height: .86">A MATTRESS THAT<br><span style="color: #2EC4B6">MOVES LIKE THE SEA</span></div>
+<div class="b" style="font-size: 15px; line-height: 1.58; color: #D5DAE6">After a bicycle accident I could barely move from bed to chair without pain. Moving patients after surgery is the same problem at a larger scale: in a study we cited, 15% of 1,200 post-operative patients had complications linked to being transferred. Curawave is a mattress of 18 × 20 soft silicone cells. Each cell bends one way when inflated, because its cotton restriction layer stretches less than the silicone; groups inflate in turn, and the wave carries the patient across without anyone lifting.</div>
+<div style="display: flex; flex-direction: column">
+<div class="stp"><b>01</b><span>Moulds modelled in Fusion and 3D-printed; silicone cast by hand.</span></div>
+<div class="stp"><b>02</b><span>Arduino and solenoid valves time each group of cells.</span></div>
+<div class="stp" style="border-bottom: 1px solid rgba(238,241,248,.15)"><b>03</b><span>A working 1 × 4 prototype, then the full design below.</span></div>
+</div>
+<div class="b" style="font-size: 14px; line-height: 1.55; color: #AEB6C8">Through my startup, Beijing Lingtong Future Technology, the same assistive-tech thinking reaches the market: we develop and sell intelligent hearing aids and the mattress.</div>
+</div>
+
+<div class="fig" style="left: 660px; top: 92px; width: 860px"><img src="/_blob/4de0745c1615a4c5c02247ad86c3e4a6" alt="Concept rendering of the full Curawave mattress" style="height: 538px; object-fit: cover; object-position: 45% 40%; background: #E7EDF4"><span class="fc">Concept rendering of the full mattress, built from our prototype's design · not a photograph</span></div>
+<div class="lab" style="left: 760px; top: 260px"><i></i>Cut-away: sheet · restriction layer · silicone base</div>
+<div class="lab" style="left: 1060px; top: 150px"><i></i>Travelling wave across 18 × 20 cells</div>
+<div class="lab" style="left: 1300px; top: 520px"><i></i>Pump + 4 valve groups</div>
+
+<div class="fig" style="left: 1550px; top: 92px; width: 306px"><img src="/_blob/9d8e6e3557fbd85611fe80cffbd26e34" alt="Cast silicone cells" style="height: 170px"><span class="fc">Cast silicone cells</span></div>
+<div class="fig" style="left: 1550px; top: 296px; width: 306px"><img src="/_blob/b6452e51a792537939c82674dd762b74" alt="Pump, valves and Arduino wiring" style="height: 170px"><span class="fc">Pump, valves and Arduino</span></div>
+<div class="fig" style="left: 1550px; top: 500px; width: 306px"><img src="/_blob/1363b697e6a919f12f15c326765bb5ce" alt="Moving principle diagram" style="height: 130px; object-fit: contain; background: #FFFFFF"><span class="fc">How one cell pushes</span></div>
+
+<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px">
+<div class="out"><span class="d on">$100k+</span><span class="b ol">raised for my assistive-tech startup</span></div>
+<div class="out"><span class="d on">3+</span><span class="b ol">wave-mattress prototypes</span></div>
+<div class="out"><span class="d on">10+</span><span class="b ol">CAD and circuit designs</span></div>
+<div class="out"><span class="d on">20+</span><span class="b ol">parts 3D-printed or cast</span></div>
+<div class="out"><span class="d on">100+</span><span class="b ol">people pitched to</span></div>
+<div class="out"><span class="d on">2</span><span class="b ol">products developed: hearing aids &amp; mattress</span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

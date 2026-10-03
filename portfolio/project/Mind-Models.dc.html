@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Editor and modeller</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #F4C152;padding-top:10px}
+.on{font-size:44px;line-height:.9;color:#FFFFFF}
+.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
+.cov{display:flex;flex-direction:column;gap:10px;background:#F6F1E4;color:#141414;padding:18px 18px 16px;box-sizing:border-box;min-width:0;box-shadow:0 18px 30px rgba(0,0,0,.35)}
+.ch{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #141414;padding-bottom:6px}
+.cl{font-size:88px;line-height:.8}
+.ct{font-size:22px;line-height:1.05}
+.cq{font-size:15px;line-height:1.2;font-style:italic;color:#3A3A3A}
+.ck{display:flex;flex-wrap:wrap;gap:5px}
+.ck span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #141414;padding:3px 6px}
+.cr{font-size:12.5px;line-height:1.4;color:#3A3A3A;margin-top:auto;border-top:1px solid #C9C1AE;padding-top:8px}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #14110B; color: #F3EEE3">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #B9AE96"><span>05 — Mind · Nº 06 / 06 · Thinking</span><span>Publication + mathematical modelling</span><span>Amy Hu · 20</span></div>
+
+<div style="position: absolute; left: 64px; top: 88px; width: 560px; display: flex; flex-direction: column; gap: 16px">
+<div class="m" style="font-size: 12px; color: #F4C152">Founding editor-in-chief</div>
+<div class="d" style="font-size: 84px; line-height: .86">MODELLING<br><span style="color: #F4C152">THE WORLD</span></div>
+<div class="s" style="font-size: 26px; line-height: 1.15; font-style: italic">From a superstition to a canal, every question becomes an equation first.</div>
+<div class="b" style="font-size: 15.5px; line-height: 1.6; color: #DDD5C3">For two years I led our school's first engineering and applied-mathematics journal: five editors, three issues, interviews with alumni and researchers, and more than 200 readers. On the other side of the page, I write the models myself. Five team papers for IMMC and HiMCM taught me to turn messy real problems into variables, assumptions and something we could test.</div>
+<div style="border-left: 3px solid #F4C152; padding-left: 16px"><span class="s" style="font-size: 21px; line-height: 1.25; font-style: italic">"Editing taught me to explain an idea. Modelling taught me to defend it."</span></div>
+</div>
+
+<div style="position: absolute; left: 680px; top: 92px; width: 1176px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; height: 650px">
+<div class="cov"><div class="ch"><span class="m" style="font-size: 10.5px">IMMC 2024</span><span class="d cl">A</span></div><div class="d ct">Saving the Panama Canal's water</div><div class="s cq">How large should water-saving basins be, and how many?</div><div class="ck"><span>Optimisation</span><span>Cost model</span></div><div class="b cr">Found the basin scale that saves the most water, then the cheapest way to build it.</div></div>
+<div class="cov"><div class="ch"><span class="m" style="font-size: 10.5px">IMMC 2025</span><span class="d cl">D</span></div><div class="d ct">Teaching a robot to jump rope</div><div class="s cq">What shape does a spinning rope take?</div><div class="ck"><span>Catenary</span><span>Jacobi sn</span><span>MATLAB</span></div><div class="b cr">Modelled the rope in 2-D and 3-D and set ranges for jump speed, time and rope length.</div></div>
+<div class="cov"><div class="ch"><span class="m" style="font-size: 10.5px">HiMCM 2025</span><span class="d cl">A</span></div><div class="d ct">Sweeping a burning building</div><div class="s cq">Which route lets responders clear rooms fastest and safest?</div><div class="ck"><span>Cellular automaton</span><span>Routing</span></div><div class="b cr">Simulated fire, smoke and people moving, then ranked rooms by risk and mobility.</div></div>
+<div class="cov"><div class="ch"><span class="m" style="font-size: 10.5px">IMMC 2026</span><span class="d cl">D</span></div><div class="d ct">Is Friday the 13th unlucky?</div><div class="s cq">Can "unluckiness" be measured from real disasters?</div><div class="ck"><span>Boltzmann</span><span>Entropy</span><span>Graph cliques</span></div><div class="b cr">Scored 2000–2025 disasters, then predicted any date's unluckiness with a graph model.</div></div>
+<div class="cov"><div class="ch"><span class="m" style="font-size: 10.5px">IMMC 2026</span><span class="d cl">⌖</span></div><div class="d ct">Guarding Etosha National Park</div><div class="s cq">Where should a small ranger team patrol, and when?</div><div class="ck"><span>Risk map</span><span>Topology</span><span>Snake routing</span></div><div class="b cr">Turned a huge park into patrol units, routes and a staffing schedule.</div></div>
+</div>
+
+<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px">
+<div class="out"><span class="d on">2 yrs</span><span class="b ol">founding editor-in-chief</span></div>
+<div class="out"><span class="d on">5+</span><span class="b ol">editors led</span></div>
+<div class="out"><span class="d on">3+</span><span class="b ol">issues published</span></div>
+<div class="out"><span class="d on">200+</span><span class="b ol">readers</span></div>
+<div class="out"><span class="d on">5</span><span class="b ol">modelling papers, IMMC &amp; HiMCM</span></div>
+<div class="out"><span class="d on">[award]</span><span class="b ol">best modelling result, to add</span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

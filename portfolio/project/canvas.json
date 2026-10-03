@@ -18,7 +18,7 @@
     },
     "Mind-Opener.dc.html": {
       "h": 960,
-      "title": "14 Mind · Research (next)",
+      "title": "14 Mind · Research",
       "w": 1920,
       "x": 0,
       "y": 6800
@@ -99,6 +99,48 @@
       "w": 1920,
       "x": 8000,
       "y": 1360
+    },
+    "Mind-IYPT.dc.html": {
+      "x": 2000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "15 Mind · IYPT & magnetic cradle"
+    },
+    "Mind-Hearing.dc.html": {
+      "x": 4000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "16 Mind · SmartHearing"
+    },
+    "Mind-Curawave.dc.html": {
+      "x": 6000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "17 Mind · Startup & Curawave"
+    },
+    "Mind-Glass.dc.html": {
+      "x": 8000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "18 Mind · Metallic glass"
+    },
+    "Mind-Optics.dc.html": {
+      "x": 10000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "19 Mind · Nonlinear optics"
+    },
+    "Mind-Models.dc.html": {
+      "x": 12000,
+      "y": 6800,
+      "w": 1920,
+      "h": 960,
+      "title": "20 Mind · Journal & modelling"
     }
   },
   "createdOnFiles": {
@@ -141,6 +183,14 @@
       "w": 240,
       "x": 0,
       "y": 1100
+    },
+    "rowMind": {
+      "kind": "title1",
+      "maxW": 13920,
+      "text": "05 Mind · Research, in activity-list order",
+      "w": 240,
+      "x": 0,
+      "y": 6540
     }
   },
   "order": [
@@ -157,7 +207,13 @@
     "Taste-Book.dc.html",
     "Taste-Twelve.dc.html",
     "Sound-Motion.dc.html",
-    "Mind-Opener.dc.html"
+    "Mind-Opener.dc.html",
+    "Mind-IYPT.dc.html",
+    "Mind-Hearing.dc.html",
+    "Mind-Curawave.dc.html",
+    "Mind-Glass.dc.html",
+    "Mind-Optics.dc.html",
+    "Mind-Models.dc.html"
   ],
   "pages": [],
   "title": "Amy Portfolio"

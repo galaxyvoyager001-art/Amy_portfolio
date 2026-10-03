@@ -17,6 +17,8 @@ body{margin:0}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
 .g{width:100%;height:100%;object-fit:cover;display:block}
 .dot{position:absolute;border-radius:50%;width:10px;height:10px;background:#FFC93C}
+.note{position:absolute;width:168px;height:196px;box-sizing:border-box;padding:16px 14px;font-family:'Caveat',cursive;font-size:22px;line-height:1.05;color:#1E1A16;box-shadow:0 12px 18px rgba(0,0,0,.4);display:flex;flex-direction:column;justify-content:space-between}
+.note span{font-size:18px;color:#5A4E40}
 </style>
 </helmet>
 <div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #121212; color: #F4F1EC">
@@ -32,10 +34,17 @@ body{margin:0}
 <div class="d" style="font-size: 92px; line-height: .86">EVEN WITHOUT SIGHT,<br><span style="color: #FFC93C">THERE IS STILL VISION</span></div>
 </div>
 <sc-for list="{{dots}}" as="d" hint-placeholder-count="30"><span class="dot" style="left: {{d.x}}px; top: {{d.y}}px; opacity: {{d.op}}"></span></sc-for>
-<div class="b" style="position: absolute; left: 600px; top: 312px; width: 760px; font-size: 17px; line-height: 1.55">We closed the project with a club exhibition. Classmates could pick up the books and learn how blind people read, move and perceive the world.</div>
-<div class="m" style="position: absolute; left: 1440px; top: 318px; width: 416px; font-size: 12px; line-height: 1.7; color: #BDB8AF; text-align: right">Club exhibition<br>Books · posters · photographs</div>
+<div class="b" style="position: absolute; left: 600px; top: 312px; width: 800px; font-size: 16.5px; line-height: 1.55">We closed the project with a club exhibition. Classmates picked up the books and learned how blind people move through and perceive the world, a group most of them had never thought about.</div>
+<div style="position: absolute; left: 1440px; top: 250px; width: 416px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span class="d" style="font-size: 76px; line-height: .9; color: #FFC93C">[___]</span><span class="m" style="font-size: 12px; color: #BDB8AF">visitors over [__] days</span></div>
+<div class="m" style="position: absolute; left: 1500px; top: 410px; font-size: 12px; color: #BDB8AF">What visitors wrote</div>
+<div style="position: absolute; left: 1500px; top: 440px; width: 356px; height: 470px">
+<div class="note" style="left: 0; top: 0; background: #FFE36E; transform: rotate(-3deg)">"[A classmate's own words about what they learned]"<span>— [grade]</span></div>
+<div class="note" style="left: 176px; top: 18px; background: #F7A1C4; transform: rotate(4deg)">"[A comment about the tactile books]"<span>— [grade]</span></div>
+<div class="note" style="left: 8px; top: 232px; background: #9FD8F0; transform: rotate(2deg)">"[What they noticed for the first time]"<span>— [grade]</span></div>
+<div class="note" style="left: 184px; top: 246px; background: #B8E2A0; transform: rotate(-4deg)">"[What they would like to do next]"<span>— [teacher]</span></div>
+</div>
 
-<div style="position: absolute; left: 600px; top: 412px; width: 1256px; height: 488px; display: grid; grid-template-columns: 250px minmax(0, 1fr) minmax(0, 1fr) 230px; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="position: absolute; left: 600px; top: 412px; width: 860px; height: 488px; display: grid; grid-template-columns: 190px minmax(0, 1fr) minmax(0, 1fr) 170px; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 10px">
 <div style="grid-row: span 2"><img class="g" src="/_blob/f1a9c5dd784caaf834c1e42db9dc1caa" alt="Exhibition boards"></div>
 <div><img class="g" src="/_blob/d4e67f784606aa1004c8e294fa6ec05e" alt="Visitors at the exhibition"></div>
 <div><img class="g" src="/_blob/53ce5d0d248c9ce9abee3119c256cc95" alt="A visitor reading the books"></div>

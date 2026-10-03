@@ -18,15 +18,9 @@ body{margin:0}
 .board{background-color:#FFFBF2;background-image:linear-gradient(rgba(31,53,209,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,53,209,.07) 1px,transparent 1px);background-size:24px 24px}
 .rule{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.4}
 .rn{font-size:26px;line-height:1;color:#FFF3DE}
-.cell{position:relative;min-width:0}
-.ttl{position:absolute;left:4px;top:0;font-family:'Caveat',cursive;font-size:29px;font-weight:700;color:#22222E}
-.sk{position:absolute;left:0;top:44px;width:330px;height:310px;object-fit:cover;background:#FFFFFF;padding:8px;box-sizing:border-box;box-shadow:0 10px 18px rgba(0,0,0,.14)}
-.tape{position:absolute;width:90px;height:24px;background:rgba(255,201,60,.7)}
-.ann{position:absolute;left:350px;top:52px;width:240px;display:flex;flex-direction:column;gap:12px;font-family:'Caveat',cursive;font-size:22px;line-height:1.05;color:#22222E}
-.ann span::before{content:'→ ';color:#FF5A1F}
-.fin{position:absolute;left:356px;top:232px;width:226px;display:flex;flex-direction:column;gap:4px}
-.fin img{width:100%;height:104px;object-fit:cover;display:block;border:3px solid #FFFFFF;box-shadow:0 8px 14px rgba(0,0,0,.18)}
-.fin span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#5A5A66}
+.sh{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0}
+.sh img{max-width:100%;max-height:100%;display:block;box-shadow:0 18px 30px rgba(0,0,0,.25)}
+.tape{position:absolute;width:96px;height:26px;background:rgba(255,201,60,.75)}
 </style>
 </helmet>
 <div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #22B5A6; color: #0E2A33">
@@ -36,7 +30,7 @@ body{margin:0}
 <div style="position: absolute; left: 64px; top: 96px; width: 470px; display: flex; flex-direction: column; gap: 20px">
 <div class="d" style="font-size: 86px; line-height: .86; color: #FFF3DE">MADE FOR<br>FINGERTIPS</div>
 <div class="s" style="font-size: 30px; line-height: 1.12; font-style: italic">The Kingdom of Shapes</div>
-<div class="b" style="font-size: 16.5px; line-height: 1.55">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square changes into other four-sided shapes. I drew every page before a single piece of felt was cut.</div>
+<div class="b" style="font-size: 16.5px; line-height: 1.55">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square grows into a whole family of shapes, from parallelograms to hexagons. I drew every page as a plan, a section and an assembly before a single piece of felt was cut.</div>
 <div class="m" style="font-size: 12px; padding-top: 6px">Rules I designed by</div>
 <div class="b rule"><span class="d rn">1</span><span>Every shape is raised: felt strips, metal or stitched edges.</span></div>
 <div class="b rule"><span class="d rn">2</span><span>Every scene faces a braille card with a raised-line icon of its shape.</span></div>
@@ -44,40 +38,11 @@ body{margin:0}
 <div class="b rule"><span class="d rn">4</span><span>Nothing loose: thread ends are covered and small parts are sewn or sealed.</span></div>
 </div>
 
-<div class="board" style="position: absolute; left: 580px; top: 92px; width: 1276px; height: 828px; box-shadow: 0 26px 50px rgba(0,0,0,.22); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 24px 30px; padding: 26px 30px; box-sizing: border-box">
-
-<div class="cell">
-<div class="ttl">Sketch 01 · Triangle Town</div>
-<img class="sk" src="/_blob/0830fbd75e9619c8a8c746732efae928" alt="Sketch of the Triangle Town page" style="transform: rotate(-1.5deg)">
-<div class="tape" style="left: 120px; top: 34px; transform: rotate(-4deg)"></div>
-<div class="ann"><span>felt strips: trace all three sides</span><span>spinning top locks into a triangle loop</span><span>title strip in braille</span></div>
-<div class="fin"><img src="/_blob/50718ba5b8c0e084222e68ad35e54cfa" alt="Finished Triangle Town spread"><span>Finished spread</span></div>
-</div>
-
-<div class="cell">
-<div class="ttl">Sketch 02 · The Christmas Tree</div>
-<img class="sk" src="/_blob/96a23b2a58703ae6cfc0f0c4c259729b" alt="Sketch of the Christmas tree page" style="transform: rotate(1.5deg)">
-<div class="tape" style="left: 130px; top: 36px; transform: rotate(3deg)"></div>
-<div class="ann"><span>layer 2 lifts on velcro</span><span>LED string hidden under layer 2, switch under the gift</span><span>stocking: soft and hard textures</span></div>
-<div class="fin"><img src="/_blob/341c963622a13464d7dbe1d608d5ae7f" alt="Finished Christmas tree spread"><span>Finished spread</span></div>
-</div>
-
-<div class="cell">
-<div class="ttl">Sketch 03 · The Triangle Conductor</div>
-<img class="sk" src="/_blob/2a2f4fffdea7c99ea3d77ae8738189f5" alt="Sketch of the triangle instrument page" style="transform: rotate(1deg)">
-<div class="tape" style="left: 110px; top: 34px; transform: rotate(-2deg)"></div>
-<div class="ann"><span>a real metal triangle: it rings</span><span>beater held by two felt tabs</span><span>equal sides, equal beats</span></div>
-<div class="fin"><img src="/_blob/4db6d2baca8137407fadc030c2216315" alt="Finished triangle spread"><span>Finished spread</span></div>
-</div>
-
-<div class="cell">
-<div class="ttl">Sketch 04 · Book 2, Fangfang</div>
-<img class="sk" src="/_blob/66e4b64e5791a77cdcc2d80e0eb897a6" alt="Sketch of the square book cover" style="transform: rotate(-1deg)">
-<div class="tape" style="left: 125px; top: 35px; transform: rotate(5deg)"></div>
-<div class="ann"><span>four-sided family: square, rectangle, rhombus, trapezoid</span><span>stitched edges you can trace</span></div>
-<div class="fin"><img src="/_blob/b6195e76ec6f3d897f7096f9de78442e" alt="A child reading the rhombus page"><span>In use: the rhombus card</span></div>
-</div>
-
+<div style="position: absolute; left: 640px; top: 96px; width: 1216px; height: 824px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 20px 24px">
+<div class="sh"><img src="/_blob/d5d52a24311797bad59dd72449b62318" alt="Plan drawing of spread 01, Triangle Town" style="transform: rotate(-1deg)"><div class="tape" style="left: 40%; top: -10px; transform: rotate(-4deg)"></div></div>
+<div class="sh"><img src="/_blob/2426d4b1a2daef7252961bbe2a84530a" alt="Exploded axonometric of one page" style="transform: rotate(1deg)"><div class="tape" style="left: 44%; top: -10px; transform: rotate(3deg)"></div></div>
+<div class="sh"><img src="/_blob/dbc701229db819be438089a410c6fd7e" alt="Elevation and section of the Christmas tree page" style="transform: rotate(.8deg)"><div class="tape" style="left: 38%; top: -10px; transform: rotate(-2deg)"></div></div>
+<div class="sh"><img src="/_blob/4cebe66a2362519797e8e193aed39a05" alt="Shape sequence for Book 2, Fangfang" style="transform: rotate(-.8deg)"><div class="tape" style="left: 46%; top: -10px; transform: rotate(5deg)"></div></div>
 </div>
 
 </div>
