@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SmartHearing</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
+.s{font-family:'Instrument Serif',Georgia,serif}
+.b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+.fig{position:absolute;display:flex;flex-direction:column;gap:6px}
+.fig img{display:block;width:100%;object-fit:contain;background:#FFFFFF;border-radius:4px}
+.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8C96AE}
+.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid #FF6B5B;padding-top:10px}
+.on{font-size:46px;line-height:.9;color:#FFFFFF}
+.ol{font-size:13px;line-height:1.35;color:#AEB6C8}
+.bar{display:grid;grid-template-columns:120px minmax(0,1fr) 54px;gap:12px;align-items:center;font-size:13px}
+.bt{height:22px;border-radius:3px}
+.res{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-top:1px solid rgba(238,241,248,.15)}
+.rv{font-size:34px;line-height:.95;color:#FF6B5B}
+.rl{font-size:13px;line-height:1.35;color:#AEB6C8}
+</style>
+</helmet>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0D1220; color: #EEF1F8">
+
+<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px; color: #AEB6C8"><span>05 — Mind · Nº 02 / 06 · Hearing</span><span>Research · Peking University, Institute for Artificial Intelligence</span><span>Amy Hu · 16</span></div>
+
+<div style="position: absolute; left: 64px; top: 88px; width: 620px; display: flex; flex-direction: column; gap: 16px">
+<div class="m" style="font-size: 12px; color: #FF6B5B">AI hearing-aid product design lead</div>
+<div class="d" style="font-size: 96px; line-height: .84">SMART<span style="color: #FF6B5B">HEARING</span></div>
+<div class="s" style="font-size: 27px; line-height: 1.15; font-style: italic">A hearing aid that knows which sound matters right now.</div>
+<div class="b" style="font-size: 15.5px; line-height: 1.6; color: #D5DAE6">Conventional hearing aids put speech first, so a siren, an alarm or a scream can be turned down as "noise". SmartHearing listens like a person does. A large audio-language model describes the scene in words; a language-queried separator pulls out the sounds those words name; and an adaptive window of 4 to 10 seconds keeps the delay low. A lightweight Query-space Adapter closes the gap between how the model describes sounds and how the separator was trained.</div>
+<div style="border-left: 3px solid #FF6B5B; padding-left: 16px"><span class="s" style="font-size: 22px; line-height: 1.25; font-style: italic">"My grandfather's hearing challenges taught me to notice quiet details. This project is about the loud ones that must never be missed."</span></div>
+</div>
+
+<div class="fig" style="left: 740px; top: 96px; width: 1116px"><img src="/_blob/0caf11df6dcb8c6755dd04997cc8bbec" alt="SmartHearing system architecture" style="height: 330px"><span class="fc">Fig. 1 · Perception path (scene understanding) and execution path (separation and gain)</span></div>
+<div class="fig" style="left: 740px; top: 470px; width: 360px"><img src="/_blob/a4a5ad7be8959db013341505f730570e" alt="Everyday listening scenes" style="height: 250px; object-fit: cover"><span class="fc">Fig. 2 · Scenes the system adapts to</span></div>
+
+<div style="position: absolute; left: 1130px; top: 470px; width: 340px; display: flex; flex-direction: column; gap: 10px">
+<div class="m" style="font-size: 11px; color: #FF6B5B">Listening test · 101 participants</div>
+<div class="b" style="font-size: 13px; color: #AEB6C8">Share of trials rated the most salient</div>
+<div class="b bar"><span>SmartHearing</span><div class="bt" style="width: 100%; background: #FF6B5B"></div><span class="d" style="font-size: 18px">50.5%</span></div>
+<div class="b bar"><span>Baseline 1</span><div class="bt" style="width: 56%; background: #5A6380"></div><span class="d" style="font-size: 18px">28.1%</span></div>
+<div class="b bar"><span>Baseline 2</span><div class="bt" style="width: 43%; background: #3D4560"></div><span class="d" style="font-size: 18px">21.5%</span></div>
+</div>
+<div style="position: absolute; left: 1500px; top: 470px; width: 356px; display: flex; flex-direction: column">
+<div class="res"><span class="d rv">+0.97 dB</span><span class="b rl">SNRi over the base separator, 600 mixtures</span></div>
+<div class="res"><span class="d rv">+1.14 dB</span><span class="b rl">SI-SDRi on the same set</span></div>
+<div class="res" style="border-bottom: 1px solid rgba(238,241,248,.15)"><span class="d rv">+1.32 dB</span><span class="b rl">SNRi on 145 unseen ESC-50 mixtures</span></div>
+</div>
+
+<div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 26px">
+<div class="out"><span class="d on">1</span><span class="b ol">patent for the AI hearing aid</span></div>
+<div class="out"><span class="d on">8.7k+</span><span class="b ol">audio samples evaluated across 5+ datasets</span></div>
+<div class="out"><span class="d on">300+</span><span class="b ol">listener trials</span></div>
+<div class="out"><span class="d on">IEEE</span><span class="b ol">first-author paper (ICASSP 2027 submission)</span></div>
+<div class="out"><span class="d on">→ 03</span><span class="b ol">taken to market through my startup (p. 17)</span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
