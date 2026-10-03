@@ -15,10 +15,10 @@ body{margin:0}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.it{position:absolute;width:200px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}
-.it img{max-width:150px;max-height:84px;display:block;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 10px 10px rgba(58,30,18,.35))}
-.bn{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:18px;line-height:1;padding-top:4px}
-.ph{font-family:'Instrument Sans',sans-serif;font-size:12.5px;line-height:1.25;max-width:190px}
+.it{position:absolute;width:170px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}
+.it img{max-width:120px;max-height:64px;display:block;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 10px 10px rgba(58,30,18,.35))}
+.bn{font-family:'Bricolage Grotesque',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;font-size:16px;line-height:1;padding-top:4px}
+.ph{font-family:'Instrument Sans',sans-serif;font-size:11.5px;line-height:1.2;max-width:160px}
 .th{position:absolute;width:206px;height:149px;object-fit:cover;display:block;border:3px solid #FFF8EA;box-shadow:0 10px 16px rgba(58,30,18,.35)}
 </style>
 </helmet>
@@ -28,7 +28,7 @@ body{margin:0}
 <div class="m" style="position: absolute; right: 64px; top: 40px; font-size: 13px">Amy Hu · 12</div>
 
 <div style="position: absolute; left: 64px; top: 96px; width: 500px; display: flex; flex-direction: column; gap: 22px">
-<div class="d" style="font-size: 92px; line-height: .84">ONE YEAR,<br>TWELVE<br>EXPERIMENTS</div>
+<div class="d" style="font-size: 82px; line-height: .84">ONE YEAR,<br>TWELVE<br>EXPERIMENTS</div>
 <div class="b" style="font-size: 17px; line-height: 1.6">Every bake in the book is also a small experiment. The inner ring shows each month's bake and the idea its science page explains. The outer ring shows the page that opens that month in the book.</div>
 <div class="s" style="font-size: 27px; line-height: 1.15; font-style: italic">Foams, emulsions, heat transfer, starch and fat: twelve ways physics ends up on a plate.</div>
 <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 6px">
@@ -38,9 +38,9 @@ body{margin:0}
 </div>
 
 <svg viewBox="0 0 1920 960" width="1920" height="960" style="position: absolute; left: 0; top: 0" aria-hidden="true">
-<ellipse cx="1240" cy="490" rx="540" ry="362" fill="none" stroke="#3A1E12" stroke-width="1.5" stroke-dasharray="3 9"/>
-<ellipse cx="1240" cy="490" rx="330" ry="226" fill="none" stroke="#3A1E12" stroke-width="2" stroke-dasharray="4 10"/>
-<circle cx="1240" cy="490" r="104" fill="#3A1E12"/>
+<ellipse cx="1240" cy="490" rx="548" ry="372" fill="none" stroke="#3A1E12" stroke-width="1.5" stroke-dasharray="3 9"></ellipse>
+<ellipse cx="1240" cy="490" rx="315" ry="214" fill="none" stroke="#3A1E12" stroke-width="2" stroke-dasharray="4 10"></ellipse>
+<circle cx="1240" cy="490" r="104" fill="#3A1E12"></circle>
 </svg>
 <sc-for list="{{links}}" as="l" hint-placeholder-count="12"><div style="position: absolute; left: {{l.x}}px; top: {{l.y}}px; width: {{l.len}}px; height: 0; border-top: 1.5px dashed #8A4B2A; transform-origin: 0 0; transform: rotate({{l.deg}}deg)"></div></sc-for>
 <div style="position: absolute; left: 1090px; top: 410px; width: 300px; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #F4C152">
@@ -87,13 +87,13 @@ const PH = ["/_blob/3f9411c8d2afa320a2ce8d28bd89dc77", "/_blob/e43990f06355c4220
 const items = [], pages = [], links = [], phys = [];
 bakes.forEach((b, i) => {
 const a = -Math.PI / 2 + i * Math.PI / 6;
-const ix = cx + 330 * Math.cos(a), iy = cy + 226 * Math.sin(a);
-const px = cx + 540 * Math.cos(a), py = cy + 362 * Math.sin(a);
-items.push({ name: b[1], phys: b[2], src: b[3], x: Math.round(ix - 100), y: Math.round(iy - 72) });
+const ix = cx + 315 * Math.cos(a), iy = cy + 214 * Math.sin(a);
+const px = cx + 548 * Math.cos(a), py = cy + 372 * Math.sin(a);
+items.push({ name: b[1], phys: b[2], src: b[3], x: Math.round(ix - 85), y: Math.round(iy - 58) });
 const rot = (i % 2 ? 1 : -1) * 3;
 phys.push({ src: PH[i], alt: b[0] + ' physics page', x: Math.round(px - 103 + 20), y: Math.round(py - 75 - 20), r: -rot });
 pages.push({ src: b[4], alt: b[0] + ' opening page', x: Math.round(px - 103), y: Math.round(py - 75), r: rot });
-const sx = ix + (px - ix) * 0.28, sy = iy + (py - iy) * 0.28, ex = ix + (px - ix) * 0.78, ey = iy + (py - iy) * 0.78;
+const sx = ix + (px - ix) * 0.42, sy = iy + (py - iy) * 0.42, ex = ix + (px - ix) * 0.62, ey = iy + (py - iy) * 0.62;
 links.push({ x: Math.round(sx), y: Math.round(sy), len: Math.round(Math.hypot(ex - sx, ey - sy)), deg: (Math.atan2(ey - sy, ex - sx) * 180 / Math.PI).toFixed(1) });
 });
 return { items, pages, links, phys };
