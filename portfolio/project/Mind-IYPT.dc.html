@@ -25,6 +25,18 @@ body{margin:0}
 .pb img{width:150px;height:84px;object-fit:cover;display:block;border-radius:3px}
 .pt{font-size:19px;line-height:1.05}
 .pd{font-size:12.5px;line-height:1.35;color:#AEB6C8;padding-top:3px}
+.cy{position:absolute;width:352px;display:flex;flex-direction:column;gap:8px}
+.cyt{font-size:21px;line-height:1;border-top:2px solid #4D7CFF;padding-top:8px}
+.cyt b{color:#4D7CFF;font-weight:800}
+.sch{height:186px;background:#FFFFFF;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box}
+.sch img{max-width:100%;max-height:100%;display:block}
+.lab{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#4D7CFF;padding-top:4px}
+.eq{background:#141B30;border:1px solid rgba(77,124,255,.55);border-radius:4px;height:78px;box-sizing:border-box;padding:6px 10px;display:flex;flex-direction:column;justify-content:center;gap:4px;text-align:center;font-family:'Instrument Serif',Georgia,serif;font-style:italic;color:#FFFFFF;white-space:nowrap}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:.8em;line-height:1.05}
+.fr span:first-child{border-bottom:1.5px solid #FFFFFF;padding:0 3px}
+.fd{display:grid;grid-template-columns:16px minmax(0,1fr);gap:6px;font-size:13px;line-height:1.38;color:#D5DAE6;padding:5px 0;border-top:1px solid rgba(238,241,248,.13)}
+.fd i{font-style:normal;color:#4D7CFF;font-family:'Bricolage Grotesque',sans-serif;font-weight:800}
+.fd b{color:#FFFFFF;font-weight:600}
 </style>
 </helmet>
 <div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #0D1220; color: #EEF1F8">
@@ -37,19 +49,45 @@ body{margin:0}
 <div class="s" style="font-size: 26px; line-height: 1.15; font-style: italic">How energy travels along a chain of magnetic pendulums.</div>
 <div class="b" style="font-size: 15.5px; line-height: 1.6; color: #D5DAE6">In a Newton's cradle, energy passes by collision. Replace the balls with repelling magnets and it passes without contact, the way atoms in a crystal trade energy through forces. I asked how magnet strength, spacing and release angle shift the chain's normal-mode frequencies, and how that decides whether energy travels or stays trapped. I designed and 3D-printed the rig, tracked every trial on video, extracted eigenfrequencies by FFT and compared them with a Lagrangian model.</div>
 <div style="border-left: 3px solid #4D7CFF; padding-left: 16px"><span class="s" style="font-size: 22px; line-height: 1.25; font-style: italic">"A tournament question became my Extended Essay: a desktop analogue of energy transfer in a lattice."</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding-top: 4px">
+<div class="m" style="font-size: 12px; color: #4D7CFF">As captain</div>
+<div class="b" style="font-size: 15px; line-height: 1.55; color: #D5DAE6">I captained the IYPT Macao team and, at school, founded our physics lab and community, Wavefront (CYPT / MYPT varsity). I run forums and inter-school exchanges and tutor younger students for tournaments.</div>
+</div>
 </div>
 
-<div class="fig" style="left: 760px; top: 96px; width: 560px"><img src="/_blob/f208c647069e9343412650e08270708f" alt="The magnetic cradle rig" style="height: 340px"><span class="fc">Fig. 1 · My 3D-printed rig with five magnetic pendulums</span></div>
-<div class="fig" style="left: 760px; top: 480px; width: 270px"><img src="/_blob/2e810404204587b4707687ff34cea418" alt="Model of coupled magnetic pendulums" style="height: 170px; object-fit: contain; background: #0D1220"><span class="fc">Fig. 2 · Model: repelling dipoles</span></div>
-<div class="fig" style="left: 1050px; top: 480px; width: 270px"><img src="/_blob/8b70f980030d85526ecb2ed3a60561a3" alt="Time-frequency spectrograms of three pendulums" style="height: 170px"><span class="fc">Fig. 3 · Energy moving pendulum to pendulum</span></div>
+<div class="m" style="position: absolute; left: 760px; top: 92px; width: 1096px; font-size: 12px; color: #4D7CFF">CYPT 2026 · the three problems I reported · picture → equation → result</div>
 
-<div style="position: absolute; left: 1370px; top: 96px; width: 486px; display: flex; flex-direction: column">
-<div class="m" style="font-size: 12px; color: #4D7CFF; padding-bottom: 8px">CYPT 2026 · problems I reported</div>
-<div class="pb"><img src="/_blob/6b8c53ff3a14dfb07f667f6d98b30dcc" alt="Slide: Magnetic Newton's Cradle"><div><div class="d pt">#15 Magnetic Newton's Cradle</div><div class="b pd">Non-touching magnets as a new kind of cradle.</div></div></div>
-<div class="pb"><img src="/_blob/557168a18b23a43c01f6296e087f006a" alt="Slide: Electrical Damping"><div><div class="d pt">#2 Electrical Damping</div><div class="b pd">A magnet on a spring, slowed by a coil and resistor.</div></div></div>
-<div class="pb" style="border-bottom: 1px solid rgba(238,241,248,.15)"><img src="/_blob/dea34c31024bca90c5d9399574b17546" alt="Slide: Levitation Control"><div><div class="d pt">#9 Levitation Control</div><div class="b pd">Steering levitating graphite with light.</div></div></div>
-<div class="m" style="font-size: 12px; color: #4D7CFF; padding: 22px 0 8px">As captain</div>
-<div class="b" style="font-size: 15px; line-height: 1.6; color: #D5DAE6">I captained the IYPT Macao team and, at school, founded our physics lab and community, Wavefront (CYPT / MYPT varsity). I run forums and inter-school exchanges and tutor younger students for tournaments.</div>
+<div class="cy" style="left: 760px; top: 124px">
+<div class="d cyt"><b>#15</b> Magnetic Newton's Cradle</div>
+<div class="sch"><img src="/_blob/65f30f882333e620f82d5f8abdffdf71" alt="My schematic: n magnetic pendulums of length l, spacing s, release angle theta"></div>
+<div class="lab">Key equation</div>
+<div class="eq"><div style="font-size: 16px">L = ½ I<sub>eq</sub>Σθ̇<sub>i</sub>² − Σ Mg(l+R)(1−cos θ<sub>i</sub>) − Σ V<sub>mag,ij</sub></div><div style="font-size: 19px">I<sub>eq</sub> θ̈<sub>n</sub> + <span class="fr"><span>∂V</span><span>∂θ<sub>n</sub></span></span> + γ θ̇<sub>n</sub> = 0</div></div>
+<div class="lab">What I found</div>
+<div class="b fd"><i>1</i><span>The motion mixes <b>normal modes</b>: the first frequency is set by gravity, the second by the magnets.</span></div>
+<div class="b fd"><i>2</i><span>Release angle sets the dominant frequency; spacing and magnet strength tune the second.</span></div>
+<div class="b fd"><i>3</i><span>Model and experiment agree within <b>~3%</b>; the chain is non- or weakly chaotic.</span></div>
+</div>
+
+<div class="cy" style="left: 1132px; top: 124px">
+<div class="d cyt"><b>#2</b> Electrical Damping</div>
+<div class="sch"><img src="/_blob/e1b34ceaf89766c5c19457871a5126d9" alt="My schematic: bar magnet on a spring inside a solenoid coil, wired to a resistor and galvanometer"></div>
+<div class="lab">Key equation</div>
+<div class="eq"><div style="font-size: 21px">F<sub>em</sub> = − <span class="fr"><span>G(x, N, B)²</span><span>R</span></span> · ẋ &nbsp;⇒&nbsp; γ<sub>em</sub> = <span class="fr"><span>G²</span><span>R</span></span></div></div>
+<div class="lab">What I found</div>
+<div class="b fd"><i>1</i><span>Damping rises with coil turns, <b>peaks near 2,700 turns</b>, then falls as the coil's own inductance takes over.</span></div>
+<div class="b fd"><i>2</i><span>The damping coefficient falls as <b>1/R</b>.</span></div>
+<div class="b fd"><i>3</i><span>For weak magnets it grows with the <b>square</b> of the magnetic moment, then levels off.</span></div>
+</div>
+
+<div class="cy" style="left: 1504px; top: 124px">
+<div class="d cyt"><b>#9</b> Levitation Control</div>
+<div class="sch"><img src="/_blob/e43dfcf34f8f8f1951b5144f1b591241" alt="My schematic: graphite sheet over a checkerboard magnet array, and the light-induced force on the sheet"></div>
+<div class="lab">Key equation</div>
+<div class="eq"><div style="font-size: 21px">F<sub>r</sub> = <span class="fr"><span>h</span><span>2μ<sub>0</sub></span></span> <span class="fr"><span>dχ<sub>∥</sub></span><span>dT</span></span> <span class="fr"><span>dT</span><span>dr</span></span> ∬ B<sub>xy</sub>² dA<sub>0</sub></div></div>
+<div class="lab">What I found</div>
+<div class="b fd"><i>1</i><span>The graphite floats where <b>diamagnetic lift</b> balances its weight.</span></div>
+<div class="b fd"><i>2</i><span>Light heats one corner; susceptibility drops with temperature, so the sheet is <b>pushed away from the light</b>.</span></div>
+<div class="b fd"><i>3</i><span>Simulation: a <b>1.36 K</b> difference across the sheet, constant under steady light.</span></div>
 </div>
 
 <div style="position: absolute; left: 64px; right: 64px; bottom: 44px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px">

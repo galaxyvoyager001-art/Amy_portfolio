@@ -133,3 +133,4 @@ cypt_cradle 65f30f882333e620f82d5f8abdffdf71
 cypt_damping e1b34ceaf89766c5c19457871a5126d9
 cypt_levitation e43dfcf34f8f8f1951b5144f1b591241
 stage_center 2e1b9f50d4145ca72acfc87fa3a100bd
+cut_tkd2 8a749eb085e140e2f1102d515f97b9dc
