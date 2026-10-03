@@ -18,9 +18,9 @@
     },
     "Mind-Curawave.dc.html": {
       "h": 960,
-      "title": "17 Mind · Startup & Curawave",
+      "title": "19 Mind · Curawave",
       "w": 1920,
-      "x": 6000,
+      "x": 10000,
       "y": 6800
     },
     "Mind-Glass.dc.html": {
@@ -32,9 +32,9 @@
     },
     "Mind-Hearing.dc.html": {
       "h": 960,
-      "title": "16 Mind · SmartHearing",
+      "title": "17 Mind · SmartHearing",
       "w": 1920,
-      "x": 4000,
+      "x": 6000,
       "y": 6800
     },
     "Mind-IYPT.dc.html": {
@@ -46,9 +46,9 @@
     },
     "Mind-Models.dc.html": {
       "h": 960,
-      "title": "20 Mind · Journal & modelling",
+      "title": "22 Mind · Modelling & journal",
       "w": 1920,
-      "x": 12000,
+      "x": 16000,
       "y": 6800
     },
     "Mind-Opener.dc.html": {
@@ -60,9 +60,9 @@
     },
     "Mind-Optics.dc.html": {
       "h": 960,
-      "title": "19 Mind · Nonlinear optics",
+      "title": "21 Mind · Nonlinear optics",
       "w": 1920,
-      "x": 10000,
+      "x": 14000,
       "y": 6800
     },
     "Sight-Details.dc.html": {
@@ -141,6 +141,20 @@
       "w": 1920,
       "x": 8000,
       "y": 1360
+    },
+    "Mind-CYPT.dc.html": {
+      "h": 960,
+      "w": 1920,
+      "title": "16 Mind · CYPT problems & captaincy",
+      "x": 4000,
+      "y": 6800
+    },
+    "Mind-Startup.dc.html": {
+      "h": 960,
+      "w": 1920,
+      "title": "20 Mind · Startup organisation",
+      "x": 12000,
+      "y": 6800
     }
   },
   "createdOnFiles": {
@@ -154,7 +168,7 @@
   "notes": {
     "rowMind": {
       "kind": "title1",
-      "maxW": 8000,
+      "maxW": 17920,
       "text": "05 Mind · Research, in activity-list order",
       "w": 240,
       "x": 0,
@@ -209,9 +223,11 @@
     "Sound-Motion.dc.html",
     "Mind-Opener.dc.html",
     "Mind-IYPT.dc.html",
+    "Mind-CYPT.dc.html",
     "Mind-Hearing.dc.html",
-    "Mind-Curawave.dc.html",
     "Mind-Glass.dc.html",
+    "Mind-Curawave.dc.html",
+    "Mind-Startup.dc.html",
     "Mind-Optics.dc.html",
     "Mind-Models.dc.html"
   ],
