@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>A House in Miniature</title>
+<title>A house in miniature</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -10,49 +10,52 @@
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Caveat:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <style>
-body{margin:0;background:#FFFFFF}
+body{margin:0}
 .d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
 .m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.pin{position:absolute;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#141414;white-space:nowrap}
-.pd{width:12px;height:12px;border-radius:50%;background:#7A1F2B;box-shadow:0 0 0 4px rgba(255,255,255,.9)}
-.pl{width:44px;height:1px;background:#141414}
-.why{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid #141414}
-.wn{font-size:34px;line-height:.9;color:#7A1F2B}
-.wt{font-size:20px;line-height:1.1}
-.wd{font-size:14.5px;line-height:1.45;color:#3A3A3A;padding-top:4px}
-.spec{display:flex;flex-direction:column;gap:4px;border-left:2px solid #7A1F2B;padding-left:12px}
-.q{display:flex;flex-direction:column;gap:4px;border-left:3px solid #7A1F2B;padding-left:14px}
-.ql{font-size:11px;color:#7A1F2B}
-.qt{font-size:24px;line-height:1.15;font-style:italic}
+.hd{position:absolute;left:64px;top:40px;right:64px;display:flex;justify-content:space-between;font-size:13px;color:#8E8A84}
+.kick{font-size:12px;color:var(--ac)}
+.H{text-transform:uppercase;color:var(--ac);line-height:.82}
+.H2{text-transform:uppercase;line-height:.9}
+.Q{font-family:'Instrument Sans','Helvetica Neue',sans-serif;font-weight:700;letter-spacing:-.01em}
+.obox{background:var(--ac);color:#111;padding:18px 20px;box-sizing:border-box;font-family:'Instrument Sans',sans-serif;font-size:15px;line-height:1.5;font-weight:500}
+.cols{text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-family:'Instrument Sans',sans-serif;font-size:13.5px;line-height:1.55;color:var(--tx2);column-gap:30px;column-rule:1px solid var(--rule)}
+.cols h4{margin:0 0 4px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);break-after:avoid}
+.cols p{margin:0 0 12px}
+.cols b{color:var(--tx);font-weight:600}
+.out{display:flex;flex-direction:column;gap:4px;border-top:2px solid var(--ac);padding-top:10px}
+.on{font-size:44px;line-height:.9;color:var(--tx)}
+.ol{font-size:13px;line-height:1.35;color:var(--tx2)}
+.fc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8E8A84}
+.shd{filter:drop-shadow(0 30px 40px rgba(0,0,0,.65))}
+.stk{filter:drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 24px 30px rgba(0,0,0,.6))}
+.hd{color:#8A8A8A}
+.pt{display:flex;flex-direction:column;gap:6px;border-top:3px solid var(--ac);padding-top:10px}
+.pl{font-size:30px;line-height:.95;color:#111;text-transform:uppercase}
+.px{font-family:'Instrument Sans',sans-serif;font-size:15px;line-height:1.5;color:#3E3E3E}
+
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #141414">
-
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>02 — Sight · Craft</span><span>Amy Hu · 09</span></div>
-
-<div style="position: absolute; left: 64px; top: 88px; width: 600px; display: flex; flex-direction: column; gap: 16px">
-<div class="d" style="font-size: 100px; line-height: .84">A HOUSE IN<br><span style="color: #7A1F2B">MINIATURE</span></div>
-<div class="s" style="font-size: 30px; line-height: 1.1; font-style: italic">A whole home, small enough to sit on a desk.</div>
-<div class="b" style="font-size: 16px; line-height: 1.6">The tactile books asked how a story can be read by hand. This project asks the opposite question: how much can a world hold when it is read only by the eye? I shrank a whole home onto a desktop, with a study, a living room behind a round moon window, a loft bed, a kitchen and a dining table already set for dinner.</div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 6px">
-<div class="q"><span class="m ql">On scale</span><span class="s qt">"A teacup has to agree with the chair beside it, or the eye notices at once."</span></div>
-<div class="q"><span class="m ql">On precision</span><span class="s qt">"The smallest parts go in with tweezers. One extra drop of glue would show."</span></div>
-<div class="q"><span class="m ql">On atmosphere</span><span class="s qt">"Paper walls, fabric and a round moon window decide how each room feels."</span></div>
+<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #FFFFFF; color: #111111; --ac:#E1262D;--tx:#111111;--tx2:#3E3E3E;--rule:rgba(0,0,0,.14)">
+<div class="m hd"><span>02 — Sight · Nº 01 / 02</span><span>Craft · a house in miniature</span><span>Amy Hu · 09</span></div>
+<div style="position: absolute; left: 64px; top: 84px; width: 620px; display: flex; flex-direction: column; gap: 16px">
+<div class="m kick">Craft · made by hand, read by eye</div>
+<div class="d H" style="font-size: 104px">A HOUSE IN<br><span style="color: #111111">MINIATURE</span></div>
+<div class="Q" style="font-size: 25px; line-height: 1.18; color: #111">How much can a world hold when it is read only by the eye?</div>
+<div class="obox" style="color: #FFFFFF">The tactile books asked how a story can be read by hand. This project asks the opposite. I shrank a whole home onto a desktop: a study, a dressing room, a living room behind a round moon window, a loft bed over the kitchen, and a dining table already set for dinner.</div>
 </div>
+<div class="m" style="position: absolute; left: 64px; top: 560px; font-size: 12px; color: #E1262D">Three things that make it look real</div>
+<div style="position: absolute; left: 64px; top: 592px; width: 620px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px">
+<div class="pt"><span class="d pl">Same scale</span><span class="px">Every object is made to one scale, so a teacup is the right size next to the chair. If one thing is off, the whole room looks fake.</span></div>
+<div class="pt"><span class="d pl">Tiny parts</span><span class="px">The smallest pieces are placed with tweezers and fixed with very little glue, so no glue shows.</span></div>
+<div class="pt"><span class="d pl">Real materials</span><span class="px">Paper for the walls, real fabric for the soft things, and a round moon window give each room its own feel.</span></div>
 </div>
-
-<div style="position: absolute; left: 64px; bottom: 44px; width: 600px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
-<div class="spec"><span class="m" style="font-size: 11px">Rooms</span><span class="d" style="font-size: 30px; line-height: 1">5+</span></div>
-<div class="spec"><span class="m" style="font-size: 11px">Build time</span><span class="d" style="font-size: 30px; line-height: 1; color: #B0303F">[__ hrs]</span></div>
-<div class="spec"><span class="m" style="font-size: 11px">Hand-made parts</span><span class="d" style="font-size: 30px; line-height: 1; color: #B0303F">[___]</span></div>
-</div>
-
-<div style="position: absolute; left: 720px; top: 96px; width: 1150px; height: 840px">
-<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 70px; top: 0; width: 980px; filter: drop-shadow(0 30px 30px rgba(0,0,0,.14))">
-<div class="b" style="position: absolute; left: 40px; bottom: 8px; width: 520px; font-size: 14px; line-height: 1.5; color: #3A3A3A">Five rooms on one continuous floor: a study and a dressing room on the left, a living room behind the moon window, a loft bed above the kitchen, and a dining room by the window.</div>
-<div class="m" style="position: absolute; right: 0; bottom: 8px; font-size: 12px; color: #6A6A6A">Fig. 01 — Full view, on white</div>
+<img src="/_blob/8937adfba54d8a786dea9187f126b440" alt="The miniature house, full view" style="position: absolute; left: 800px; top: 92px; width: 1010px; filter: drop-shadow(0 30px 30px rgba(0,0,0,.14))">
+<div style="position: absolute; left: 760px; top: 876px; width: 1096px; display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #DADADA; padding-top: 10px">
+<span class="b" style="font-size: 14px; color: #3E3E3E">Five rooms on one continuous floor, from the study on the left to the dining room by the window.</span>
+<span class="fc">Fig. 1 · Full view, on white</span>
 </div>
 
 </div>

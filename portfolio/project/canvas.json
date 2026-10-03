@@ -16,11 +16,53 @@
       "x": 0,
       "y": 0
     },
+    "Mind-Curawave.dc.html": {
+      "h": 960,
+      "title": "18 Mind · Startup & Curawave",
+      "w": 1920,
+      "x": 8000,
+      "y": 6800
+    },
+    "Mind-Glass.dc.html": {
+      "h": 960,
+      "title": "19 Mind · Metallic glass",
+      "w": 1920,
+      "x": 10000,
+      "y": 6800
+    },
+    "Mind-Hearing.dc.html": {
+      "h": 960,
+      "title": "17 Mind · SmartHearing",
+      "w": 1920,
+      "x": 6000,
+      "y": 6800
+    },
+    "Mind-IYPT.dc.html": {
+      "h": 960,
+      "title": "15 Mind · IYPT & magnetic cradle",
+      "w": 1920,
+      "x": 2000,
+      "y": 6800
+    },
+    "Mind-Models.dc.html": {
+      "h": 960,
+      "title": "21 Mind · Journal & modelling",
+      "w": 1920,
+      "x": 14000,
+      "y": 6800
+    },
     "Mind-Opener.dc.html": {
       "h": 960,
       "title": "14 Mind · Research",
       "w": 1920,
       "x": 0,
+      "y": 6800
+    },
+    "Mind-Optics.dc.html": {
+      "h": 960,
+      "title": "20 Mind · Nonlinear optics",
+      "w": 1920,
+      "x": 12000,
       "y": 6800
     },
     "Sight-Details.dc.html": {
@@ -100,47 +142,12 @@
       "x": 8000,
       "y": 1360
     },
-    "Mind-IYPT.dc.html": {
-      "x": 2000,
-      "y": 6800,
-      "w": 1920,
+    "Mind-CYPT.dc.html": {
       "h": 960,
-      "title": "15 Mind · IYPT & magnetic cradle"
-    },
-    "Mind-Hearing.dc.html": {
+      "title": "16 Mind · CYPT, three problems",
+      "w": 1920,
       "x": 4000,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "16 Mind · SmartHearing"
-    },
-    "Mind-Curawave.dc.html": {
-      "x": 6000,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "17 Mind · Startup & Curawave"
-    },
-    "Mind-Glass.dc.html": {
-      "x": 8000,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "18 Mind · Metallic glass"
-    },
-    "Mind-Optics.dc.html": {
-      "x": 10000,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "19 Mind · Nonlinear optics"
-    },
-    "Mind-Models.dc.html": {
-      "x": 12000,
-      "y": 6800,
-      "w": 1920,
-      "h": 960,
-      "title": "20 Mind · Journal & modelling"
+      "y": 6800
     }
   },
   "createdOnFiles": {
@@ -152,6 +159,14 @@
     "view": "canvas"
   },
   "notes": {
+    "rowMind": {
+      "kind": "title1",
+      "maxW": 10000,
+      "text": "05 Mind · Research, in activity-list order",
+      "w": 240,
+      "x": 0,
+      "y": 6540
+    },
     "rowOpen": {
       "kind": "title1",
       "maxW": 3920,
@@ -178,19 +193,11 @@
     },
     "rowTouch": {
       "kind": "title1",
-      "maxW": 11920,
+      "maxW": 8000,
       "text": "01 Touch · Tactile books for blind children (爱心伴读)",
       "w": 240,
       "x": 0,
       "y": 1100
-    },
-    "rowMind": {
-      "kind": "title1",
-      "maxW": 13920,
-      "text": "05 Mind · Research, in activity-list order",
-      "w": 240,
-      "x": 0,
-      "y": 6540
     }
   },
   "order": [
@@ -209,6 +216,7 @@
     "Sound-Motion.dc.html",
     "Mind-Opener.dc.html",
     "Mind-IYPT.dc.html",
+    "Mind-CYPT.dc.html",
     "Mind-Hearing.dc.html",
     "Mind-Curawave.dc.html",
     "Mind-Glass.dc.html",
