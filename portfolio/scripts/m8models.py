@@ -59,8 +59,8 @@ body20 = f"""<div style="position: absolute; left: 0; top: 0; width: 1920px; hei
 <div class="m" style="font-size: 10.5px; color: #C9D6EA">Amy Hu · team captain and main modeller · author of all five papers · 3 Finalist awards</div>
 </div>
 <div class="abs" style="position: absolute; left: 700px; top: 74px; width: 700px; color: #FFFFFF; border-top: 1px solid rgba(255,255,255,.5); padding-top: 10px"><b>Summary</b> &nbsp;{sum20}</div>
-<div style="position: absolute; left: 1440px; top: 70px; width: 424px; display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 16px; color: #FFFFFF">
-<div style="box-sizing: border-box; height: 166px; border: 1.5px dashed rgba(255,255,255,.75); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6px; font-family: 'IBM Plex Mono',monospace; font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.85)">Cover · Applied Mathematics Vol. 2 · IMMC<br><br>(please upload)</div>
+<div style="position: absolute; left: 1440px; top: 70px; width: 424px; display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 16px; color: #FFFFFF">
+<img src="/_blob/c2ec89f47e3ad9dc90c13dd2569ab178" alt="Cover of our school journal, Applied Mathematics Vol. 2: IMMC" style="width: 124px; height: 166px; object-fit: cover; display: block; box-shadow: 0 6px 14px rgba(0,0,0,.35)">
 <div style="border-left: 4px solid #F2AA5A; padding-left: 14px"><div class="lbl" style="color: #F2AA5A">A separate role: journal editor</div><div class="sr" style="font-size: 13px; line-height: 1.45; padding-top: 4px">I am also an editor of our school's mathematics journal. Our Vol. 2, <i>Applied Mathematics</i>, was an IMMC issue: it explained contest models, including ours, for every reader, alongside interviews with alumni and researchers.</div></div>
 </div>
 """ + kws([('5', 'papers, all written by me'), ('Captain', 'and main modeller'), ('3×', 'Finalist awards'), ('Vol. 2', 'journal issue on IMMC'), ('200+', 'journal readers')], 700, 1164, 0, col='#FFFFFF', top=250) + cols

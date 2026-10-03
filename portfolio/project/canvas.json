@@ -16,6 +16,13 @@
       "x": 0,
       "y": 0
     },
+    "Mind-CYPT.dc.html": {
+      "h": 960,
+      "title": "16 Mind · CYPT problems & captaincy",
+      "w": 1920,
+      "x": 4000,
+      "y": 6800
+    },
     "Mind-Curawave.dc.html": {
       "h": 960,
       "title": "19 Mind · Curawave",
@@ -63,6 +70,13 @@
       "title": "21 Mind · Nonlinear optics",
       "w": 1920,
       "x": 14000,
+      "y": 6800
+    },
+    "Mind-Startup.dc.html": {
+      "h": 960,
+      "title": "20 Mind · Startup organisation",
+      "w": 1920,
+      "x": 12000,
       "y": 6800
     },
     "Sight-Details.dc.html": {
@@ -141,20 +155,6 @@
       "w": 1920,
       "x": 8000,
       "y": 1360
-    },
-    "Mind-CYPT.dc.html": {
-      "h": 960,
-      "w": 1920,
-      "title": "16 Mind · CYPT problems & captaincy",
-      "x": 4000,
-      "y": 6800
-    },
-    "Mind-Startup.dc.html": {
-      "h": 960,
-      "w": 1920,
-      "title": "20 Mind · Startup organisation",
-      "x": 12000,
-      "y": 6800
     }
   },
   "createdOnFiles": {
@@ -168,7 +168,7 @@
   "notes": {
     "rowMind": {
       "kind": "title1",
-      "maxW": 17920,
+      "maxW": 8000,
       "text": "05 Mind · Research, in activity-list order",
       "w": 240,
       "x": 0,
