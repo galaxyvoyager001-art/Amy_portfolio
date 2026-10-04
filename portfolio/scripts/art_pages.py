@@ -1,4 +1,4 @@
-"""Essay-style pages for the two handmade books (docs/work/tactile-books.html, physics-of-baking.html).
+"""Essay-style pages for the crafts and arts (docs/work/: tactile-books, miniature-house, physics-of-baking, guzheng-taekwondo).
 These are written by hand rather than from work_content.py; build_work.py skips their slugs."""
 import os, re
 HERE = os.path.dirname(__file__)
@@ -91,15 +91,18 @@ TOUCH = f'''
   </div>
 </section>
 
-<section class="vows">
+<section class="readpage">
   <span class="fn m">IV.</span>
-  <h2 class="fh">Four rules, kept like promises</h2>
-  <ol>
-    <li><span class="d">Every edge can be followed.</span><em>Shapes are raised in felt strips, metal or stitching, never just printed.</em></li>
-    <li><span class="d">Something always answers.</span><em>On every page, something spins, rings, clicks or moves when you find it.</em></li>
-    <li><span class="d">Nothing comes loose.</span><em>Thread ends are hidden; small parts are sewn or sealed.</em></li>
-    <li><span class="d">The book tells you where to go.</span><em>A raised icon on each braille card names the shape to look for next.</em></li>
-  </ol>
+  <h2 class="fh">One page, <em>read by a hand</em></h2>
+  <p class="rp-lead">The waiter in a triangle tailcoat, carrying the newest drink in the Kingdom of Shapes. Hover the numbers to follow a finger across the page.</p>
+  <div class="rp">
+    <img src="{W}page7.webp" alt="A book spread: a metal triangle instrument on purple felt, and a braille story card">
+    <button class="pin" style="--x:11%;--y:58%" data-n="1"><span class="pl"><b>Follow the edge.</b> Real metal, three corners: the shape is found before it is named.</span></button>
+    <button class="pin" style="--x:38%;--y:46%" data-n="2"><span class="pl"><b>Strike it.</b> The beater is the triangle’s partner; the page answers with a ring.</span></button>
+    <button class="pin" style="--x:29%;--y:34%" data-n="3"><span class="pl"><b>Nothing gets lost.</b> An elastic loop keeps the beater tied to its page.</span></button>
+    <button class="pin" style="--x:66%;--y:24%" data-n="4"><span class="pl"><b>The story, in dots.</b> Braille and print sit side by side, so a blind child and a sighted parent read together.</span></button>
+    <button class="pin" style="--x:94%;--y:66%" data-n="5"><span class="pl"><b>Where to go next.</b> A raised glass, one more triangle hiding in the story.</span></button>
+  </div>
 </section>
 
 <section class="frag mirror">
@@ -110,7 +113,7 @@ TOUCH = f'''
       <p class="big split-words">Merleau-Ponty noticed that when your right hand touches your left, you can never quite say which one is feeling and which one is being felt.</p>
       <p>Reading together worked like that. Each volunteer in our club reads with the same child every week, year after year, more than fifty pairs in all. Over ten visits, we came to teach, and kept finding that we were the ones learning how to pay attention: to the weight of a page, the sound of a buckle, how long a small hand stays on one shape before it moves on.</p>
     </div>
-    <figure class="mimg a"><img src="{W}visit_group.webp" alt="Volunteers on a visit to the NGO"></figure>
+    <figure class="mimg a"><img src="{W}books_grid.webp" alt="The finished felt books, spread by spread"><figcaption class="m">The finished books, spread by spread</figcaption></figure>
     <figure class="mimg b"><img src="{W}planet.webp" alt="Textured paintings from the My Little Planet workshop"><figcaption class="m">“My Little Planet”: painting with things you can feel</figcaption></figure>
   </div>
 </section>
@@ -228,4 +231,155 @@ TASTE = f'''
 open(OUT + 'physics-of-baking.html', 'w').write(wrap(
     'physics-of-baking', 'The Physics of Baking', 'A baking book about physics, time and memory: twelve months, twelve recipes, twelve virtues.',
     W + 'book_cover.webp', 'art-taste', TASTE, 'guzheng-taekwondo.html', 'Sound &amp;<br>motion', W + 'cut_guzheng.webp'))
+
+# ------------------------------------------------------------------ SIGHT
+ROOMS = [('house_d2', 'The study', 'Someone works here. Tiny printed books fill the shelves; a chair is pulled up to the desk.'),
+         ('house_d1', 'The dressing room', 'A yellow towel on the rail, slippers by the basin: the morning has just happened.'),
+         ('house_d3_cut', 'The living room', 'A round window, painted branches, a screen glowing with a mountain at sunset.'),
+         ('house_d4', 'The kitchen', 'Tucked under the loft bed, because in a small home every corner works twice.'),
+         ('house_d5_cut', 'The dining room', 'Dinner is already served. Whoever lives here is about to sit down.')]
+reel = ''.join(f'<figure><img src="{W}{i}.webp" alt="{t}"><figcaption><b class="d">{t}</b><span>{c}</span></figcaption></figure>' for i, t, c in ROOMS)
+
+SIGHT = f'''
+<header class="h-hero" data-shrink>
+  <div class="h-pin">
+    <span class="m h-kick">02 · Sight · an essay on scale</span>
+    <h1 class="d h-title"><span>A house</span><span>in miniature</span></h1>
+    <img class="h-house" src="{W}cut_house_pano.webp" alt="The miniature house, five rooms on one floor">
+    <p class="h-sub">Five rooms, one desk, more than two hundred parts made by hand.</p>
+  </div>
+</header>
+
+<section class="frag">
+  <span class="fn m">I.</span>
+  <h2 class="fh">A mustard seed <em>holds a mountain</em></h2>
+  <p class="big split-words">“The cleverer I am at miniaturizing the world, the better I possess it.” Gaston Bachelard wrote that in <em>The Poetics of Space</em>, in a chapter about tiny things.</p>
+  <div class="cols">
+    <p>A Buddhist phrase says the same thing more boldly: 芥子纳须弥, a mustard seed can hold Mount Sumeru. Making this house felt like testing that idea with tweezers. How much of a home survives when everything is shrunk onto a desk?</p>
+    <p>The answer, it turns out, is everything that matters: not the size of the rooms but the traces of the person in them. A towel left on the rail. A chair pulled out. Dinner on the table, still waiting.</p>
+  </div>
+</section>
+
+<section class="loupe-sec">
+  <span class="fn m">II.</span>
+  <h2 class="fh">Look closer</h2>
+  <div class="loupe" data-loupe style="--img:url({W}house_d2.webp)">
+    <img src="{W}house_d2.webp" alt="The study, with a bookcase, desk and chair">
+    <div class="lens" aria-hidden="true"></div>
+  </div>
+  <p class="loupe-cap">Move the lens across the study. At this scale, a book is a fold of paper and a lamp is a bead, and the question is never “is it accurate?” but “does it feel lived in?”</p>
+</section>
+
+<section class="hands rooms" data-hands>
+  <div class="hands-in">
+    <div class="hands-head"><span class="fn m">III.</span><h2 class="fh">Five rooms, <em>one life</em></h2></div>
+    <div class="hands-track">{reel}</div>
+  </div>
+</section>
+
+<section class="moon" data-moon>
+  <div class="moon-in">
+    <div class="moon-hole"><img src="{W}house_d7.webp" alt="The whole house seen through a round window"></div>
+    <div class="moon-txt">
+      <span class="fn m">IV. 借景 · borrowed scenery</span>
+      <p>Chinese gardens are often small, so they borrow. A round <i>moon window</i> frames a view beyond the wall, and a courtyard a few steps wide suddenly holds a whole landscape.</p>
+      <p>The living room does the same. A few centimetres of wall open onto painted branches and a mountain at sunset. Scroll, and the window opens onto the house.</p>
+    </div>
+  </div>
+</section>
+
+<section class="frag build">
+  <span class="fn m">V.</span>
+  <h2 class="fh">How it was built</h2>
+  <ol class="hsteps">
+    <li><b class="d">Plan the floor</b><span>Five rooms on one level, with the bed lofted above the kitchen.</span></li>
+    <li><b class="d">Build the shell</b><span>Walls, floor and loft must be square, or nothing inside sits straight.</span></li>
+    <li><b class="d">Make the furniture</b><span>Bookcase, desk, bed, sofa, cabinets: piece by piece, with tweezers and glue.</span></li>
+    <li><b class="d">Dress every room</b><span>Bedding, a towel, food on the plates: the details that make it lived in.</span></li>
+  </ol>
+  <div class="tiny">
+    <figure><img src="{W}house_d8_cut.webp" alt="A tea set smaller than a fingernail"><figcaption class="m">A tea set smaller than a fingernail</figcaption></figure>
+    <figure><img src="{W}house_d5_cut.webp" alt="A dinner table, fully set"><figcaption class="m">Dinner, already served</figcaption></figure>
+  </div>
+</section>
+
+<section class="coda">
+  <blockquote class="d">Making it small is easy. Making it <em>believable</em> is the work.</blockquote>
+</section>
+'''
+
+open(OUT + 'miniature-house.html', 'w').write(wrap(
+    'miniature-house', 'A House in Miniature', 'A miniature home built by hand, and an essay on scale, detail and borrowed scenery.',
+    W + 'cut_house_pano.webp', 'art-sight', SIGHT, 'physics-of-baking.html', 'The physics<br>of baking', W + 'book_cover.webp'))
+
+# ------------------------------------------------------------------ SOUND & MOTION
+SOUND = f'''
+<header class="s-hero" data-strings>
+  <svg class="strings" aria-hidden="true"></svg>
+  <span class="m s-kick">04 · Sound &amp; Motion · an essay on stillness</span>
+  <h1 class="d s-title"><span>Sound &amp;</span><span>motion</span></h1>
+  <img class="s-zheng" src="{W}cut_guzheng.webp" alt="Amy playing the guzheng">
+  <div class="s-foot"><p>Twenty-one strings. Run your cursor across them.</p><button class="snd m" type="button" aria-pressed="false">Sound off</button></div>
+</header>
+
+<section class="frag">
+  <span class="fn m">I. 大音希声</span>
+  <h2 class="fh">The greatest sound <em>is barely heard</em></h2>
+  <p class="big split-words">Laozi wrote that the greatest music is faint, almost silent. Two and a half thousand years later, John Cage walked onto a stage in 1952 and played nothing at all for four minutes and thirty-three seconds.</p>
+  <div class="cols">
+    <p>On the guzheng, plucking a string is only half of a note. The left hand presses, bends and shakes the string after it sounds, so the pitch keeps moving as it fades. Much of the music lives in the decay, and in the rest that follows it.</p>
+    <p>I play the 21-string zither as a soloist, in duets and with an ensemble, and I sing. I performed at our school gala in the spring of Grade 10 and at the school’s public performance in the autumn of Grade 11.</p>
+  </div>
+</section>
+
+<section class="stage">
+  <figure class="st-a"><img src="{W}guzheng_duo.webp" alt="A guzheng duet on stage under a projected mountain sky"><figcaption class="m">Duet · school gala</figcaption></figure>
+  <figure class="st-b"><img src="{W}ensemble1.webp" alt="A guzheng ensemble performing outdoors"><figcaption class="m">Ensemble · outdoors</figcaption></figure>
+  <figure class="st-c"><img src="{W}sing.webp" alt="Singing on stage with friends"><figcaption class="m">Voice</figcaption></figure>
+</section>
+
+<section class="still" data-still>
+  <div class="still-in">
+    <img class="still-fig" src="{W}cut_tkd2.webp" alt="Amy in a taekwondo stance">
+    <div class="still-txt">
+      <span class="fn m">II. 静中有动</span>
+      <h2 class="fh">Every kick <em>begins standing still</em></h2>
+      <p class="lines"><span>A Chinese saying: in stillness there is motion,</span><span>and in motion, stillness.</span></p>
+      <p>Eight years of taekwondo taught me that the fastest movement starts from the calmest stance: weight settled, eyes level, breath held for one beat. A kick that is hurried arrives late.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mat">
+  <img src="{W}tkd_match.webp" alt="A competition bout in Beijing">
+  <div class="mat-stats">
+    <div class="stat"><b class="d" data-count="8">0</b><span>years on the mat</span></div>
+    <div class="stat"><b class="d">Gold</b><span>Beijing competition</span></div>
+    <div class="stat"><b class="d">Black</b><span>belt</span></div>
+    <div class="stat"><b class="d" data-count="50" data-suffix="+">0</b><span>younger students coached</span></div>
+  </div>
+</section>
+
+<section class="frag teach">
+  <span class="fn m">III.</span>
+  <div class="teach-grid">
+    <div>
+      <h2 class="fh">To teach a movement, <em>slow it down</em></h2>
+      <p>Since Grade 5 I have been an assistant instructor at Shangdi Youth Taekwondo Academy, coaching more than fifty younger students in forms, kicks, sparring and discipline.</p>
+      <p>Teaching means taking a movement I can do without thinking and slowing it down until a younger student can copy it: where the foot turns, when the hip opens, where the eyes go. It is the same patience a phrase on the guzheng asks for.</p>
+    </div>
+    <figure><img src="{W}tkd_teaching.webp" alt="Leading a class of young students at sunset"></figure>
+  </div>
+</section>
+
+<section class="pair">
+  <img src="{W}cut_guzheng.webp" alt="Guzheng">
+  <blockquote class="d">Both begin <em>with waiting.</em></blockquote>
+  <img src="{W}cut_tkd.webp" alt="Taekwondo">
+</section>
+'''
+
+open(OUT + 'guzheng-taekwondo.html', 'w').write(wrap(
+    'guzheng-taekwondo', 'Sound & Motion', 'Guzheng and taekwondo: an essay on stillness, sound and motion.',
+    W + 'cut_guzheng.webp', 'art-sound', SOUND, 'physics-tournaments.html', 'Coupled<br>pendulums', W + 'cut_ee_rig.webp'))
 print('ok')

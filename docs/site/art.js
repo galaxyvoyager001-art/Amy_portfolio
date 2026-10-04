@@ -42,14 +42,13 @@
     gsap.from('.t-kick, .t-hint, .t-foot', { opacity: 0, y: 20, stagger: .1, duration: 1, delay: .6, ease: 'power3.out' });
   }
 
-  const hands = document.querySelector('[data-hands]');
-  if (hands) {
+  document.querySelectorAll('[data-hands]').forEach(hands => {
     const track = hands.querySelector('.hands-track');
     gsap.to(track, { x: () => -(track.scrollWidth - innerWidth + innerWidth * .1), ease: 'none',
       scrollTrigger: { trigger: hands, start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } });
-    gsap.utils.toArray('.hands-track figure').forEach((f, i) => gsap.from(f.querySelector('img'), { rotate: i % 2 ? 6 : -6, scale: .9, ease: 'none',
+    track.querySelectorAll('figure').forEach((f, i) => gsap.from(f.querySelector('img'), { rotate: i % 2 ? 6 : -6, scale: .9, ease: 'none',
       scrollTrigger: { trigger: hands, start: 'top top', end: 'bottom bottom', scrub: true } }));
-  }
+  });
 
   const cellBox = document.querySelector('[data-cells]');
   if (cellBox) {
@@ -126,4 +125,119 @@
   const leaves = gsap.utils.toArray('.leaf');
   leaves.slice(0, -1).forEach((l, i) => gsap.to(l, { scale: .9, opacity: .35, ease: 'none',
     scrollTrigger: { trigger: leaves[i + 1], start: 'top bottom', end: 'top 25%', scrub: true } }));
+
+  /* ---------------- one annotated page: a "finger" walks the pins until someone hovers ---------------- */
+  const pins = [...document.querySelectorAll('.rp .pin')];
+  if (pins.length) {
+    let k = -1, timer = null, user = false;
+    const step = () => { if (user) return; pins.forEach(p => p.classList.remove('on')); k = (k + 1) % pins.length; pins[k].classList.add('on'); };
+    ScrollTrigger.create({ trigger: '.rp', start: 'top 70%', end: 'bottom 20%',
+      onToggle: s => { clearInterval(timer); pins.forEach(p => p.classList.remove('on')); if (s.isActive && !user) { step(); timer = setInterval(step, 2600); } } });
+    pins.forEach(p => {
+      p.addEventListener('pointerenter', () => { user = true; clearInterval(timer); pins.forEach(q => q.classList.toggle('on', q === p)); });
+      p.addEventListener('click', () => { user = true; clearInterval(timer); pins.forEach(q => q.classList.toggle('on', q === p && !q.classList.contains('on'))); });
+    });
+  }
+
+  /* ---------------- SIGHT ---------------- */
+  const shrink = document.querySelector('[data-shrink]');
+  if (shrink) {
+    const tl = gsap.timeline({ scrollTrigger: { trigger: shrink, start: 'top top', end: 'bottom bottom', scrub: true } });
+    tl.to('.h-house', { scale: 1, ease: 'none' }, 0).to('.h-title span:first-child', { xPercent: -30, opacity: .15, ease: 'none' }, 0)
+      .to('.h-title span:last-child', { xPercent: 30, opacity: .15, ease: 'none' }, 0).to('.h-sub', { opacity: 0, ease: 'none' }, 0);
+    gsap.from('.h-house', { y: 120, opacity: 0, duration: 1.4, delay: .5, ease: 'expo.out' });
+    gsap.from('.h-title span', { yPercent: 100, opacity: 0, stagger: .1, duration: 1.2, delay: .55, ease: 'expo.out' });
+  }
+
+  const loupe = document.querySelector('[data-loupe]');
+  if (loupe) {
+    const lp = { x: .5, y: .5 }; let inside = false;
+    loupe.addEventListener('pointerenter', () => inside = true);
+    loupe.addEventListener('pointerleave', () => inside = false);
+    gsap.ticker.add(() => {
+      const r = loupe.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      let tx, ty;
+      if (inside && !touch) { tx = (mouse.x - r.left) / r.width; ty = (mouse.y - r.top) / r.height; }
+      else { const t = performance.now() / 1000; tx = .5 + .32 * Math.sin(t * .5); ty = .5 + .25 * Math.sin(t * .8 + 1); }
+      lp.x += (tx - lp.x) * .15; lp.y += (ty - lp.y) * .15;
+      loupe.style.setProperty('--lx', lp.x * 100 + '%'); loupe.style.setProperty('--ly', lp.y * 100 + '%');
+      loupe.style.setProperty('--px', lp.x * 100 + '%'); loupe.style.setProperty('--py', lp.y * 100 + '%');
+    });
+  }
+
+  const moon = document.querySelector('[data-moon]');
+  if (moon) {
+    const hole = moon.querySelector('.moon-hole'), inner = moon.querySelector('.moon-in');
+    const set = p => {
+      const max = Math.hypot(innerWidth, innerHeight) / 2;
+      const r = gsap.utils.interpolate(Math.min(innerWidth, innerHeight) * .16, max, gsap.parseEase('power2.in')(p));
+      hole.style.setProperty('--r', r + 'px'); inner.style.setProperty('--r', r + 'px');
+      hole.style.setProperty('--s', 1.3 - .3 * p); inner.style.setProperty('--ring', 1 - p * 1.4);
+    };
+    set(0);
+    ScrollTrigger.create({ trigger: moon, start: 'top top', end: 'bottom bottom', scrub: true, onUpdate: s => set(s.progress) });
+  }
+  gsap.utils.toArray('.hsteps li, .tiny figure, .loupe-cap').forEach(el => gsap.from(el, { y: 50, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
+
+  /* ---------------- SOUND: 21 strings, plucked by the cursor ---------------- */
+  const sh = document.querySelector('[data-strings]');
+  if (sh) {
+    const svg = sh.querySelector('svg'), N = 21, NS = 'http://www.w3.org/2000/svg';
+    /* guzheng tuning: D pentatonic, low to high */
+    const PENT = [0, 2, 4, 7, 9], freq = i => 146.83 * Math.pow(2, (Math.floor(i / 5) * 12 + PENT[i % 5]) / 12);
+    const S = [...Array(N)].map((_, i) => { const p = document.createElementNS(NS, 'path'); svg.appendChild(p); return { p, a: 0, y: .5, ph: 0 }; });
+    let W = 0, H = 0, ctx = null, on = false;
+    const size = () => { W = sh.clientWidth; H = sh.clientHeight; svg.setAttribute('viewBox', `0 0 ${W} ${H}`); };
+    size(); addEventListener('resize', size);
+    const xs = i => W * (.06 + .88 * i / (N - 1));
+    const pluck = (i, y, v) => {
+      const s = S[i]; s.a = Math.min(28, 8 + v * .25); s.y = clamp(y / H, .1, .9); s.ph = 0;
+      if (on && ctx) {
+        const o = ctx.createOscillator(), g = ctx.createGain(), f = ctx.createBiquadFilter();
+        o.type = 'triangle'; o.frequency.value = freq(i); f.type = 'lowpass'; f.frequency.value = 2400;
+        g.gain.setValueAtTime(0, ctx.currentTime); g.gain.linearRampToValueAtTime(.16, ctx.currentTime + .005);
+        g.gain.exponentialRampToValueAtTime(.0005, ctx.currentTime + 2.4);
+        o.connect(f).connect(g).connect(ctx.destination); o.start(); o.stop(ctx.currentTime + 2.5);
+      }
+    };
+    let last = null;
+    sh.addEventListener('pointermove', e => {
+      const r = sh.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      if (last) {
+        const v = Math.hypot(x - last.x, y - last.y);
+        for (let i = 0; i < N; i++) { const sx = xs(i); if ((last.x - sx) * (x - sx) < 0) pluck(i, y, v); }
+      }
+      last = { x, y };
+    });
+    sh.addEventListener('pointerleave', () => last = null);
+    const btn = sh.querySelector('.snd');
+    btn.addEventListener('click', () => {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume();
+      on = !on; btn.setAttribute('aria-pressed', on); btn.textContent = on ? 'Sound on' : 'Sound off';
+    });
+    let t0 = performance.now(), auto = 0;
+    gsap.ticker.add(() => {
+      if (sh.getBoundingClientRect().bottom < 0) return;
+      const now = performance.now();
+      if ((touch || !mouse.moved) && now - auto > 700) { auto = now; pluck(Math.floor(Math.random() * N), H * (.3 + Math.random() * .4), 40); }
+      S.forEach((s, i) => {
+        s.ph += .55; s.a *= .965;
+        const x = xs(i), off = s.a * Math.sin(s.ph);
+        s.p.setAttribute('d', `M${x},0 Q${x + off * 2},${s.y * H} ${x},${H}`);
+        s.p.classList.toggle('hot', s.a > 1.5);
+      });
+    });
+    gsap.from('.s-title span', { yPercent: 100, opacity: 0, stagger: .1, duration: 1.2, delay: .5, ease: 'expo.out' });
+    gsap.from('.s-zheng', { x: 120, opacity: 0, duration: 1.4, delay: .6, ease: 'expo.out' });
+  }
+
+  const still = document.querySelector('[data-still]');
+  if (still) {
+    gsap.timeline({ scrollTrigger: { trigger: still, start: 'top top', end: 'bottom bottom', scrub: true } })
+      .fromTo('.still-fig', { scale: .8, rotate: -4 }, { scale: 1.05, rotate: 0, ease: 'none' })
+      .from('.still-txt .lines span', { opacity: 0, x: -40, stagger: .2, ease: 'none' }, 0);
+  }
+  gsap.utils.toArray('.stage figure, .teach-grid figure, .pair img').forEach((el, i) => gsap.from(el, { y: 80, opacity: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
+  gsap.utils.toArray('.mat img').forEach(m => gsap.fromTo(m, { clipPath: 'inset(10% 8% 10% 8% round 20px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', scrollTrigger: { trigger: m, start: 'top bottom', end: 'top 20%', scrub: true } }));
 })();

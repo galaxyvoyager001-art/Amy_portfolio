@@ -124,7 +124,7 @@ def page(p, nxt):
 exec(open(os.path.join(os.path.dirname(__file__), 'work_content.py')).read())
 
 # Essay pages written by art_pages.py; still part of the next-project chain.
-BESPOKE = {'tactile-books', 'physics-of-baking'}
+BESPOKE = {'tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekwondo'}
 
 for i, p in enumerate(PAGES):
     nxt = PAGES[(i + 1) % len(PAGES)]
