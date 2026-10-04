@@ -84,9 +84,6 @@ body.rs-build{--paper:#111113;--rf:#EDEBE4;--rl:rgba(237,235,228,.16);background
 .cmp-bar span{position:absolute;top:14px;background:rgba(0,0,0,.65);color:#fff;padding:5px 10px;border-radius:999px;font-size:10.5px;white-space:nowrap}
 .cmp-bar span:first-child{right:16px}.cmp-bar span:last-child{left:16px}
 
-.malus svg{display:block;width:100%;height:auto}
-.malus label{display:block;padding-top:10px;font-size:11px}
-.malus output{margin-left:12px;font-family:'Mono'}
 
 .scn-b{display:flex;gap:10px;flex-wrap:wrap}
 .scn-s{position:relative;min-height:150px;margin-top:20px}

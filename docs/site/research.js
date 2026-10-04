@@ -72,37 +72,6 @@
     c.addEventListener('pointerleave', () => { if (!down) gsap.to(c, { '--p': '50%', duration: 0.8, ease: 'power3.out' }); });
   });
 
-  /* ---------- Malus's law ---------- */
-  document.querySelectorAll('[data-lab="malus"]').forEach(box => {
-    const svg = box.querySelector('svg'), inp = box.querySelector('input'), out = box.querySelector('output');
-    const gx = a => 250 + a / 180 * 360, gy = v => 250 - v * 200;
-    let path = ''; for (let a = 0; a <= 180; a += 2) path += (a ? 'L' : 'M') + gx(a).toFixed(1) + ',' + gy(Math.cos(a * Math.PI / 180) ** 2).toFixed(1);
-    svg.innerHTML = `
-      <g stroke="currentColor" fill="none" stroke-width="1.5" opacity=".9">
-        <circle cx="70" cy="95" r="52"/><line x1="70" y1="43" x2="70" y2="147" stroke-width="3"/>
-        <circle cx="70" cy="225" r="52"/><line class="an" x1="70" y1="173" x2="70" y2="277" stroke="${accent}" stroke-width="3"/>
-      </g>
-      <text x="140" y="99" font-size="12" fill="currentColor" font-family="monospace">polariser</text>
-      <text x="140" y="229" font-size="12" fill="${accent}" font-family="monospace">analyser</text>
-      <g stroke="currentColor" stroke-width="1" opacity=".5"><line x1="250" y1="250" x2="615" y2="250"/><line x1="250" y1="40" x2="250" y2="250"/></g>
-      <text x="250" y="270" font-size="11" fill="currentColor" font-family="monospace">0°</text><text x="420" y="270" font-size="11" fill="currentColor" font-family="monospace">90°</text><text x="590" y="270" font-size="11" fill="currentColor" font-family="monospace">180°</text>
-      <text x="216" y="54" font-size="11" fill="currentColor" font-family="monospace">I/I₀</text>
-      <path d="${path}" fill="none" stroke="currentColor" stroke-width="2"/>
-      <line class="cur" y1="40" y2="250" stroke="${accent}" stroke-dasharray="4 5"/>
-      <circle class="dot" r="7" fill="${accent}"/>
-      <circle cx="${gx(45)}" cy="${gy(0.502)}" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
-      <text x="${gx(45) + 12}" y="${gy(0.502) - 10}" font-size="11" fill="currentColor" font-family="monospace">my data: 0.502</text>
-      <text class="val" x="620" y="30" text-anchor="end" font-size="22" fill="${accent}" font-family="monospace"></text>`;
-    const an = svg.querySelector('.an'), cur = svg.querySelector('.cur'), dot = svg.querySelector('.dot'), val = svg.querySelector('.val');
-    const set = () => {
-      const a = +inp.value, v = Math.cos(a * Math.PI / 180) ** 2;
-      out.textContent = a + '°'; an.setAttribute('transform', `rotate(${a} 70 225)`);
-      cur.setAttribute('x1', gx(a)); cur.setAttribute('x2', gx(a)); dot.setAttribute('cx', gx(a)); dot.setAttribute('cy', gy(v));
-      val.textContent = 'I/I₀ = ' + v.toFixed(3);
-    };
-    inp.addEventListener('input', set); set();
-  });
-
   /* ---------- which sound matters ---------- */
   document.querySelectorAll('[data-lab="scenes"]').forEach(box => {
     const bs = [...box.querySelectorAll('button')], sets = [...box.querySelectorAll('.sc-set')];
