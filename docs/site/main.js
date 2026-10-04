@@ -153,10 +153,10 @@
     gsap.to(s.querySelector('.bg img'), { yPercent: -14, ease: 'none', scrollTrigger: { trigger: s, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 
-  /* ---------- five senses, five questions: one pinned stage, five scenes ---------- */
+  /* ---------- four senses, four questions: one pinned stage, one scene each ---------- */
   const sn = document.querySelector('.senses');
   if (sn) {
-    const pin = sn.querySelector('.sn-pin'), N = 5;
+    const pin = sn.querySelector('.sn-pin'), N = sn.querySelectorAll('.sn-q').length;
     const words = [...sn.querySelectorAll('.sn-word')], imgs = [...sn.querySelectorAll('.sn-img')], qs = [...sn.querySelectorAll('.sn-q')], dots = [...sn.querySelectorAll('.sn-dots i')];
     let cur = -1;
     const show = k => {

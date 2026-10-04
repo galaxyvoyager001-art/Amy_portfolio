@@ -127,8 +127,9 @@ ORDER = ['tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekw
          'modelling', 'smarthearing', 'curawave', 'lingtong']
 PAGES.sort(key=lambda p: ORDER.index(p['slug']))
 
-# Essay pages written by art_pages.py; still part of the next-project chain.
-BESPOKE = {'tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekwondo'}
+# Every page is now hand-built by art_pages.py or research_pages.py; PAGES remains the content archive.
+BESPOKE = {'tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekwondo',  # art_pages.py
+           'physics-tournaments', 'metallic-glass', 'optics', 'modelling', 'smarthearing', 'curawave', 'lingtong'}  # research_pages.py
 
 for i, p in enumerate(PAGES):
     nxt = PAGES[(i + 1) % len(PAGES)]

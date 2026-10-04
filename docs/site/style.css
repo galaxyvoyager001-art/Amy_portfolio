@@ -225,7 +225,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ---------- five senses, five questions ---------- */
-.senses{position:relative;height:520vh}
+.senses{position:relative;height:420vh}
 .sn-pin{position:sticky;top:0;height:100vh;overflow:hidden;background:#0C0C10;color:#EDE6D6;--sa:#FFC93C}
 .sn-kick{position:absolute;top:96px;left:var(--pad);color:var(--sa);transition:color .6s}
 .sn-words{position:absolute;left:var(--pad);right:var(--pad);bottom:var(--pad);margin:0;height:.86em;overflow:hidden;font-size:clamp(90px,19vw,380px);line-height:.86;text-transform:uppercase;z-index:1}
