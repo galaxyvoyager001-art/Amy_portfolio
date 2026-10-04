@@ -3,85 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Amy Hu · Portfolio</title>
-<meta name="description" content="Amy Hu — a portfolio for the senses: tactile books, a miniature house, the physics of baking, guzheng and taekwondo, and research & entrepreneurship.">
-<meta property="og:title" content="Amy Hu · Portfolio">
-<meta property="og:image" content="pages/p01.jpg">
-<style>
-  :root { --bg: #1b1d22; --fg: #f3efe6; --muted: #a7a399; --accent: #ff6b3d; }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
-  header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between;
-    gap: 16px; padding: 14px clamp(16px, 4vw, 48px); background: rgba(27,29,34,.92); backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255,255,255,.08); }
-  .name { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; }
-  .name b { color: var(--accent); font-weight: 600; }
-  .actions { display: flex; gap: 10px; align-items: center; }
-  .btn { color: var(--fg); text-decoration: none; font-size: 14px; padding: 8px 14px; border: 1px solid rgba(255,255,255,.25);
-    border-radius: 999px; white-space: nowrap; }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #1b1d22; font-weight: 600; }
-  .btn:hover { border-color: var(--fg); }
-  .count { color: var(--muted); font-size: 13px; }
-  main { max-width: 1600px; margin: 0 auto; padding: clamp(16px, 3vw, 40px) clamp(16px, 4vw, 48px) 80px;
-    display: flex; flex-direction: column; gap: clamp(16px, 2.4vw, 32px); }
-  figure { margin: 0; }
-  figure img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; background: #2a2d33;
-    box-shadow: 0 10px 30px rgba(0,0,0,.35); cursor: zoom-in; }
-  figcaption { color: var(--muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding-top: 8px; }
-  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 16px 48px; }
-  #lb { position: fixed; inset: 0; background: rgba(10,10,12,.96); display: none; align-items: center; justify-content: center; z-index: 10; }
-  #lb.on { display: flex; }
-  #lb img { max-width: 100vw; max-height: 100vh; object-fit: contain; }
-  #lb button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1); color: #fff;
-    border: 0; font-size: 28px; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; }
-  #lb .prev { left: 14px; } #lb .next { right: 14px; }
-  #lb .close { top: 30px; right: 14px; transform: none; font-size: 22px; }
-  @media (max-width: 600px) { .count { display: none; } .name { font-size: 13px; } }
-</style>
+<title>Amy Hu — Made for the senses</title>
+<meta name="description" content="Amy Hu: tactile books for blind children, a miniature house, the physics of baking, guzheng and taekwondo, and research and entrepreneurship in physics, acoustics and assistive engineering.">
+<meta property="og:title" content="Amy Hu — Made for the senses">
+<meta property="og:image" content="portfolio/pages/p01.jpg">
+<link rel="preload" href="site/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%23FF5A1F%22/%3E%3C/svg%3E">
 </head>
-<body>
-<header>
-  <div class="name">Amy Hu <b>/</b> Portfolio</div>
-  <div class="actions">
-    <span class="count">22 pages</span>
-    <a class="btn primary" href="Amy_Hu_Portfolio.pdf" download>Download PDF</a>
-  </div>
-</header>
-<main id="pages"></main>
-<footer>Amy Hu · Touch · Sight · Taste · Sound &amp; Motion · Mind — click any page to enlarge</footer>
-<div id="lb" role="dialog" aria-label="Page viewer">
-  <img alt="">
-  <button class="prev" aria-label="Previous page">‹</button>
-  <button class="next" aria-label="Next page">›</button>
-  <button class="close" aria-label="Close">✕</button>
+<body data-theme="ink">
+
+<div class="loader" aria-hidden="true"><span class="d count">0</span><span class="m lname">Amy Hu — made for the senses</span></div>
+<div class="curtain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><div class="ring"><span>View</span></div><div class="dot"></div></div>
+
+<nav class="nav">
+  <a href="#top" class="d brand">Amy <b>Hu</b></a>
+  <button class="navbtn m" aria-expanded="false" aria-controls="menu"><span class="lab">Menu</span><span class="lines"><i></i><i></i></span></button>
+</nav>
+<div class="menu" id="menu">
+  <div class="imgs"><img data-k="home" src="site/img/hero.webp" alt="" class="on"><img data-k="made" src="site/img/visit.webp" alt=""><img data-k="research" src="site/img/lab.webp" alt=""><img data-k="gallery" src="site/img/guzhengduo.webp" alt=""><img data-k="portfolio" src="site/img/stage.webp" alt=""></div>
+  <ul>
+    <li><a class="d" href="#top" data-k="home"><small>01</small>Home</a></li>
+    <li><a class="d" href="#made" data-k="made"><small>02</small>Made</a></li>
+    <li><a class="d" href="#research" data-k="research"><small>03</small>Research</a></li>
+    <li><a class="d" href="#gallery" data-k="gallery"><small>04</small>Gallery</a></li>
+    <li><a class="d" href="portfolio/" data-k="portfolio"><small>05</small>Portfolio</a></li>
+  </ul>
+  <div class="foot m"><span>Touch · Sight · Taste · Sound · Mind</span><span>Beijing</span></div>
 </div>
-<script>
-  const titles = ["Cover","Contents","Touch · Even Without Sight","Touch · Design drawings","Touch · Making","Touch · The books",
-    "Touch · The visits","Touch · Exhibition","Sight · A house in miniature","Sight · Look closer","Taste · The Physics of Baking",
-    "Taste · Twelve bakes","Sound & Motion","Research & Entrepreneurship","IYPT · Coupled pendulums","CYPT · Damping & levitation",
-    "SmartHearing","Metallic glass","Curawave","Lingtong · the company","Experimental optics","Modelling & publishing"];
-  const main = document.getElementById('pages');
-  titles.forEach((t, i) => {
-    const n = String(i + 1).padStart(2, '0');
-    const f = document.createElement('figure');
-    f.innerHTML = `<img src="pages/p${n}.jpg" alt="Page ${n}: ${t}" loading="${i < 2 ? 'eager' : 'lazy'}" width="2560" height="1280"><figcaption>${n} · ${t}</figcaption>`;
-    f.querySelector('img').addEventListener('click', () => open(i));
-    main.appendChild(f);
-  });
-  const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
-  let cur = 0;
-  function show(i) { cur = (i + titles.length) % titles.length; const n = String(cur + 1).padStart(2, '0'); lbImg.src = `pages/p${n}.jpg`; lbImg.alt = `Page ${n}: ${titles[cur]}`; }
-  function open(i) { show(i); lb.classList.add('on'); }
-  function close() { lb.classList.remove('on'); }
-  lb.querySelector('.prev').onclick = e => { e.stopPropagation(); show(cur - 1); };
-  lb.querySelector('.next').onclick = e => { e.stopPropagation(); show(cur + 1); };
-  lb.querySelector('.close').onclick = close;
-  lb.addEventListener('click', e => { if (e.target === lb) close(); });
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('on')) return;
-    if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1);
-  });
-</script>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-sticky">
+    <h1 class="d hero-title" aria-label="Amy Hu"><span class="ln">AMY</span><span class="ln">HU</span></h1>
+    <svg class="hero-goo" aria-hidden="true">
+      <defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="22" result="b"/><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 36 -14" result="g"/><feComposite in="SourceGraphic" in2="g" operator="atop"/></filter></defs>
+      <g filter="url(#goo)" fill="#FF5A1F" id="goo-g"></g>
+    </svg>
+    <img class="hero-portrait" src="site/img/hero.webp" alt="Amy Hu presenting her project">
+    <div class="h hero-sign">made for the senses</div>
+    <div class="hero-meta">
+      <div class="next"><div class="m">Currently building</div><div class="d t">SmartHearing</div><div class="m" style="color:var(--cream);opacity:.7;padding-top:6px">AI hearing aid · patent</div></div>
+      <div class="scrollcue m"><i></i>Scroll</div>
+      <div class="m" style="text-align:right">Student · maker · researcher<br>founder, Lingtong</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" data-speed="1"><div class="track">
+  <span class="item d">Touch<span class="star"></span>Sight<span class="star"></span>Taste<span class="star"></span>Sound<span class="star"></span>Motion<span class="star"></span>Mind<span class="h">made for the senses</span></span>
+</div></div>
+
+<!-- MANIFESTO -->
+<section class="manifesto" data-theme-on="ink">
+  <span class="m">( Manifesto )</span>
+  <p class="d split-words">Every project began with a sense, <em>and ended with something I could hand to someone else.</em> A book read by fingertips, a house read by the eye, a recipe read by taste, and research that asks what engineering can do when a sense fails.</p>
+</section>
+
+<section class="stats">
+  <div class="stat"><b class="d" data-count="1">0</b><span>patent for an AI hearing aid</span></div>
+  <div class="stat"><b class="d" data-count="2">0</b><span>first-author research papers</span></div>
+  <div class="stat"><b class="d" data-count="100" data-prefix="$" data-suffix="k+">0</b><span>raised for my assistive-tech startup</span></div>
+  <div class="stat"><b class="d" data-count="50" data-suffix="+">0</b><span>blind children paired with reading tutors, every week</span></div>
+  <div class="stat"><b class="d" data-count="3">0</b><span>mathematical modelling Finalist awards</span></div>
+</section>
+
+<!-- IN / OFF THE LAB -->
+<section class="split" data-theme-on="cream">
+  <a class="side" href="#research" data-cursor="Research">
+    <div class="bg"><img src="site/img/lab.webp" alt="" data-par="-10"></div>
+    <div class="m">( 01 ) Research &amp; entrepreneurship</div>
+    <div class="d big"><span>In the</span><span class="acc">lab</span></div>
+    <div>
+      <p>Physics tournaments, laboratories at Peking University and the Chinese Academy of Sciences, an AI hearing aid, and the company I founded to build it.</p>
+      <ul>
+        <li>Coupled pendulums · IYPT &amp; CYPT <span class="m">captain</span></li>
+        <li>SmartHearing · Peking University <span class="m">patent</span></li>
+        <li>Metallic glass · CAS <span class="m">first author</span></li>
+        <li>Lingtong Future Technology <span class="m">founder</span></li>
+      </ul>
+    </div>
+  </a>
+  <a class="side" href="#made" data-cursor="Made">
+    <div class="bg"><img src="site/img/visit.webp" alt="" data-par="-10"></div>
+    <div class="m">( 02 ) Making &amp; performing</div>
+    <div class="d big"><span>Off the</span><span class="acc">lab</span></div>
+    <div>
+      <p>Tactile books for blind children, a house small enough for a desk, a baking book on Amazon, the guzheng on stage and a black belt on the mat.</p>
+      <ul>
+        <li>Even Without Sight · tactile books <span class="m">leader</span></li>
+        <li>A House in Miniature <span class="m">200+ parts</span></li>
+        <li>The Physics of Baking <span class="m">published</span></li>
+        <li>Guzheng · Taekwondo <span class="m">black belt</span></li>
+      </ul>
+    </div>
+  </a>
+</section>
+
+<!-- HALL OF THINGS -->
+<section class="hall" id="made" data-theme-on="cream">
+  <div class="hall-head">
+    <h2 class="d">Things I<br>have <span class="acc">made</span></h2>
+    <p>From felt and braille to silicone and code. Every object here was cut, sewn, cast, printed or baked by hand, and each one was made for somebody's senses.</p>
+  </div>
+  <div class="grid">
+    <a class="thing" href="portfolio/#p3" data-cursor="Touch"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Tactile book</b><span class="m">Touch</span></div><div class="im"><img src="site/img/book.webp" alt="A felt tactile book" loading="lazy"></div><span class="m">felt · braille · 16 spreads</span></a>
+    <a class="thing" href="portfolio/#p9" data-cursor="Sight"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Miniature house</b><span class="m">Sight</span></div><div class="im"><img src="site/img/house.webp" alt="The miniature house" loading="lazy"></div><span class="m">5 rooms · 200+ parts</span></a>
+    <a class="thing" href="portfolio/#p11" data-cursor="Taste"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>The Physics of Baking</b><span class="m">Taste</span></div><div class="im"><img src="site/img/croissant.webp" alt="A croissant from the book" loading="lazy"></div><span class="m">12 months · on Amazon</span></a>
+    <a class="thing" href="portfolio/#p13" data-cursor="Sound"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Guzheng</b><span class="m">Sound</span></div><div class="im"><img src="site/img/guzheng.webp" alt="Amy playing the guzheng" loading="lazy"></div><span class="m">21 strings · on stage</span></a>
+    <a class="thing" href="portfolio/#p15" data-cursor="Mind"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Pendulum chain</b><span class="m">Mind</span></div><div class="im"><img src="site/img/rig.webp" alt="3D-printed magnetic pendulum rig" loading="lazy"></div><span class="m">3D printed · IYPT</span></a>
+    <a class="thing" href="portfolio/#p17" data-cursor="Mind"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>SmartHearing</b><span class="m">Mind</span></div><div class="im"><img src="site/img/hearing.webp" alt="SmartHearing prototype" loading="lazy" style="border-radius:12px"></div><span class="m">AI hearing aid · patent</span></a>
+    <a class="thing" href="portfolio/#p19" data-cursor="Mind"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Curawave</b><span class="m">Mind</span></div><div class="im"><img src="site/img/units.webp" alt="Cast silicone mattress units" loading="lazy" style="border-radius:12px"></div><span class="m">soft robotics · CTO</span></a>
+    <a class="thing" href="portfolio/#p13" data-cursor="Motion"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i><div class="lab"><b>Taekwondo</b><span class="m">Motion</span></div><div class="im"><img src="site/img/tkd.webp" alt="Amy in taekwondo uniform" loading="lazy"></div><span class="m">black belt · Beijing gold</span></a>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research" id="research" data-theme-on="ink">
+  <h2 class="d title">Research &amp;<br><span class="acc">Entrepreneurship</span></h2>
+  <div class="rlist">
+    <a class="rrow" href="portfolio/#p15" data-img="site/img/rig.webp"><span class="d n">01</span><span class="d t">Energy transport in a chain of magnetically coupled pendulums</span><span class="v">IB Extended Essay · IYPT Macao &amp; CYPT 2026 team captain</span><span class="m pg">p. 15–16</span></a>
+    <a class="rrow" href="portfolio/#p17" data-img="site/img/scenes.webp"><span class="d n">02</span><span class="d t">SmartHearing: scene-adaptive hearing assistance</span><span class="v">Peking University, Institute for AI · patent · co-first author</span><span class="m pg">p. 17</span></a>
+    <a class="rrow" href="portfolio/#p18" data-img="site/img/sem.webp"><span class="d n">03</span><span class="d t">Micro-particle impacts on metallic glasses</span><span class="v">Chinese Academy of Sciences · first author · ISEF Beijing</span><span class="m pg">p. 18</span></a>
+    <a class="rrow" href="portfolio/#p19" data-img="site/img/units.webp"><span class="d n">04</span><span class="d t">Curawave transfer mattress</span><span class="v">Conrad Challenge · CTO</span><span class="m pg">p. 19</span></a>
+    <a class="rrow" href="portfolio/#p20" data-img="site/img/logo.webp"><span class="d n">05</span><span class="d t">Lingtong Future Technology</span><span class="v">Founder · trademarks filed · USD 100k+ raised</span><span class="m pg">p. 20</span></a>
+    <a class="rrow" href="portfolio/#p21" data-img="site/img/optics.webp"><span class="d n">06</span><span class="d t">Polarisation control and experimental optics</span><span class="v">Peking University, Institute of Physics</span><span class="m pg">p. 21</span></a>
+    <a class="rrow" href="portfolio/#p22" data-img="site/img/journal.webp"><span class="d n">07</span><span class="d t">Mathematical modelling and publishing</span><span class="v">IMMC · HiMCM · team captain · journal editor</span><span class="m pg">p. 22</span></a>
+  </div>
+</section>
+<div class="peek" aria-hidden="true"><img alt=""></div>
+
+<!-- HORIZONTAL GALLERY -->
+<section class="hz" id="gallery" data-theme-on="olive">
+  <div class="hz-sticky">
+    <div class="hz-track">
+      <div class="hz-intro"><span class="m acc">( Gallery )</span><h2 class="d">Out<br>there</h2><p>Visits, tournaments, stages and workshops: the places where the work met people.</p></div>
+      <figure class="hz-card" style="width:min(38vw,560px)"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/visit.webp" alt="Volunteers on a visit to the children" loading="lazy"></div><span class="pill m">Touch</span><figcaption class="cap m"><span>Care &amp; Reading · ABF visit</span><span>10+ visits</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(44vw,640px);margin-top:16vh"><div class="frame" style="aspect-ratio:2/1"><img src="site/img/kids.webp" alt="Children reading the felt books by touch" loading="lazy"></div><figcaption class="cap m"><span>Reading by touch</span><span>Beijing</span></figcaption></figure>
+      <div class="hz-quote d">"Even without sight, there is still vision."<span class="h">— Care &amp; Reading</span></div>
+      <figure class="hz-card" style="width:min(30vw,420px)"><div class="frame" style="aspect-ratio:3/4"><img src="site/img/working.webp" alt="Amy sewing a felt page" loading="lazy"></div><span class="pill m">Making</span><figcaption class="cap m"><span>At the bench</span><span>felt · thread</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(42vw,600px);margin-top:-14vh"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/guzhengduo.webp" alt="Guzheng duet on stage" loading="lazy"></div><span class="pill m">Sound</span><figcaption class="cap m"><span>Guzheng duet · school gala</span><span>Grade 10</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(36vw,520px);margin-top:14vh"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/tkdmatch.webp" alt="Taekwondo competition bout" loading="lazy"></div><span class="pill m">Motion</span><figcaption class="cap m"><span>Competition bout</span><span>Beijing gold</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(36vw,520px)"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/teaching.webp" alt="Coaching younger taekwondo students" loading="lazy"></div><figcaption class="cap m"><span>Coaching 50+ younger students</span><span>assistant instructor</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(40vw,580px);margin-top:-12vh"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/present.webp" alt="Reporting Electrical Damping at CYPT" loading="lazy"></div><span class="pill m">Mind</span><figcaption class="cap m"><span>Reporting Electrical Damping</span><span>CYPT 2026</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(36vw,520px);margin-top:12vh"><div class="frame" style="aspect-ratio:4/3"><img src="site/img/team.webp" alt="The CYPT team at work" loading="lazy"></div><figcaption class="cap m"><span>The team · I was captain</span><span>CYPT 2026</span></figcaption></figure>
+      <figure class="hz-card" style="width:min(26vw,360px)"><div class="frame" style="aspect-ratio:2/3"><img src="site/img/stage.webp" alt="Amy on stage as a Conrad Challenge finalist" loading="lazy"></div><span class="pill m">Pitch</span><figcaption class="cap m"><span>Conrad Challenge finalist</span><span>on stage</span></figcaption></figure>
+      <div class="hz-quote d" style="padding-right:8vw">Two projects<br>became <span class="acc">one company.</span><span class="h">— Lingtong, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="partners" data-theme-on="cream">
+  <span class="m">( Where the work happened )</span>
+  <div class="marquee" data-speed="-0.7"><div class="track"><span class="item d">Peking University<span class="star"></span>Chinese Academy of Sciences<span class="star"></span>IYPT<span class="star"></span>CYPT<span class="star"></span>Conrad Challenge<span class="star"></span>ISEF Beijing<span class="star"></span>IMMC<span class="star"></span>HiMCM<span class="star"></span>ABF Beijing<span class="star"></span>Amazon KDP<span class="star"></span></span></div></div>
+</div>
+
+<!-- PORTFOLIO CTA -->
+<section class="cta" data-theme-on="acc">
+  <div class="sticker" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text fill="#F3F0E8" font-family="Mono" font-size="13" letter-spacing="5"><textPath href="#c">22 PAGES · FIVE SENSES · 22 PAGES · FIVE SENSES ·</textPath></text></svg>Read the<br>portfolio</div>
+  <span class="m">( The full portfolio )</span>
+  <h2 class="d">Five senses,<br>22 pages</h2>
+  <p>Every project in detail: the drawings, the making, the papers and the people they were made for.</p>
+  <div class="btns"><a class="btn fill" href="portfolio/" data-cursor="Open">Open portfolio →</a><a class="btn" href="portfolio/Amy_Hu_Portfolio.pdf" download>Download PDF</a></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="top">
+    <div class="stmt">Made for the senses.<br>Built to be handed on.</div>
+    <div class="col"><span class="m">Explore</span><a href="#made">Things I have made</a><a href="#research">Research</a><a href="#gallery">Gallery</a><a href="portfolio/">Portfolio</a></div>
+    <div class="col"><span class="m">Contact</span><span>[ email to be added ]</span><span>Beijing, China</span></div>
+  </div>
+  <div class="d bigname">Amy Hu</div>
+  <div class="legal m"><span>© 2026 Amy Hu</span><a href="#top">Back to top ↑</a></div>
+</footer>
+
+<script src="site/vendor/gsap.min.js"></script>
+<script src="site/vendor/ScrollTrigger.min.js"></script>
+<script src="site/vendor/lenis.min.js"></script>
+<script src="site/main.js"></script>
 </body>
 </html>
