@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curawave — Amy Hu</title>
+<meta name="description" content="A mattress of inflatable silicone units that tilt in alternating groups to slide a patient sideways onto another bed.">
+<meta property="og:image" content="../site/img/w/cw_units.webp">
+<link rel="stylesheet" href="../site/style.css">
+<link rel="stylesheet" href="../site/work.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%23FF5A1F%22/%3E%3C/svg%3E">
+</head>
+<body class="work" style="--pc:#0B3B45;--pt:#FFFFFF;--pa:#8FE3D8;--pa2:#0F7C7A">
+<div class="curtain" aria-hidden="true" style="transform:translateY(0)"></div>
+<div class="cursor" aria-hidden="true"><div class="ring"><span>View</span></div><div class="dot"></div></div>
+<nav class="nav"><a href="../index.html#made" class="m back">← All work</a><a href="../index.html" class="d brand">Amy <b>Hu</b></a><button class="navbtn m" aria-expanded="false" aria-controls="menu"><span class="lab">Menu</span><span class="lines"><i></i><i></i></span></button></nav>
+<div class="menu" id="menu">
+  <div class="imgs"><img data-k="home" src="../site/img/hero.webp" alt="" class="on"><img data-k="made" src="../site/img/visit.webp" alt=""><img data-k="research" src="../site/img/lab.webp" alt=""><img data-k="gallery" src="../site/img/guzhengduo.webp" alt=""><img data-k="portfolio" src="../site/img/stage.webp" alt=""></div>
+  <ul>
+    <li><a class="d" href="../index.html" data-k="home"><small>01</small>Home</a></li>
+    <li><a class="d" href="../index.html#made" data-k="made"><small>02</small>Made</a></li>
+    <li><a class="d" href="../index.html#research" data-k="research"><small>03</small>Research</a></li>
+    <li><a class="d" href="../index.html#gallery" data-k="gallery"><small>04</small>Gallery</a></li>
+    <li><a class="d" href="../portfolio/index.html" data-k="portfolio"><small>05</small>Portfolio</a></li>
+  </ul>
+  <div class="foot m"><span>Touch · Sight · Taste · Sound · Mind</span><span>Beijing</span></div>
+</div>
+<main>
+<header class="w-hero">
+  <div class="heroimg photo"><img src="../site/img/w/cw_units.webp" alt="Cast silicone mattress units"></div>
+  <span class="m kick">05 · Mind · Conrad Challenge</span>
+  <h1 class="d"><span class="ln"><span>Cura</span></span><span class="ln"><span>wave</span></span></h1>
+  <div class="sub">A wave-bionic soft robotic mattress that slides a patient sideways onto another bed, with no one lifting.</div>
+  <div class="w-meta"><div><span class="m">Role</span><span>CTO</span></div><div><span class="m">Competition</span><span>Conrad Challenge</span></div><div><span class="m">Built</span><span>Moulds, silicone units, valves, Arduino</span></div><div><span class="m">Why</span><span>My own weeks on an injured leg</span></div></div>
+</header>
+<section class="w-intro"><span class="m">( Overview )</span><p class="d split-words">Among 1,200 post-operative patients in one study, 15% had complications related to being moved. <em>Curawave moves a patient the way a wave moves a boat</em>: soft units tilt left and right in alternating groups and slide the patient horizontally onto the next bed.</p></section>
+<section class="w-facts stats" style="--n:4"><div class="stat"><b class="d" data-count="360" data-prefix="" data-suffix="" data-dec="0">0</b><span>units in the full 18 × 20 design</span></div><div class="stat"><b class="d" data-count="3" data-prefix="" data-suffix="+" data-dec="0">0+</b><span>prototype generations</span></div><div class="stat"><b class="d" data-count="20" data-prefix="" data-suffix="+" data-dec="0">0+</b><span>parts printed or cast</span></div><div class="stat"><b class="d" data-count="100" data-prefix="" data-suffix="+" data-dec="0">0+</b><span>people pitched to</span></div></section>
+<section class="blk"><div class="two"><div class="txt"><h2 class="d"><span class="n">01</span>How one unit moves</h2><p>Each unit has a hollow silicone inflation layer, a non-stretch cotton confining layer and a silicone base. Because the confining layer stretches less, the unit tilts sideways when inflated. Neighbouring groups inflate in turn, so a sideways wave carries the patient across.</p></div><figure class="fig contain"><div class="fr"><img src="../site/img/w/cw_principle.webp" alt="How one unit tilts and pushes" loading="lazy"></div><figcaption><span>How one unit tilts and pushes</span><span class="m">Principle</span></figcaption></figure></div></section><section class="band"><h2 class="d"><span class="n">02</span>How we built it</h2><div class="steps" style="--c:4"><div class="step"><span class="d">01</span><b>Model the moulds</b><span>Autodesk Fusion: bases, top, bottom and core.</span></div><div class="step"><span class="d">02</span><b>Cast and test</b><span>Moulds 3D-printed; silicones of different thickness compared.</span></div><div class="step"><span class="d">03</span><b>Valves + code</b><span>Solenoid valves switch the pump; an Arduino times them.</span></div><div class="step"><span class="d">04</span><b>1 × 4 prototype</b><span>Air split four ways, each group on its own valve.</span></div></div></section><section class="blk"><h2 class="d"><span class="n">03</span>From prototype to plan</h2><div class="gridf" style="--c:3;--ar:16/9"><figure class="fig "><div class="fr"><img src="../site/img/w/cw_circuit.webp" alt="Pump, valves and Arduino wiring" loading="lazy"></div><figcaption><span>Pump, valves and Arduino wiring</span><span class="m">Hardware</span></figcaption></figure><figure class="fig contain"><div class="fr"><img src="../site/img/w/cw_slide09.webp" alt="The layers of one unit" loading="lazy"></div><figcaption><span>The layers of one unit</span><span class="m">Design</span></figcaption></figure><figure class="fig contain"><div class="fr"><img src="../site/img/w/cw_slide16.webp" alt="The Curawave brand" loading="lazy"></div><figcaption><span>The Curawave brand</span><span class="m">Brand</span></figcaption></figure></div></section>
+</main>
+<a class="nextp" href="lingtong.html" data-cursor="Next"><span class="m">Next project →</span><div class="d t">Lingtong<br>Future Tech</div><img src="../site/img/w/lt_logo.webp" alt=""></a>
+<footer class="footer" style="padding-top:8vh"><div class="legal m" style="margin-top:0"><span>© 2026 Amy Hu</span><a href="../index.html">Home</a><a href="../portfolio/index.html">Full portfolio</a></div></footer>
+<script src="../site/vendor/gsap.min.js"></script>
+<script src="../site/vendor/ScrollTrigger.min.js"></script>
+<script src="../site/vendor/lenis.min.js"></script>
+<script src="../site/work.js"></script>
+</body>
+</html>

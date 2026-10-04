@@ -32,11 +32,13 @@
   });
 
   /* ---------- loader ---------- */
+  let seen = false; try { seen = sessionStorage.getItem('amy-seen') === '1'; sessionStorage.setItem('amy-seen', '1'); } catch (e) {}
   lenis.stop();
   const cnt = document.querySelector('.loader .count');
   const intro = gsap.timeline({ onComplete: () => lenis.start() });
-  intro.to({ v: 0 }, { v: 100, duration: reduce ? 0.1 : 1.6, ease: 'power2.inOut', onUpdate() { cnt.textContent = Math.round(this.targets()[0].v); } })
-       .to('.curtain', { y: '0%', duration: 0.7, ease: 'power3.inOut' })
+  if (seen) { cnt.textContent = '100'; gsap.set('.loader', { display: 'none' }); gsap.set('.curtain', { y: '0%' }); }
+  intro.to({ v: seen ? 100 : 0 }, { v: 100, duration: seen ? 0 : (reduce ? 0.1 : 1.6), ease: 'power2.inOut', onUpdate() { cnt.textContent = Math.round(this.targets()[0].v); } })
+       .to('.curtain', { y: '0%', duration: seen ? 0 : 0.7, ease: 'power3.inOut' })
        .set('.loader', { display: 'none' })
        .to('.curtain', { y: '-100%', duration: 0.8, ease: 'power3.inOut' })
        .from('.hero-title .ch', { yPercent: 110, opacity: 0, duration: 1.1, stagger: 0.05, ease: 'expo.out' }, '-=0.45')
@@ -194,9 +196,7 @@
       scrollTrigger: { trigger: c, containerAnimation: hzTween, start: 'left right', end: 'center center', scrub: true } });
   });
 
-  /* ---------- cta + footer ---------- */
-  gsap.from('.cta .d', { scale: 0.7, opacity: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: '.cta', start: 'top 70%' } });
-  gsap.to('.sticker', { y: -120, rotate: 30, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'bottom top', scrub: true } });
+  /* ---------- footer ---------- */
   gsap.from('.footer .bigname', { yPercent: 60, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: true } });
 
   /* ---------- menu ---------- */
@@ -212,7 +212,7 @@
   }));
 
   /* ---------- page-leave transition ---------- */
-  document.querySelectorAll('a[href^="portfolio/"]:not([download])').forEach(a => a.addEventListener('click', e => {
+  document.querySelectorAll('a[href^="portfolio/"]:not([download]), a[href^="work/"]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault(); const href = a.getAttribute('href');
     gsap.fromTo('.curtain', { y: '100%' }, { y: '0%', duration: 0.7, ease: 'power3.inOut', onComplete: () => location.href = href });
   }));
