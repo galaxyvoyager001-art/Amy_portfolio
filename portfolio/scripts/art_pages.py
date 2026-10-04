@@ -372,11 +372,6 @@ SOUND = f'''
   </div>
 </section>
 
-<section class="pair">
-  <img src="{W}cut_guzheng.webp" alt="Guzheng">
-  <blockquote class="d">Both begin <em>with waiting.</em></blockquote>
-  <img src="{W}cut_tkd.webp" alt="Taekwondo">
-</section>
 '''
 
 open(OUT + 'guzheng-taekwondo.html', 'w').write(wrap(

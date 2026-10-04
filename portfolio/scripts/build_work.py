@@ -72,7 +72,7 @@ NAV = '''<div class="curtain" aria-hidden="true" style="transform:translateY(0)"
   <div class="imgs"><img data-k="home" src="../site/img/hero.webp" alt="" class="on"><img data-k="made" src="../site/img/visit.webp" alt=""><img data-k="research" src="../site/img/lab.webp" alt=""><img data-k="gallery" src="../site/img/guzhengduo.webp" alt=""><img data-k="portfolio" src="../site/img/stage.webp" alt=""></div>
   <ul>
     <li><a class="d" href="../index.html" data-k="home"><small>01</small>Home</a></li>
-    <li><a class="d" href="../index.html#made" data-k="made"><small>02</small>Made</a></li>
+    <li><a class="d" href="../index.html#made" data-k="made"><small>02</small>Senses</a></li>
     <li><a class="d" href="../index.html#research" data-k="research"><small>03</small>Research</a></li>
     <li><a class="d" href="../index.html#gallery" data-k="gallery"><small>04</small>Gallery</a></li>
     <li><a class="d" href="../portfolio/index.html" data-k="portfolio"><small>05</small>Portfolio</a></li>
@@ -122,6 +122,10 @@ def page(p, nxt):
 '''
 
 exec(open(os.path.join(os.path.dirname(__file__), 'work_content.py')).read())
+
+ORDER = ['tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekwondo', 'physics-tournaments', 'metallic-glass', 'optics',
+         'modelling', 'smarthearing', 'curawave', 'lingtong']
+PAGES.sort(key=lambda p: ORDER.index(p['slug']))
 
 # Essay pages written by art_pages.py; still part of the next-project chain.
 BESPOKE = {'tactile-books', 'miniature-house', 'physics-of-baking', 'guzheng-taekwondo'}

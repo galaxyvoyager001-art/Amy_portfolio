@@ -153,23 +153,35 @@
     gsap.to(s.querySelector('.bg img'), { yPercent: -14, ease: 'none', scrollTrigger: { trigger: s, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 
-  /* ---------- hall ---------- */
-  gsap.from('.hall-head .d', { yPercent: 40, opacity: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.hall', start: 'top 75%' } });
-  gsap.from('.thing', { y: 120, opacity: 0, rotate: (i) => (i % 2 ? 4 : -4), stagger: 0.08, duration: 1.1, ease: 'expo.out',
-    scrollTrigger: { trigger: '.grid', start: 'top 85%' } });
-  if (!touch) document.querySelectorAll('.thing').forEach(t => {
-    const img = t.querySelector('.im img');
-    t.addEventListener('pointermove', e => {
-      const r = t.getBoundingClientRect(); const dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
-      gsap.to(t, { rotateY: dx * 10, rotateX: -dy * 10, transformPerspective: 900, duration: 0.6, ease: 'power3.out' });
-      gsap.to(img, { x: dx * 24, y: dy * 24, duration: 0.6, ease: 'power3.out' });
-    });
-    t.addEventListener('pointerleave', () => { gsap.to(t, { rotateY: 0, rotateX: 0, duration: 0.8, ease: 'elastic.out(1,.5)' }); gsap.to(img, { x: 0, y: 0, duration: 0.8 }); });
-  });
+  /* ---------- five senses, five questions: one pinned stage, five scenes ---------- */
+  const sn = document.querySelector('.senses');
+  if (sn) {
+    const pin = sn.querySelector('.sn-pin'), N = 5;
+    const words = [...sn.querySelectorAll('.sn-word')], imgs = [...sn.querySelectorAll('.sn-img')], qs = [...sn.querySelectorAll('.sn-q')], dots = [...sn.querySelectorAll('.sn-dots i')];
+    let cur = -1;
+    const show = k => {
+      if (k === cur) return;
+      const dir = k > cur ? 1 : -1, q = qs[k];
+      gsap.to(pin, { backgroundColor: q.dataset.bg, color: q.dataset.fg, duration: 0.9, ease: 'power2.inOut' });
+      pin.style.setProperty('--sa', q.dataset.ac);
+      words.forEach((w, i) => gsap.to(w, { yPercent: i === k ? 0 : (i < k ? -110 : 110), opacity: i === k ? 1 : 0, duration: 0.9, ease: 'expo.out' }));
+      imgs.forEach((im, i) => gsap.to(im, { opacity: i === k ? 1 : 0, scale: i === k ? 1 : 0.7, rotate: i === k ? 0 : dir * (i < k ? -14 : 14), y: i === k ? 0 : (i < k ? -80 : 80), duration: 1.1, ease: 'expo.out' }));
+      qs.forEach((x, i) => { x.classList.toggle('on', i === k); gsap.to(x, { opacity: i === k ? 1 : 0, y: i === k ? 0 : 30, duration: 0.7, delay: i === k ? 0.15 : 0, ease: 'power3.out' }); });
+      dots.forEach((d, i) => d.classList.toggle('on', i === k));
+      cur = k;
+    };
+    gsap.set(words, { yPercent: 110, opacity: 0 }); gsap.set(imgs, { opacity: 0, scale: 0.7 }); gsap.set(qs, { opacity: 0, y: 30 });
+    show(0);
+    ScrollTrigger.create({ trigger: sn, start: 'top top', end: 'bottom bottom', onUpdate: s => show(Math.min(N - 1, Math.floor(s.progress * N))) });
+    gsap.to(imgs, { yPercent: -6, ease: 'none', scrollTrigger: { trigger: sn, start: 'top top', end: 'bottom bottom', scrub: true } });
+  }
+
+  gsap.utils.toArray('.rch-h').forEach(h => gsap.from(h.children, { y: 40, opacity: 0, stagger: 0.08, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: h, start: 'top 85%' } }));
+  gsap.from('.r-thread', { y: 40, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: '.r-thread', start: 'top 88%' } });
 
   /* ---------- research list with image peek ---------- */
   gsap.from('.research .title', { yPercent: 30, opacity: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '.research', start: 'top 75%' } });
-  gsap.from('.rrow', { x: -60, opacity: 0, stagger: 0.07, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: '.rlist', start: 'top 85%' } });
+  gsap.utils.toArray('.rlist').forEach(l => gsap.from(l.querySelectorAll('.rrow'), { x: -60, opacity: 0, stagger: 0.07, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: l, start: 'top 85%' } }));
   const peek = document.querySelector('.peek'), pimg = peek.querySelector('img'), pp = { x: 0, y: 0 };
   if (!touch) {
     document.querySelectorAll('.rrow').forEach(r => {

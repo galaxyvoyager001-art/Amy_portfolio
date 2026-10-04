@@ -79,7 +79,7 @@ dict(slug='guzheng-taekwondo', seo='Guzheng & Taekwondo', kicker='04 · Sound &a
     ('grid', '', '', '', 2, '4/3', [fig('c21c06d3', 'Leading a class of young students', 'Coaching'), fig('cut_tkd2', 'In a taekwondo stance', 'Black belt', 'cut')]),
   ]),
 # ------------------------------------------------------------------ PHYSICS TOURNAMENTS
-dict(slug='physics-tournaments', seo='Physics Tournaments: IYPT & CYPT', kicker='05 · Mind · IB Extended Essay · IYPT · CYPT',
+dict(slug='physics-tournaments', seo='Physics Tournaments: IYPT & CYPT', kicker='Research · Asking 01 · IB Extended Essay · IYPT · CYPT',
   title=['Coupled', 'pendulums'], sub='Energy transport and localization in a chain of magnetically coupled pendulums, and two more problems I reported at CYPT 2026.',
   c='#1B2FA8', t='#F3F0E8', a='#FFB4A3', a2='#D9432E', hero='cut_ee_rig', hero_alt='My 3D-printed magnetic pendulum rig',
   meta=[('Role', 'Team captain · reporter'), ('Tournaments', 'IYPT Macao team · CYPT 2026'), ('Research', 'IB Physics Extended Essay'), ('Community', 'Founder of Wavefront, our school physics lab')],
@@ -97,7 +97,7 @@ dict(slug='physics-tournaments', seo='Physics Tournaments: IYPT & CYPT', kicker=
       [fig('cy_ph_discuss', 'Leading a team discussion', 'Captain'), fig('cy_ph_present', 'Reporting Electrical Damping', 'CYPT 2026'), fig('cy_ph_team', 'The whole team at work', 'Team')]),
   ]),
 # ------------------------------------------------------------------ SMARTHEARING
-dict(slug='smarthearing', seo='SmartHearing', kicker='05 · Mind · Peking University, Institute for AI',
+dict(slug='smarthearing', seo='SmartHearing', kicker='Research · Building 05 · Peking University, Institute for AI',
   title=['Smart', 'hearing'], sub='Scene-adaptive hearing assistance: a hearing aid that decides which sound matters, and enhances it.',
   c='#5E1A14', t='#FFFFFF', a='#FFB4A3', a2='#C2412D', hero='lt_hearing', hero_alt='SmartHearing hearing-aid prototype', hero_photo=True,
   meta=[('Role', 'Product design lead · equal-contribution author'), ('Lab', 'Peking University, Institute for AI'), ('Output', 'Patent · ICASSP 2027 submission'), ('Why', 'My grandfather\'s hearing loss')],
@@ -110,7 +110,7 @@ dict(slug='smarthearing', seo='SmartHearing', kicker='05 · Mind · Peking Unive
     ('quote', 'My grandfather\'s hearing taught me to notice quiet details. This project is about the loud ones that must never be missed.', 'Why it matters to me'),
   ]),
 # ------------------------------------------------------------------ METALLIC GLASS
-dict(slug='metallic-glass', seo='Flowed Metal', kicker='05 · Mind · Chinese Academy of Sciences, Institute of Mechanics',
+dict(slug='metallic-glass', seo='Flowed Metal', kicker='Research · Asking 02 · Chinese Academy of Sciences, Institute of Mechanics',
   title=['Flowed', 'metal'], sub='Micro-particle impacts on metallic glasses under high temperature.',
   c='#1D2226', t='#FFFFFF', a='#F2A16E', a2='#C4521F', hero='lab_setup', hero_alt='The laser-induced particle impact platform', hero_photo=True,
   meta=[('Role', 'First author'), ('Lab', 'Institute of Mechanics, CAS'), ('Supervisor', 'Prof. Minqiang Jiang'), ('Recognition', 'ISEF Beijing qualifier')],
@@ -124,7 +124,7 @@ dict(slug='metallic-glass', seo='Flowed Metal', kicker='05 · Mind · Chinese Ac
     ('two', '03', 'Why: shear transformations', ['I built a quarter-symmetric ABAQUS model with 1.35 million elements and a coupled shear-transformation / free-volume law. It matched the measured crater and showed why: at 200 °C contact lasts longer, stress is lower and many more shear transformations activate.'], fig('fm_sim', 'Field-averaged stress, plastic strain and STZ density', 'Simulation', 'contain'), True),
   ]),
 # ------------------------------------------------------------------ CURAWAVE
-dict(slug='curawave', seo='Curawave', kicker='05 · Mind · Conrad Challenge',
+dict(slug='curawave', seo='Curawave', kicker='Research · Building 06 · Conrad Challenge',
   title=['Cura', 'wave'], sub='A wave-bionic soft robotic mattress that slides a patient sideways onto another bed, with no one lifting.',
   c='#0B3B45', t='#FFFFFF', a='#8FE3D8', a2='#0F7C7A', hero='cw_units', hero_alt='Cast silicone mattress units', hero_photo=True,
   meta=[('Role', 'CTO'), ('Competition', 'Conrad Challenge'), ('Built', 'Moulds, silicone units, valves, Arduino'), ('Why', 'My own weeks on an injured leg')],
@@ -137,7 +137,7 @@ dict(slug='curawave', seo='Curawave', kicker='05 · Mind · Conrad Challenge',
     ('grid', '03', 'From prototype to plan', '', 3, '16/9', [fig('cw_circuit', 'Pump, valves and Arduino wiring', 'Hardware'), fig('cw_slide09', 'The layers of one unit', 'Design', 'contain'), fig('cw_slide16', 'The Curawave brand', 'Brand', 'contain')]),
   ]),
 # ------------------------------------------------------------------ LINGTONG
-dict(slug='lingtong', seo='Lingtong Future Technology', kicker='05 · Mind · Entrepreneurship',
+dict(slug='lingtong', seo='Lingtong Future Technology', kicker='Research · Building 07 · Entrepreneurship',
   title=['Lingtong', 'Future Tech'], sub='The human-centred assistive technology company I founded to turn research into products.',
   c='#33244D', t='#FFFFFF', a='#E0A93B', a2='#33244D', hero='lt_logo', hero_alt='Lingtong logo', hero_small=True,
   meta=[('Role', 'Founder &amp; CTO'), ('Team', 'About five people'), ('Raised', 'USD 100k+'), ('Trademarks', 'Filed July 2026, CNIPA')],
@@ -154,7 +154,7 @@ dict(slug='lingtong', seo='Lingtong Future Technology', kicker='05 · Mind · En
       [fig('lt_tm1', 'Acceptance notice', 'CNIPA', 'contain'), fig('lt_tm2', 'Preliminary approval notice', 'CNIPA', 'contain')]),
   ]),
 # ------------------------------------------------------------------ OPTICS
-dict(slug='optics', seo='Experimental Optics', kicker='05 · Mind · Peking University, Institute of Physics',
+dict(slug='optics', seo='Experimental Optics', kicker='Research · Asking 03 · Peking University, Institute of Physics',
   title=['Light,', 'measured'], sub='Polarisation control and twelve experimental optics reports, then Raman and laser systems in a research lab.',
   c='#0F2A1E', t='#FFFFFF', a='#9BE7B4', a2='#2F7D4F', hero='op_ph4', hero_alt='Laser and spectrometer bench', hero_photo=True,
   meta=[('Role', 'Nonlinear optics research intern'), ('Lab', 'Peking University, Institute of Physics'), ('Reports', '12 full lab reports'), ('Systems', 'Raman, lasers, polarisation')],
@@ -168,7 +168,7 @@ dict(slug='optics', seo='Experimental Optics', kicker='05 · Mind · Peking Univ
       [fig('op_ph1', 'My labelled sample', 'Sample'), fig('op_ph2', 'The clean-room entrance', 'Lab'), fig('op_ph3', 'An optical table I aligned', 'Bench'), fig('lab_land', 'Beside the optics', 'Me')]),
   ]),
 # ------------------------------------------------------------------ MODELLING
-dict(slug='modelling', seo='Mathematical Modelling', kicker='05 · Mind · IMMC · HiMCM',
+dict(slug='modelling', seo='Mathematical Modelling', kicker='Research · Asking 04 · IMMC · HiMCM',
   title=['Modelling', 'the world'], sub='Five modelling papers, all written by me as team captain and main modeller, and an applied mathematics journal.',
   c='#14233F', t='#FFFFFF', a='#F2AA5A', a2='#C8641E', hero='mm_cover', hero_alt='Applied Mathematics, Vol. 2', hero_photo=True,
   meta=[('Role', 'Team captain · main modeller'), ('Papers', 'Five, all written by me'), ('Awards', '3 Finalist awards'), ('Also', 'Editor, school mathematics journal')],
