@@ -14,41 +14,54 @@ body{margin:0}
 .d{font-family:'Bricolage Grotesque','Arial Narrow',sans-serif;font-variation-settings:'wdth' 75;font-weight:800;letter-spacing:-.02em}
 .s{font-family:'Instrument Serif',Georgia,serif}
 .b{font-family:'Instrument Sans','Helvetica Neue',sans-serif}
-.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-.board{background-color:#FFFBF2;background-image:linear-gradient(rgba(31,53,209,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,53,209,.07) 1px,transparent 1px);background-size:24px 24px}
-.rule{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;font-size:16px;line-height:1.4}
-.rn{font-size:26px;line-height:1;color:#FFF3DE}
-.sh{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0}
-.sh img{max-width:100%;max-height:100%;display:block;box-shadow:0 18px 30px rgba(0,0,0,.25)}
-.tape{position:absolute;width:96px;height:26px;background:rgba(255,201,60,.75)}
-.h{font-family:'Caveat',cursive;font-weight:700}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}
+.sheet{background-color:#F5F3EE;background-image:linear-gradient(rgba(31,63,191,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(31,63,191,.06) 1px,transparent 1px);background-size:20px 20px}
+.dw{position:absolute;width:404px}
+.dh{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#1C1C1C;border-bottom:1px solid #1C1C1C;padding-bottom:4px;margin-bottom:8px}
+.sk{width:404px;height:303px;display:block;border:1px solid rgba(28,28,28,.35);box-sizing:border-box;background:#FFF}
+.ab{position:absolute;right:-14px;bottom:30px;width:200px;background:#FFF;padding:4px;box-shadow:0 6px 14px rgba(0,0,0,.18)}
+.ab img{width:100%;height:96px;object-fit:cover;display:block}
+.ab span{position:absolute;left:-4px;top:-18px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#1F3FBF;background:#F5F3EE;padding:1px 4px}
+.cp{font-family:'Instrument Sans',sans-serif;font-size:12.5px;line-height:1.4;color:#333;padding-top:7px}
+.rule{display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;font-size:14px;line-height:1.42;padding:7px 0;border-top:1px solid rgba(28,28,28,.25)}
+.rn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1F3FBF;padding-top:2px}
 </style>
 </helmet>
-<div style="width: 1920px; height: 960px; position: relative; overflow: hidden; background: #22B5A6; color: #0E2A33">
-
-<div class="m" style="position: absolute; left: 64px; top: 40px; right: 64px; display: flex; justify-content: space-between; font-size: 13px"><span>01 — Touch · Design</span><span>Amy Hu · 04</span></div>
-
-<div style="position: absolute; left: 64px; top: 96px; width: 470px; display: flex; flex-direction: column; gap: 20px">
-<div class="d" style="font-size: 86px; line-height: .86; color: #FFF3DE">MADE FOR<br>FINGERTIPS</div>
-<div class="s" style="font-size: 30px; line-height: 1.12; font-style: italic">The Kingdom of Shapes</div>
-<div class="b" style="font-size: 16.5px; line-height: 1.55">Each book is a story set in the Kingdom of Shapes. In the first, Jianjian the triangle crosses town to a New Year concert, and every scene hides a triangle to find by touch. In the second, Fangfang the square grows into a whole family of shapes, from parallelograms to hexagons. I drew every page as a plan, a section and an assembly before a single piece of felt was cut.</div>
-<div class="m" style="font-size: 12px; padding-top: 6px">Rules I designed by</div>
-<div class="b rule"><span class="d rn">1</span><span>Every shape is raised: felt strips, metal or stitched edges.</span></div>
-<div class="b rule"><span class="d rn">2</span><span>Every scene faces a braille card with a raised-line icon of its shape.</span></div>
-<div class="b rule"><span class="d rn">3</span><span>Something on each page spins, rings or lights up.</span></div>
-<div class="b rule"><span class="d rn">4</span><span>Nothing loose: thread ends are covered and small parts are sewn or sealed.</span></div>
+<div class="sheet" style="width: 1920px; height: 960px; position: relative; overflow: hidden; color: #1C1C1C">
+<div style="position: absolute; left: 28px; top: 28px; right: 28px; bottom: 28px; border: 1.5px solid #1C1C1C"></div>
+<div class="m" style="position: absolute; left: 56px; top: 46px; right: 56px; display: flex; justify-content: space-between; font-size: 11px"><span>01 — Touch · Design drawings</span><span>Amy Hu · 04</span></div>
+<div style="position: absolute; left: 56px; top: 88px; width: 490px; display: flex; flex-direction: column; gap: 16px">
+<div class="d" style="font-size: 78px; line-height: .88">FROM DRAWING<br><span style="color: #1F3FBF">TO FELT</span></div>
+<div class="s" style="font-size: 25px; line-height: 1.15; font-style: italic">Design drawings for the Kingdom of Shapes, shown beside the pages they became.</div>
+<div class="b" style="font-size: 15px; line-height: 1.55; color: #333">Each book is a story set in the Kingdom of Shapes: Jianjian the triangle crosses town to a New Year concert, and Fangfang the square grows into a family of shapes. Before any felt was cut, I drew every spread in pencil as a plan, with its parts laid out, joints in section and a cutting list, so the finished page could be built exactly and safely.</div>
+<div><div class="m" style="font-size: 10.5px; color: #1F3FBF; padding-bottom: 4px">Design rules</div><div class="b rule"><span class="rn">R1</span><span>Every shape is raised: felt strips, metal or stitched edges.</span></div><div class="b rule"><span class="rn">R2</span><span>Every scene faces a braille card with a raised-line icon of its shape.</span></div><div class="b rule"><span class="rn">R3</span><span>Something on each page spins, rings or lights up.</span></div><div class="b rule"><span class="rn">R4</span><span>Nothing loose: thread ends are covered and small parts are sewn or sealed.</span></div></div>
 </div>
-
-<div style="position: absolute; left: 630px; top: 92px; width: 1236px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 30px">
-<figure style="margin: 0; position: relative; transform: rotate(-1.2deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/e356c29ae90b1435f6b0f877f973dba4" alt="Pencil plan of spread 01 with parts" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(3.5999999999999996deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">01 · Spread 01: a hinged triangle, a compass and pegs to find, with every part drawn out</figcaption></figure>
-<figure style="margin: 0; position: relative; transform: rotate(0.9deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/7e1a8541d01fa0482c6880511081c78c" alt="Pencil drawing of folding rods forming a triangle and a 4" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(-2.7deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">02 · Rods that fold into a triangle and a 4; the rivet joint in section</figcaption></figure>
-<figure style="margin: 0; position: relative; transform: rotate(-0.6deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/8cbd88b3c9aec5a970625df4850160ac" alt="Pencil plan of a page with roof, keyring and compass" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(1.7999999999999998deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">03 · A roof, a spring keyring and a compass, with the hinge detail below</figcaption></figure>
-<figure style="margin: 0; position: relative; transform: rotate(1.1deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/999095591948645964b22c482ebfd129" alt="Pencil layout grid of a book page" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(-3.3000000000000003deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">04 · The page grid: story text on the left, the braille card on the right</figcaption></figure>
-<figure style="margin: 0; position: relative; transform: rotate(-0.9deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/655ac6dc93cabcadecda1d2f35a05ecd" alt="Pencil plan of the dress page" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(2.7deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">05 · The dress page: a hanger, a gathered skirt and three triangles</figcaption></figure>
-<figure style="margin: 0; position: relative; transform: rotate(0.7deg)"><div style="background: #FFFDF8; padding: 10px; box-shadow: 0 16px 26px rgba(0,0,0,.22)"><img src="/_blob/105f333b4ba93316d71fb87b2022566f" alt="Pencil plan of the Christmas tree page with parts" style="width: 100%; display: block"></div><div class="tape" style="left: 40%; top: -11px; transform: rotate(-2.0999999999999996deg)"></div><figcaption class="h" style="font-size: 21px; line-height: 1.12; color: #0E2A33; padding: 8px 4px 0">06 · The Christmas tree page and every piece cut for it</figcaption></figure>
-</div>
-<div class="h" style="position: absolute; left: 640px; bottom: 26px; font-size: 24px; color: #FFF3DE; transform: rotate(-1deg)">all six drawn by hand, in pencil, before any felt was cut</div>
-</div>
+<div style="position: absolute; left: 56px; bottom: 46px; width: 490px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #1C1C1C; border-left: none"><div style="padding: 6px 8px; border-left: 1px solid #1C1C1C"><div class="m" style="font-size: 8.5px; color: #777">Project</div><div class="b" style="font-size: 12.5px; font-weight: 600; padding-top: 2px">Kingdom of Shapes</div></div><div style="padding: 6px 8px; border-left: 1px solid #1C1C1C"><div class="m" style="font-size: 8.5px; color: #777">Drawn by</div><div class="b" style="font-size: 12.5px; font-weight: 600; padding-top: 2px">Amy Hu</div></div><div style="padding: 6px 8px; border-left: 1px solid #1C1C1C"><div class="m" style="font-size: 8.5px; color: #777">Medium</div><div class="b" style="font-size: 12.5px; font-weight: 600; padding-top: 2px">Pencil on paper</div></div><div style="padding: 6px 8px; border-left: 1px solid #1C1C1C"><div class="m" style="font-size: 8.5px; color: #777">Sheet</div><div class="b" style="font-size: 12.5px; font-weight: 600; padding-top: 2px">A-04 of 06</div></div></div>
+<div style="position: absolute; left: 574px; top: 76px; bottom: 46px; border-left: 1px solid rgba(28,28,28,.4)"></div>
+<div class="dw" style="left: 600px; top: 88px">
+<div class="dh"><span>Dwg 01 · Plan + parts</span><span style="color: #1F3FBF">B1 · p. 05 · Traffic jam</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/e356c29ae90b1435f6b0f877f973dba4" alt="Pencil drawing 01: Plan + parts"><div class="ab"><span>AS BUILT →</span><img src="/_blob/a5e8e0bb767c36a280c112d4e5582a75" alt="Finished felt page: B1 · p. 05 · Traffic jam"></div></div>
+<div class="cp">Hinged felt rods, a road sign and a compass, every loose part drawn out before cutting.</div></div>
+<div class="dw" style="left: 1036px; top: 88px">
+<div class="dh"><span>Dwg 02 · Plan + section</span><span style="color: #1F3FBF">B1 · p. 01 · Triangle Town</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/7e1a8541d01fa0482c6880511081c78c" alt="Pencil drawing 02: Plan + joint section"><div class="ab"><span>AS BUILT →</span><img src="/_blob/50718ba5b8c0e084222e68ad35e54cfa" alt="Finished felt page: B1 · p. 01 · Triangle Town"></div></div>
+<div class="cp">Rods that fold into a triangle and a 4; the section shows how each rivet joint holds the felt layers.</div></div>
+<div class="dw" style="left: 1472px; top: 88px">
+<div class="dh"><span>Dwg 03 · Plan + hinge detail</span><span style="color: #1F3FBF">B1 · p. 02 · The horn</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/8cbd88b3c9aec5a970625df4850160ac" alt="Pencil drawing 03: Plan + hinge detail"><div class="ab"><span>AS BUILT →</span><img src="/_blob/78ec456acbc502746be4e9393f8dbede" alt="Finished felt page: B1 · p. 02 · The horn"></div></div>
+<div class="cp">A roof, a spring keyring and a compass; the hinge drawn in detail so the flap opens without tearing.</div></div>
+<div class="dw" style="left: 600px; top: 516px">
+<div class="dh"><span>Dwg 04 · Layout grid</span><span style="color: #1F3FBF">Every spread</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/999095591948645964b22c482ebfd129" alt="Pencil drawing 04: Layout grid"><div class="ab"><span>AS BUILT →</span><img src="/_blob/2fd4db8e991cda2fc828ee48637b2ae3" alt="Finished felt page: Every spread"></div></div>
+<div class="cp">The standard grid: title strip and story on the left, braille card with a raised-line shape on the right.</div></div>
+<div class="dw" style="left: 1036px; top: 516px">
+<div class="dh"><span>Dwg 05 · Plan + components</span><span style="color: #1F3FBF">B1 · p. 04 · The gown</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/655ac6dc93cabcadecda1d2f35a05ecd" alt="Pencil drawing 05: Plan + components"><div class="ab"><span>AS BUILT →</span><img src="/_blob/7c20c3d38329f075f4cdabdb9b2ad340" alt="Finished felt page: B1 · p. 04 · The gown"></div></div>
+<div class="cp">A hanger, a gathered skirt and three triangles: the dress was drawn in parts, then assembled.</div></div>
+<div class="dw" style="left: 1472px; top: 516px">
+<div class="dh"><span>Dwg 06 · Plan + cutting list</span><span style="color: #1F3FBF">B1 · p. 06 · The tree</span></div>
+<div style="position: relative"><img class="sk" src="/_blob/105f333b4ba93316d71fb87b2022566f" alt="Pencil drawing 06: Plan + cutting list"><div class="ab"><span>AS BUILT →</span><img src="/_blob/341c963622a13464d7dbe1d608d5ae7f" alt="Finished felt page: B1 · p. 06 · The tree"></div></div>
+<div class="cp">Three triangles stack into a tree; the cutting list below gives every ornament, sock and bow.</div></div>
 
 </div>
 </x-dc>
