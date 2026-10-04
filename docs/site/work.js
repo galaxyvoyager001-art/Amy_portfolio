@@ -9,13 +9,16 @@
 
   /* enter: curtain lifts, title rises */
   gsap.set('.curtain', { y: '0%' });
-  const tl = gsap.timeline();
-  tl.to('.curtain', { y: '-100%', duration: 0.9, ease: 'power3.inOut', delay: 0.1 })
-    .from('.w-hero h1 .ln > span', { yPercent: 110, duration: 1.1, stagger: 0.08, ease: 'expo.out' }, '-=0.45')
-    .from('.w-hero .kick, .w-hero .sub, .w-meta > div', { y: 30, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out' }, '-=0.8')
-    .from('.w-hero .heroimg', { y: 80, opacity: 0, scale: 0.94, duration: 1.3, ease: 'expo.out' }, '-=1.1');
-  gsap.to('.w-hero .heroimg', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: '.w-hero', start: 'top top', end: 'bottom top', scrub: true } });
-  gsap.to('.w-hero h1', { yPercent: -20, ease: 'none', scrollTrigger: { trigger: '.w-hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (!document.querySelector('.w-hero')) gsap.to('.curtain', { y: '-100%', duration: 0.9, ease: 'power3.inOut', delay: 0.1 });
+  else {
+    const tl = gsap.timeline();
+    tl.to('.curtain', { y: '-100%', duration: 0.9, ease: 'power3.inOut', delay: 0.1 })
+      .from('.w-hero h1 .ln > span', { yPercent: 110, duration: 1.1, stagger: 0.08, ease: 'expo.out' }, '-=0.45')
+      .from('.w-hero .kick, .w-hero .sub, .w-meta > div', { y: 30, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out' }, '-=0.8')
+      .from('.w-hero .heroimg', { y: 80, opacity: 0, scale: 0.94, duration: 1.3, ease: 'expo.out' }, '-=1.1');
+    gsap.to('.w-hero .heroimg', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: '.w-hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.to('.w-hero h1', { yPercent: -20, ease: 'none', scrollTrigger: { trigger: '.w-hero', start: 'top top', end: 'bottom top', scrub: true } });
+  }
 
   /* cursor */
   const cur = document.querySelector('.cursor'), ring = cur.querySelector('.ring'), dot = cur.querySelector('.dot');
