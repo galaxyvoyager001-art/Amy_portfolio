@@ -362,13 +362,12 @@ SOUND = f'''
 
 <section class="frag teach">
   <span class="fn m">III.</span>
-  <div class="teach-grid">
+  <div class="teach-grid solo">
     <div>
       <h2 class="fh">To teach a movement, <em>slow it down</em></h2>
       <p>Since Grade 5 I have been an assistant instructor at Shangdi Youth Taekwondo Academy, coaching more than fifty younger students in forms, kicks, sparring and discipline.</p>
       <p>Teaching means taking a movement I can do without thinking and slowing it down until a younger student can copy it: where the foot turns, when the hip opens, where the eyes go. It is the same patience a phrase on the guzheng asks for.</p>
     </div>
-    <figure><img src="{W}tkd_teaching.webp" alt="Leading a class of young students at sunset"></figure>
   </div>
 </section>
 

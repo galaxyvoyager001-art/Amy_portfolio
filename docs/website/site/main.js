@@ -190,7 +190,7 @@
   const peek = document.querySelector('.peek'), pimg = peek.querySelector('img'), pp = { x: 0, y: 0 };
   if (!touch) {
     document.querySelectorAll('.rrow').forEach(r => {
-      r.addEventListener('pointerenter', () => { pimg.src = r.dataset.img; peek.classList.add('on'); });
+      r.addEventListener('pointerenter', () => { pimg.src = r.dataset.img; peek.classList.toggle('fit', r.dataset.fit === 'contain'); peek.classList.add('on'); });
       r.addEventListener('pointerleave', () => peek.classList.remove('on'));
     });
     gsap.ticker.add(() => {

@@ -282,3 +282,5 @@ body.art-sound{--paper:#120C0B;background:#120C0B;color:#F3E9DC;--gold:#E1262D;-
   .teach-grid{grid-template-columns:1fr}
   .pair{grid-template-columns:1fr 1fr}.pair blockquote{grid-column:1/-1;grid-row:1}
 }
+
+.teach-grid.solo{grid-template-columns:minmax(0,1fr);max-width:900px}
