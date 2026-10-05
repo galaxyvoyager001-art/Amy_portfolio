@@ -161,8 +161,7 @@ PAGES.append(dict(slug='optics', ch='ask', no='03 / 04', name='Light, Measured',
     + GRID(4, g.F('op_ph3', 'An optical table I aligned', ar='3/4'), g.F('lab_comp', 'At the bench', ar='3/4'), g.F('op_ph1', 'My labelled sample', ar='3/4'), g.F('op_ph2', 'The clean-room entrance', ar='3/4')),
     P('The measurements land close to the reference values: a He-Ne wavelength of about 633 nm against 632.8 nm, and Malus’s law within 0.4% at 45°.')
     + LIST(('Thin lens', 'f = 100.0 mm by the conjugate method'), ('Newton’s rings', 'Lens radius ≈ 0.85 m'), ('Air wedge', 'Sheet thickness ≈ 74 µm'), ('Young’s double slit', 'He-Ne wavelength ≈ 633 nm'), ('Diffraction grating', 'Mercury green line ≈ 546 nm'), ('Malus’s law', 'I/I₀ = 0.502 at 45°'), ('Abbe refractometer', 'Water 1.3330, sugar solution 1.3474'), ('Holography', 'A 3-D image rebuilt from a plate')),
-    ROW(P('As a research intern in a nonlinear optics group at Peking University’s Institute of Physics, I also operated Raman and laser systems normally used by graduate students and tested more than twenty polarisation states of the beam.'),
-        g.F('lab_amy', 'In the lab', ar='4/5')),
+    P('As a research intern in a nonlinear optics group at Peking University’s Institute of Physics, I also operated Raman and laser systems normally used by graduate students and tested more than twenty polarisation states of the beam.'),
   ]))
 
 # ================================================================ ASKING 04 · MODELLING
