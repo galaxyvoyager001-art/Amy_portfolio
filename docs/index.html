@@ -22,6 +22,13 @@
     border-radius: 999px; white-space: nowrap; }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #1b1d22; font-weight: 600; }
   .btn:hover { border-color: var(--fg); }
+  .btn.site { position: relative; background: #3A55E2; border-color: #3A55E2; color: #fff; font-weight: 600; font-size: 15px; padding: 11px 20px; box-shadow: 0 0 0 0 rgba(58,85,226,.6); animation: sitePulse 2.4s infinite; }
+  .btn.site span { display: inline-block; margin-left: 6px; transition: transform .3s; }
+  .btn.site:hover { background: #2F47C9; border-color: #fff; }
+  .btn.site:hover span { transform: translateX(4px); }
+  @keyframes sitePulse { 0% { box-shadow: 0 0 0 0 rgba(58,85,226,.65); } 70% { box-shadow: 0 0 0 14px rgba(58,85,226,0); } 100% { box-shadow: 0 0 0 0 rgba(58,85,226,0); } }
+  .btn.site em { font-style: normal; } .btn.site .short { display: none; }
+  @media (max-width: 600px) { .btn.site { font-size: 13px; padding: 9px 14px; } .btn.site .long { display: none; } .btn.site .short { display: inline; } .btn.primary { padding: 8px 12px; } }
   .count { color: var(--muted); font-size: 13px; }
   main { max-width: 1600px; margin: 0 auto; padding: clamp(16px, 3vw, 40px) clamp(16px, 4vw, 48px) 80px;
     display: flex; flex-direction: column; gap: clamp(16px, 2.4vw, 32px); }
@@ -45,7 +52,7 @@
   <span class="name">Amy Hu <b>/</b> Portfolio</span>
   <div class="actions">
     <span class="count">22 pages</span>
-    <a class="btn" href="website/">Personal website ↗</a>
+    <a class="btn site" href="website/"><em class="long">Visit my personal website</em><em class="short">My website</em> <span>→</span></a>
     <a class="btn primary" href="Amy_Hu_Portfolio.pdf" download>Download PDF</a>
   </div>
 </header>
