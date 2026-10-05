@@ -1,10 +1,10 @@
-"""Essay-style pages for the crafts and arts (docs/work/: tactile-books, miniature-house, physics-of-baking, guzheng-taekwondo).
+"""Essay-style pages for the crafts and arts (docs/website/work/: tactile-books, miniature-house, physics-of-baking, guzheng-taekwondo).
 These are written by hand rather than from work_content.py; build_work.py skips their slugs."""
 import os, re
 HERE = os.path.dirname(__file__)
 src = open(os.path.join(HERE, 'build_work.py')).read()
 NAV = re.search(r"NAV = '''(.*?)'''", src, re.S).group(1)
-OUT = '/home/user/Amy_portfolio/docs/work/'
+OUT = '/home/user/Amy_portfolio/docs/website/work/'
 
 def wrap(slug, title, desc, og, body_cls, body, nxt_href, nxt_title, nxt_img):
     return f'''<!doctype html>
@@ -26,7 +26,7 @@ def wrap(slug, title, desc, og, body_cls, body, nxt_href, nxt_title, nxt_img):
 {body}
 </main>
 <a class="nextp" href="{nxt_href}" data-cursor="Next"><span class="m">Next project →</span><div class="d t">{nxt_title}</div><img src="{nxt_img}" alt=""></a>
-<footer class="footer" style="padding-top:8vh"><div class="legal m" style="margin-top:0"><span>© 2026 Amy Hu</span><a href="../index.html">Home</a><a href="../portfolio/index.html">Full portfolio</a></div></footer>
+<footer class="footer" style="padding-top:8vh"><div class="legal m" style="margin-top:0"><span>© 2026 Amy Hu</span><a href="../index.html">Home</a><a href="../../">Full portfolio</a></div></footer>
 <script src="../site/vendor/gsap.min.js"></script>
 <script src="../site/vendor/ScrollTrigger.min.js"></script>
 <script src="../site/vendor/lenis.min.js"></script>

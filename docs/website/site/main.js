@@ -158,7 +158,10 @@
   if (sn) {
     const pin = sn.querySelector('.sn-pin'), N = sn.querySelectorAll('.sn-q').length;
     const words = [...sn.querySelectorAll('.sn-word')], imgs = [...sn.querySelectorAll('.sn-img')], qs = [...sn.querySelectorAll('.sn-q')], dots = [...sn.querySelectorAll('.sn-dots i')];
+    const cta = sn.querySelector('.sn-cta');
     let cur = -1;
+    /* the whole stage opens the project on screen, not only the small link */
+    pin.addEventListener('click', e => { if (!e.target.closest('a')) cta.click(); });
     const show = k => {
       if (k === cur) return;
       const dir = k > cur ? 1 : -1, q = qs[k];
@@ -168,6 +171,8 @@
       imgs.forEach((im, i) => gsap.to(im, { opacity: i === k ? 1 : 0, scale: i === k ? 1 : 0.7, rotate: i === k ? 0 : dir * (i < k ? -14 : 14), y: i === k ? 0 : (i < k ? -80 : 80), duration: 1.1, ease: 'expo.out' }));
       qs.forEach((x, i) => { x.classList.toggle('on', i === k); gsap.to(x, { opacity: i === k ? 1 : 0, y: i === k ? 0 : 30, duration: 0.7, delay: i === k ? 0.15 : 0, ease: 'power3.out' }); });
       dots.forEach((d, i) => d.classList.toggle('on', i === k));
+      cta.href = q.getAttribute('href');
+      gsap.fromTo(cta, { scale: 0.6, rotate: -20 }, { scale: 1, rotate: 0, duration: 0.9, ease: 'elastic.out(1,.6)' });
       cur = k;
     };
     gsap.set(words, { yPercent: 110, opacity: 0 }); gsap.set(imgs, { opacity: 0, scale: 0.7 }); gsap.set(qs, { opacity: 0, y: 30 });
@@ -224,7 +229,7 @@
   }));
 
   /* ---------- page-leave transition ---------- */
-  document.querySelectorAll('a[href^="portfolio/"]:not([download]), a[href^="work/"]').forEach(a => a.addEventListener('click', e => {
+  document.querySelectorAll('a[href="../"], a[href^="work/"]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault(); const href = a.getAttribute('href');
     gsap.fromTo('.curtain', { y: '100%' }, { y: '0%', duration: 0.7, ease: 'power3.inOut', onComplete: () => location.href = href });
   }));

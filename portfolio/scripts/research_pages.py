@@ -1,4 +1,4 @@
-"""Research & Entrepreneurship detail pages (docs/work/). Two chapters with one shared structure:
+"""Research & Entrepreneurship detail pages (docs/website/work/). Two chapters with one shared structure:
 Asking   (I The question · II The method · III The finding · IV Beyond)
 Building (I For whom · II The problem · III What we built · IV Where it stands)"""
 import os, re, glob, html
@@ -6,8 +6,8 @@ from PIL import Image
 
 ROOT = '/home/user/Amy_portfolio'
 A = ROOT + '/portfolio/assets/'
-OUT = ROOT + '/docs/work/'
-IMG = ROOT + '/docs/site/img/w/'
+OUT = ROOT + '/docs/website/work/'
+IMG = ROOT + '/docs/website/site/img/w/'
 src = open(os.path.join(os.path.dirname(__file__), 'build_work.py')).read()
 NAV = re.search(r"NAV = '''(.*?)'''", src, re.S).group(1)
 
@@ -89,7 +89,7 @@ def page(d, nxt):
 </div>
 </main>
 <a class="nextp" href="{nxt["slug"]}.html" data-cursor="Next"><span class="m">{nxt["label"]} →</span><div class="d t">{nxt["name"]}</div><img src="{img(nxt["hero"])}" alt=""></a>
-<footer class="footer" style="padding-top:8vh"><div class="legal m" style="margin-top:0"><span>© 2026 Amy Hu</span><a href="../index.html#research">All research</a><a href="../portfolio/index.html">Full portfolio</a></div></footer>
+<footer class="footer" style="padding-top:8vh"><div class="legal m" style="margin-top:0"><span>© 2026 Amy Hu</span><a href="../index.html#research">All research</a><a href="../../">Full portfolio</a></div></footer>
 <script src="../site/vendor/gsap.min.js"></script>
 <script src="../site/vendor/ScrollTrigger.min.js"></script>
 <script src="../site/vendor/lenis.min.js"></script>
