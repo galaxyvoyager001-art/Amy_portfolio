@@ -18,98 +18,91 @@
     },
     "Mind-CYPT.dc.html": {
       "h": 960,
-      "title": "16 Mind · CYPT problems & captaincy",
+      "title": "15 Mind · CYPT problems & captaincy",
       "w": 1920,
       "x": 4000,
       "y": 6800
     },
     "Mind-Curawave.dc.html": {
       "h": 960,
-      "title": "19 Mind · Curawave",
+      "title": "18 Mind · Curawave",
       "w": 1920,
       "x": 10000,
       "y": 6800
     },
     "Mind-Glass.dc.html": {
       "h": 960,
-      "title": "18 Mind · Metallic glass",
+      "title": "17 Mind · Metallic glass",
       "w": 1920,
       "x": 8000,
       "y": 6800
     },
     "Mind-Hearing.dc.html": {
       "h": 960,
-      "title": "17 Mind · SmartHearing",
+      "title": "16 Mind · SmartHearing",
       "w": 1920,
       "x": 6000,
       "y": 6800
     },
     "Mind-IYPT.dc.html": {
       "h": 960,
-      "title": "15 Mind · IYPT & magnetic cradle",
+      "title": "14 Mind · IYPT & magnetic cradle",
       "w": 1920,
       "x": 2000,
       "y": 6800
     },
     "Mind-Models.dc.html": {
       "h": 960,
-      "title": "22 Mind · Modelling & journal",
+      "title": "21 Mind · Modelling & journal",
       "w": 1920,
       "x": 16000,
       "y": 6800
     },
     "Mind-Opener.dc.html": {
       "h": 960,
-      "title": "14 Mind · Research",
+      "title": "13 Mind · Research",
       "w": 1920,
       "x": 0,
       "y": 6800
     },
     "Mind-Optics.dc.html": {
       "h": 960,
-      "title": "21 Mind · Nonlinear optics",
+      "title": "20 Mind · Nonlinear optics",
       "w": 1920,
       "x": 14000,
       "y": 6800
     },
     "Mind-Startup.dc.html": {
       "h": 960,
-      "title": "20 Mind · Startup organisation",
+      "title": "19 Mind · Startup organisation",
       "w": 1920,
       "x": 12000,
       "y": 6800
     },
-    "Sight-Details.dc.html": {
-      "h": 960,
-      "title": "10 Sight · How it was made",
-      "w": 1920,
-      "x": 2000,
-      "y": 2720
-    },
     "Sight-House.dc.html": {
       "h": 960,
-      "title": "09 Sight · The house",
+      "title": "09 Sight · A house in miniature",
       "w": 1920,
       "x": 0,
       "y": 2720
     },
     "Sound-Motion.dc.html": {
       "h": 960,
-      "title": "13 Sound & Motion",
+      "title": "22 Music & Motion · Guzheng & taekwondo",
       "w": 1920,
       "x": 0,
-      "y": 5440
+      "y": 8160
     },
     "Taste-Book.dc.html": {
       "h": 960,
-      "title": "11 Taste · The book",
+      "title": "10 Taste · The book",
       "w": 1920,
       "x": 0,
       "y": 4080
     },
     "Taste-Twelve.dc.html": {
       "h": 960,
-      "title": "12 Taste · Twelve bakes",
+      "title": "11 Taste · Twelve bakes",
       "w": 1920,
       "x": 2000,
       "y": 4080
@@ -155,6 +148,13 @@
       "w": 1920,
       "x": 8000,
       "y": 1360
+    },
+    "Sound-Phonograph.dc.html": {
+      "h": 960,
+      "w": 1920,
+      "x": 0,
+      "y": 5440,
+      "title": "12 Sound · Echoes Recovered"
     }
   },
   "createdOnFiles": {
@@ -169,7 +169,7 @@
     "rowMind": {
       "kind": "title1",
       "maxW": 8000,
-      "text": "05 Mind · Research, in activity-list order",
+      "text": "05 Mind · Research & entrepreneurship",
       "w": 240,
       "x": 0,
       "y": 6540
@@ -185,7 +185,7 @@
     "rowSight": {
       "kind": "title1",
       "maxW": 3920,
-      "text": "02 Sight · Craft on pure white",
+      "text": "02 Sight · A house in miniature",
       "w": 240,
       "x": 0,
       "y": 2460
@@ -205,6 +205,22 @@
       "w": 240,
       "x": 0,
       "y": 1100
+    },
+    "rowSound": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "04 Sound · Echoes Recovered",
+      "w": 240,
+      "x": 0,
+      "y": 5180
+    },
+    "rowMusic": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "06 Music & Motion · Guzheng & taekwondo",
+      "w": 240,
+      "x": 0,
+      "y": 7900
     }
   },
   "order": [
@@ -217,10 +233,9 @@
     "Touch-Visit.dc.html",
     "Touch-Exhibition.dc.html",
     "Sight-House.dc.html",
-    "Sight-Details.dc.html",
     "Taste-Book.dc.html",
     "Taste-Twelve.dc.html",
-    "Sound-Motion.dc.html",
+    "Sound-Phonograph.dc.html",
     "Mind-Opener.dc.html",
     "Mind-IYPT.dc.html",
     "Mind-CYPT.dc.html",
@@ -229,7 +244,8 @@
     "Mind-Curawave.dc.html",
     "Mind-Startup.dc.html",
     "Mind-Optics.dc.html",
-    "Mind-Models.dc.html"
+    "Mind-Models.dc.html",
+    "Sound-Motion.dc.html"
   ],
   "pages": [],
   "title": "Amy Portfolio"
