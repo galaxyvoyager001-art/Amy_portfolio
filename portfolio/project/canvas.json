@@ -13,68 +13,68 @@
       "h": 960,
       "title": "01 Cover",
       "w": 1920,
-      "x": 0,
-      "y": 0
+      "x": 10,
+      "y": 7
     },
     "Mind-CYPT.dc.html": {
       "h": 960,
-      "title": "15 Mind · CYPT problems & captaincy",
+      "title": "16 Mind · CYPT problems & captaincy",
       "w": 1920,
       "x": 4000,
       "y": 6800
     },
     "Mind-Curawave.dc.html": {
       "h": 960,
-      "title": "18 Mind · Curawave",
+      "title": "19 Mind · Curawave",
       "w": 1920,
       "x": 10000,
       "y": 6800
     },
     "Mind-Glass.dc.html": {
       "h": 960,
-      "title": "17 Mind · Metallic glass",
+      "title": "18 Mind · Metallic glass",
       "w": 1920,
       "x": 8000,
       "y": 6800
     },
     "Mind-Hearing.dc.html": {
       "h": 960,
-      "title": "16 Mind · SmartHearing",
+      "title": "17 Mind · SmartHearing",
       "w": 1920,
       "x": 6000,
       "y": 6800
     },
     "Mind-IYPT.dc.html": {
       "h": 960,
-      "title": "14 Mind · IYPT & magnetic cradle",
+      "title": "15 Mind · IYPT & magnetic cradle",
       "w": 1920,
       "x": 2000,
       "y": 6800
     },
     "Mind-Models.dc.html": {
       "h": 960,
-      "title": "21 Mind · Modelling & journal",
+      "title": "22 Mind · Modelling & journal",
       "w": 1920,
       "x": 16000,
       "y": 6800
     },
     "Mind-Opener.dc.html": {
       "h": 960,
-      "title": "13 Mind · Research",
+      "title": "14 Mind · Research",
       "w": 1920,
       "x": 0,
       "y": 6800
     },
     "Mind-Optics.dc.html": {
       "h": 960,
-      "title": "20 Mind · Nonlinear optics",
+      "title": "21 Mind · Nonlinear optics",
       "w": 1920,
       "x": 14000,
       "y": 6800
     },
     "Mind-Startup.dc.html": {
       "h": 960,
-      "title": "19 Mind · Startup organisation",
+      "title": "20 Mind · Startup organisation",
       "w": 1920,
       "x": 12000,
       "y": 6800
@@ -88,10 +88,17 @@
     },
     "Sound-Motion.dc.html": {
       "h": 960,
-      "title": "22 Music & Motion · Guzheng & taekwondo",
+      "title": "23 Music & Motion · Guzheng & taekwondo",
       "w": 1920,
       "x": 0,
       "y": 8160
+    },
+    "Sound-Phonograph.dc.html": {
+      "h": 960,
+      "title": "13 Sound · Echoes Recovered",
+      "w": 1920,
+      "x": 2000,
+      "y": 5440
     },
     "Taste-Book.dc.html": {
       "h": 960,
@@ -149,12 +156,12 @@
       "x": 8000,
       "y": 1360
     },
-    "Sound-Phonograph.dc.html": {
+    "Sound-Past.dc.html": {
       "h": 960,
+      "title": "12 Sound · Hearing the Past",
       "w": 1920,
       "x": 0,
-      "y": 5440,
-      "title": "12 Sound · Echoes Recovered"
+      "y": 5440
     }
   },
   "createdOnFiles": {
@@ -174,6 +181,14 @@
       "x": 0,
       "y": 6540
     },
+    "rowMusic": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "06 Music & Motion · Guzheng & taekwondo",
+      "w": 240,
+      "x": 0,
+      "y": 7900
+    },
     "rowOpen": {
       "kind": "title1",
       "maxW": 3920,
@@ -190,6 +205,14 @@
       "x": 0,
       "y": 2460
     },
+    "rowSound": {
+      "kind": "title1",
+      "maxW": 3920,
+      "text": "04 Sound · Hearing the Past & Echoes Recovered",
+      "w": 240,
+      "x": 0,
+      "y": 5180
+    },
     "rowTaste": {
       "kind": "title1",
       "maxW": 3920,
@@ -205,22 +228,6 @@
       "w": 240,
       "x": 0,
       "y": 1100
-    },
-    "rowSound": {
-      "kind": "title1",
-      "maxW": 3920,
-      "text": "04 Sound · Echoes Recovered",
-      "w": 240,
-      "x": 0,
-      "y": 5180
-    },
-    "rowMusic": {
-      "kind": "title1",
-      "maxW": 3920,
-      "text": "06 Music & Motion · Guzheng & taekwondo",
-      "w": 240,
-      "x": 0,
-      "y": 7900
     }
   },
   "order": [
@@ -235,6 +242,7 @@
     "Sight-House.dc.html",
     "Taste-Book.dc.html",
     "Taste-Twelve.dc.html",
+    "Sound-Past.dc.html",
     "Sound-Phonograph.dc.html",
     "Mind-Opener.dc.html",
     "Mind-IYPT.dc.html",
